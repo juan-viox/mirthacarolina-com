@@ -1,0 +1,127 @@
+{
+  "client": {
+    "legalName": "Mirtha Carolina Solorzano",
+    "displayName": "Mirtha Carolina",
+    "shortName": "Carolina",
+    "slug": "carolina-realtor-monmouth",
+    "title": "Realtor-Associate",
+    "businessType": "real-estate",
+    "tagline": "Heritage Atlantic Broker. Modern Cinematic Eye.",
+    "taglineEs": "Corredora del Atlántico Histórico. Mirada Cinematográfica Moderna.",
+    "founder": "Mirtha Carolina Solorzano",
+    "location": "Holmdel, NJ",
+    "region": "Monmouth County, New Jersey",
+    "submarkets": ["Holmdel", "Red Bank", "Rumson", "Long Branch", "Pier Village", "Colts Neck", "Middletown", "Fair Haven", "Little Silver", "Atlantic Highlands"],
+    "languages": ["English", "Spanish"],
+    "instagramUrl": "https://www.instagram.com/carolina.therealtor/",
+    "instagramHandle": "@carolina.therealtor",
+    "sourceUrl": "https://www.tcmrealtygroup.com/mirtha-solorzano",
+    "domain": "mirthacarolina.com"
+  },
+  "brokerage": {
+    "name": "Christie's International Real Estate Group",
+    "fullLegalEntity": "Christie's International Real Estate Northern New Jersey Inc.",
+    "team": "Teresa Minnick Group (TCM Realty Group)",
+    "officeAddress": "59 Main Street, Holmdel, NJ 07733",
+    "officePhone": "732-444-7575",
+    "cellPhone": "201-554-7166",
+    "email": "CSolorzano@christiesrealestategroup.com",
+    "agentProfileUrl": "https://www.christiesrealestategroup.com/realestate/agent/mirtha-carolina-solorzano/",
+    "teamProfileUrl": "https://www.tcmrealtygroup.com/mirtha-solorzano"
+  },
+  "positioning": {
+    "primary": "Bilingual luxury concierge for Monmouth County",
+    "wedges": [
+      "Bilingual Spanish/English luxury concierge for Latin American wealth migrating to the Jersey Shore",
+      "Navesink River waterfront specialist",
+      "Christie's-as-international-buyer-bridge"
+    ],
+    "differentiators": [
+      "Native Spanish + English with full editorial bilingual web parity",
+      "Christie's International Real Estate global network",
+      "Background in international diplomacy, education, and marketing",
+      "Teresa Minnick Group platform ($800M+ team career sales)"
+    ],
+    "moodWords": ["EDITORIAL", "ATLANTIC", "CINEMATIC"]
+  },
+  "brand": {
+    "colors": {
+      "navyDeep":     { "hex": "#0B1F3A", "use": "primary background, heritage anchor" },
+      "navyInk":      { "hex": "#162B4A", "use": "card backgrounds, secondary depth" },
+      "christiesRed": { "hex": "#9B2032", "use": "surgical brand tie-in, affiliate lockup, hover underlines" },
+      "shoreSand":    { "hex": "#E8DFCE", "use": "warm neutral, coastal warmth" },
+      "ivoryCream":   { "hex": "#F5F1E8", "use": "primary light surface, body copy in dark sections" },
+      "champagneGold":{ "hex": "#C4A962", "use": "metallic accent, dividers, numerals, key figures" },
+      "seaFoam":      { "hex": "#7FA5A8", "use": "Navesink/waterfront modules only" },
+      "charcoal":     { "hex": "#1C1C1C", "use": "body text on light surfaces" }
+    },
+    "typography": {
+      "display": { "family": "Fraunces", "weights": [300, 400, 500, 600, 700], "axes": "opsz 9..144, ital", "use": "all editorial headings, hero, section titles" },
+      "body":    { "family": "Inter",    "weights": [300, 400, 500, 600, 700], "use": "body copy, UI, navigation, captions" },
+      "accent":  { "family": "Cormorant Garamond", "weights": [400, 500, 600], "axes": "ital", "use": "pull-quotes, ledes, italic accents" },
+      "mono":    { "family": "JetBrains Mono", "use": "MLS numbers, market-data stat blocks (sparingly)" }
+    },
+    "logoTreatment": "Editorial wordmark — \"MIRTHA CAROLINA\" set in Fraunces 500 with letter-spacing 0.18em, all caps. Stacked treatment available with \"CHRISTIE'S INTERNATIONAL REAL ESTATE\" in Inter 500 small-caps below as affiliation lockup. Color: Navy Deep on light, Ivory Cream on dark, Champagne Gold for metallic premium contexts.",
+    "logoSvg": "INLINE_SVG_TO_BE_GENERATED_IN_BUILD_PHASE"
+  },
+  "hero": {
+    "concept": "Cinematic Navesink Twilight",
+    "description": "Scroll-driven drone cinematic over a Navesink River / Rumson waterfront estate at golden-twilight. Hero opens with a slow boom-out from a wood-shingle gable to a wide aerial crossing the river toward Sandy Hook. Wordmark fades in on second beat. Scroll-scrubbed so frame sequence advances as user scrolls.",
+    "geminiPrompt": "Cinematic aerial drone photograph at golden hour twilight, slowly booming out from a classic American wood-shingle gabled estate roof to reveal a sweeping wide aerial view of the Navesink River in Monmouth County New Jersey. Foreground: weathered cedar shingles and a copper finial catching the last light. Middle ground: manicured estate gardens, a stone seawall, a private dock with a wooden sailboat moored. Background: the wide silver-blue Navesink River reflecting amber and rose twilight, distant Sandy Hook peninsula on the horizon, a few distant sailboats, soft atmospheric haze. Lighting: warm golden-hour key light from the west, cool cyan ambient from the east, deep navy sky transitioning to peach at the horizon. Color palette: deep navy water, warm cedar browns, champagne gold sunset, soft cream clouds, hint of seafoam in the river. Style: editorial architectural photography in the manner of Architectural Digest meets a Christie's auction catalog cover. Shot on Hasselblad medium format equivalent, 24mm equivalent wide angle, deep depth of field, slight film grain. Painterly clouds, no people, no cars, no text. 16:9 cinematic aspect ratio.",
+    "wavespeedMotionPrompt": "Slow continuous boom-out and reverse dolly: the camera starts close on the wood-shingle roof gable and copper finial, then rises and pulls back smoothly to reveal the estate, gardens, dock, and the wide Navesink River beyond. Subtle wind ripples on the water surface, gentle sway of distant sailboat masts, soft drift of high cirrus clouds. Atmospheric golden-hour light slowly intensifies. No camera shake. Cinematic, contemplative, prestige real-estate film. 5 seconds.",
+    "frameCount": 0,
+    "imagePath": "",
+    "videoPath": ""
+  },
+  "sections": [
+    "1. Scroll-scrubbed cinematic hero (Navesink drone + wordmark + Private Showing CTA)",
+    "2. Christie's International Real Estate affiliation lockup (understated trust bar)",
+    "3. Featured Properties (3-5 hover-parallax cards, price-on-request)",
+    "4. Neighborhood Films (scroll-pinned Holmdel / Red Bank / Rumson / Long Branch cross-dissolve)",
+    "5. Bilingual Editorial Bio (split-scroll, EN/ES toggle, Spanish first-class)",
+    "6. The Monmouth Portfolio (curated grid, sold + active + coming soon)",
+    "7. Market Insights (Quarterly Monmouth Luxury Report, gated lead magnet)",
+    "8. Client Stories (testimonial marquee on dark)",
+    "9. The Process (editorial 6-step concierge treatment)",
+    "10. Private Showing (magnetic CTA, inline editorial form, Studio Concierge widget)",
+    "11. Footer (Christie's network lockup, bilingual switch, credentials, license placeholder)"
+  ],
+  "seo": {
+    "title": "Mirtha Carolina · Christie's International Real Estate · Monmouth County, NJ",
+    "titleEs": "Mirtha Carolina · Christie's International Real Estate · Condado de Monmouth, NJ",
+    "description": "Bilingual luxury real estate concierge serving Holmdel, Rumson, Red Bank, Colts Neck, and the Navesink River. Christie's International Real Estate Group · Teresa Minnick Group.",
+    "descriptionEs": "Asesora inmobiliaria de lujo bilingüe sirviendo Holmdel, Rumson, Red Bank, Colts Neck y el río Navesink. Christie's International Real Estate Group · Teresa Minnick Group.",
+    "keywords": "Mirtha Carolina, Carolina Solorzano, Monmouth County realtor, Holmdel realtor, Rumson realtor, Red Bank realtor, Navesink waterfront, bilingual realtor NJ, Spanish speaking realtor New Jersey, Christie's International Real Estate, luxury Jersey Shore, Colts Neck estate, Long Branch Pier Village",
+    "schemaType": "RealEstateAgent",
+    "geo": { "lat": 40.3676, "lng": -74.1721, "addressLocality": "Holmdel", "addressRegion": "NJ", "postalCode": "07733" }
+  },
+  "deployment": {
+    "domain": "mirthacarolina.com",
+    "wwwSubdomain": "www.mirthacarolina.com",
+    "githubRepo": "mirthacarolina-com",
+    "vercelProjectName": "mirthacarolina",
+    "esLocale": true,
+    "enLocale": true
+  },
+  "voiceAgent": {
+    "name": "Mirtha Carolina Studio Concierge",
+    "personaEn": "Warm, cultured, bilingual concierge for Mirtha Carolina's Monmouth County real estate practice. Speaks with the calm refinement of a Christie's auction catalog. Knows the difference between Rumson old-money and Holmdel estate-living, between a Pier Village loft buyer and a Navesink waterfront seller.",
+    "personaEs": "Concierge cálida, culta y bilingüe para la práctica inmobiliaria de Mirtha Carolina en el condado de Monmouth. Habla con el refinamiento sereno de un catálogo de subasta de Christie's.",
+    "twilioPhone": "TBD"
+  },
+  "phaseStatus": {
+    "0_competitiveAnalysis": "complete",
+    "1_stitch": "skipped",
+    "2_brandAnalysis": "in_progress",
+    "3_heroConcepts": "pending",
+    "4_sceneGeneration": "pending",
+    "5_siteBuild": "pending",
+    "6_imageGeneration": "pending",
+    "7_seo": "pending",
+    "8_deploy": "pending",
+    "9_voiceAgent": "pending",
+    "10_newsletter": "pending",
+    "11_designSystemExport": "pending",
+    "12_finalQA": "pending"
+  }
+}
