@@ -1658,13 +1658,16 @@ h1, h2, h3, h4, h5, .display, .numeral {
   opacity: 1;
   transform: translateY(-1px);
 }
-.christies-svg {
+.christies-logo-img {
   display: block;
   width: 280px;
   max-width: 100%;
   height: auto;
-  shape-rendering: geometricPrecision;
+  /* Official PNG is black on transparent. Soften slightly so it sits inside the editorial palette. */
+  opacity: 0.88;
+  transition: opacity 0.4s ease;
 }
+.christies-lockup:hover .christies-logo-img { opacity: 1; }
 .christies-caption {
   font-family: var(--ff-body);
   font-size: 9.5px;
@@ -2480,8 +2483,212 @@ h1, h2, h3, h4, h5, .display, .numeral {
 </section>
 
 <!-- ==========================================================================
-     SECTION 12 — VOICE AGENT PLACEHOLDER
+     SECTION 12 — VOICE AGENT (Studio Concierge — Jessica · bilingual)
      ========================================================================== -->
+<script>
+/* =============================================================================
+   ELEVENLABS CLIENT TOOLS — let the Studio Concierge drive the page
+   Tools registered in the agent config:
+     scroll_to_section, scroll_direction, change_language,
+     highlight_property, highlight_neighborhood,
+     open_inquiry_form, show_market_report
+   ========================================================================== */
+(function () {
+  'use strict';
+
+  function $(sel, root) { return (root || document).querySelector(sel); }
+  function $$(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
+
+  function smoothScrollTo(el, offset) {
+    if (!el) return;
+    var rect = el.getBoundingClientRect();
+    var top  = rect.top + window.pageYOffset - (offset || 80);
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  }
+
+  function pulse(el, duration) {
+    if (!el) return;
+    el.classList.add('mc-pulse');
+    setTimeout(function () { el.classList.remove('mc-pulse'); }, duration || 2400);
+  }
+
+  var SECTION_IDS = ['hero','properties','neighborhoods','about','portfolio','insights','stories','process','contact','footer'];
+
+  function sectionById(id) {
+    if (id === 'footer') return document.querySelector('footer.footer');
+    return document.getElementById(id);
+  }
+
+  var MC = {
+    scroll_to_section: function (args) {
+      var id = (args && (args.section_id || args.section || args.id) || '').toString().trim().toLowerCase();
+      if (SECTION_IDS.indexOf(id) === -1) {
+        // tolerate aliases
+        var alias = { home:'hero', listings:'properties', listing:'properties', neighborhood:'neighborhoods', bio:'about',
+                      'mirtha':'about', mirthacarolina:'about', portfolio_grid:'portfolio',
+                      market:'insights', report:'insights', testimonials:'stories', form:'contact',
+                      inquire:'contact', schedule:'contact' };
+        id = alias[id] || 'hero';
+      }
+      smoothScrollTo(sectionById(id));
+      return { ok: true, scrolled_to: id };
+    },
+
+    scroll_direction: function (args) {
+      var dir = (args && args.direction || '').toString().trim().toLowerCase();
+      if (dir === 'top')    { window.scrollTo({ top: 0, behavior: 'smooth' }); return { ok: true, direction: 'top' }; }
+      if (dir === 'bottom') { window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); return { ok: true, direction: 'bottom' }; }
+
+      // next / previous: find current section in viewport, jump to neighbor
+      var anchors = SECTION_IDS.map(sectionById).filter(Boolean);
+      var y = window.pageYOffset + 120;
+      var currentIdx = 0;
+      for (var i = 0; i < anchors.length; i++) {
+        var top = anchors[i].getBoundingClientRect().top + window.pageYOffset;
+        if (top <= y) currentIdx = i;
+      }
+      var targetIdx = (dir === 'previous' || dir === 'prev' || dir === 'up')
+        ? Math.max(0, currentIdx - 1)
+        : Math.min(anchors.length - 1, currentIdx + 1);
+      smoothScrollTo(anchors[targetIdx]);
+      return { ok: true, direction: dir, scrolled_to: SECTION_IDS[SECTION_IDS.indexOf(anchors[targetIdx].id || 'footer')] || 'footer' };
+    },
+
+    change_language: function (args) {
+      var loc = (args && args.locale || '').toString().trim().toLowerCase();
+      if (loc !== 'en' && loc !== 'es') return { ok: false, error: 'invalid locale' };
+      var pill = document.querySelector('.lang-pill[data-lang="' + loc + '"]');
+      if (pill) {
+        pill.click();
+        return { ok: true, locale: loc };
+      }
+      // Fallback — set localStorage and reload language toggle directly via existing API
+      try { localStorage.setItem('mc-locale', loc); } catch (e) {}
+      document.documentElement.lang = loc;
+      $$('[data-en]').forEach(function (el) {
+        var v = el.dataset[loc]; if (v !== undefined) el.textContent = v;
+      });
+      return { ok: true, locale: loc, fallback: true };
+    },
+
+    highlight_property: function (args) {
+      var idx = parseInt((args && (args.index || args.id || args.n)) || 0, 10);
+      if (!idx || idx < 1 || idx > 3) return { ok: false, error: 'index must be 1, 2, or 3' };
+      smoothScrollTo(document.getElementById('properties'));
+      var cards = $$('.featured-card, .property-card, [data-property-index]');
+      var target = cards[idx - 1] || $$('#properties .card')[idx - 1] || $$('#properties article')[idx - 1] || $$('#properties .featured-card')[idx - 1];
+      setTimeout(function () { pulse(target, 3000); }, 700);
+      return { ok: true, index: idx };
+    },
+
+    highlight_neighborhood: function (args) {
+      var name = (args && args.name || '').toString().trim().toLowerCase();
+      var aliases = { 'red bank':'red-bank', 'redbank':'red-bank', 'long branch':'pier-village', 'piervillage':'pier-village', 'pier_village':'pier-village' };
+      name = aliases[name] || name;
+      smoothScrollTo(document.getElementById('neighborhoods'));
+      // Try to find a slide / panel matching the neighborhood
+      setTimeout(function () {
+        var sel = '[data-neighborhood="' + name + '"], #nb-' + name + ', .neighborhood-' + name + ', .nb-' + name + ', [data-nb="' + name + '"]';
+        var target = document.querySelector(sel);
+        if (target) {
+          smoothScrollTo(target, 200);
+          pulse(target, 3000);
+        } else {
+          // Fallback — scroll within Neighborhoods section so the right entry comes into view
+          var section = document.getElementById('neighborhoods');
+          if (section) {
+            var entries = $$('.neighborhood, .nb, .neighborhood-entry, [data-neighborhood]', section);
+            var order = ['holmdel','red-bank','rumson','pier-village'];
+            var pos = order.indexOf(name);
+            if (pos >= 0 && entries[pos]) { smoothScrollTo(entries[pos], 200); pulse(entries[pos], 3000); }
+          }
+        }
+      }, 700);
+      return { ok: true, neighborhood: name };
+    },
+
+    open_inquiry_form: function () {
+      var contact = document.getElementById('contact');
+      smoothScrollTo(contact);
+      setTimeout(function () {
+        var first = contact && (contact.querySelector('input[name="name"], input[type="text"], input:not([type="hidden"])'));
+        if (first) { try { first.focus({ preventScroll: true }); } catch (e) { first.focus(); } }
+        var form = contact && contact.querySelector('form');
+        if (form) pulse(form, 2400);
+      }, 800);
+      return { ok: true };
+    },
+
+    show_market_report: function () {
+      smoothScrollTo(document.getElementById('insights'));
+      setTimeout(function () {
+        var card = document.querySelector('#insights .insights-card, #insights .market-card, #insights .card, #insights article');
+        if (card) pulse(card, 3000);
+      }, 700);
+      return { ok: true };
+    }
+  };
+
+  // Expose for debugging
+  window.MC_TOOLS = MC;
+
+  // Register on the elevenlabs-convai widget when it fires `call`
+  function attachWidget() {
+    var widget = document.querySelector('elevenlabs-convai');
+    if (!widget) return;
+
+    // Pattern 1 (current): the widget dispatches a "call" event on itself when a client tool is invoked
+    widget.addEventListener('elevenlabs-convai:call', function (e) {
+      try {
+        if (e && e.detail && e.detail.config) {
+          e.detail.config.clientTools = MC;
+        }
+      } catch (err) {
+        console.warn('[mc] widget tool registration failed:', err);
+      }
+    });
+
+    // Pattern 2 (legacy): listen for tool_call directly via the SDK
+    widget.addEventListener('elevenlabs-convai:tool-call', function (e) {
+      try {
+        var name = e.detail && e.detail.tool_name;
+        var params = e.detail && e.detail.parameters;
+        if (name && typeof MC[name] === 'function') {
+          MC[name](params || {});
+        }
+      } catch (err) {
+        console.warn('[mc] tool-call legacy handler error:', err);
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', attachWidget);
+  } else {
+    attachWidget();
+  }
+  // Also re-attach after a delay in case the widget mounts late
+  setTimeout(attachWidget, 1500);
+  setTimeout(attachWidget, 4000);
+})();
+</script>
+
+<style>
+  /* Pulse highlight used by the agent's highlight_* tools */
+  .mc-pulse {
+    animation: mc-pulse-kf 1.6s ease-in-out 0s 2 both;
+    will-change: box-shadow, transform;
+  }
+  @keyframes mc-pulse-kf {
+    0%   { box-shadow: 0 0 0 0 rgba(196, 169, 98, 0.0), 0 0 0 0 rgba(196, 169, 98, 0); transform: translateY(0); }
+    35%  { box-shadow: 0 0 0 6px rgba(196, 169, 98, 0.55), 0 18px 50px -16px rgba(11,31,58,0.45); transform: translateY(-3px); }
+    100% { box-shadow: 0 0 0 0 rgba(196, 169, 98, 0.0), 0 0 0 0 rgba(196, 169, 98, 0); transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .mc-pulse { animation: none; outline: 2px solid var(--champagne-gold); outline-offset: 4px; }
+  }
+</style>
+
 <div class="voice-agent-wrap" aria-hidden="false">
   <elevenlabs-convai agent-id="agent_4801kp773y4pe3rt1v1007yd8w4c"></elevenlabs-convai>
 </div>
@@ -2500,24 +2707,7 @@ h1, h2, h3, h4, h5, .display, .numeral {
           Bilingual luxury concierge for the Navesink, Rumson, Holmdel, and the Atlantic shoreline.
         </p>
         <a class="christies-lockup" href="https://www.christiesrealestategroup.com/" target="_blank" rel="noopener" aria-label="Christie's International Real Estate Group">
-          <svg class="christies-svg" viewBox="0 0 480 156" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cireg-title">
-            <title id="cireg-title">Christie's International Real Estate Group</title>
-            <defs>
-              <style>
-                .ch-display { font-family: 'Cormorant Garamond', 'Adobe Caslon', 'Trajan Pro', Georgia, serif; font-weight: 500; letter-spacing: 0.04em; }
-                .ch-sub     { font-family: 'Cormorant Garamond', 'Adobe Caslon', 'Trajan Pro', Georgia, serif; font-weight: 500; letter-spacing: 0.18em; }
-                .ch-group   { font-family: 'Cormorant Garamond', 'Adobe Caslon', 'Trajan Pro', Georgia, serif; font-weight: 600; letter-spacing: 0.42em; }
-              </style>
-            </defs>
-            <!-- CHRISTIE'S -->
-            <text class="ch-display" x="240" y="60" text-anchor="middle" font-size="62" fill="currentColor">CHRISTIE&#8217;S</text>
-            <!-- INTERNATIONAL REAL ESTATE -->
-            <text class="ch-sub" x="240" y="98" text-anchor="middle" font-size="16" fill="currentColor">INTERNATIONAL REAL ESTATE</text>
-            <!-- divider — GROUP — divider -->
-            <line x1="150" y1="132" x2="200" y2="132" stroke="currentColor" stroke-width="0.9" />
-            <text class="ch-group" x="240" y="138" text-anchor="middle" font-size="15" fill="currentColor">GROUP</text>
-            <line x1="280" y1="132" x2="330" y2="132" stroke="currentColor" stroke-width="0.9" />
-          </svg>
+          <img class="christies-logo-img" src="assets/images/christies-logo.png" alt="Christie's International Real Estate Group" width="2613" height="659" loading="lazy" decoding="async" />
           <span class="christies-caption" data-en="Independently Owned and Operated" data-es="Operada de Forma Independiente">Independently Owned and Operated</span>
         </a>
       </div>
