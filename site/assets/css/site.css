@@ -35,7 +35,7 @@
 
   --ease-out:     cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out:  cubic-bezier(0.65, 0, 0.35, 1);
-  --nav-h:        76px;
+  --nav-h:        148px;
 }
 
 /* ==========================================================================
@@ -231,8 +231,8 @@ h1, h2, h3, h4, h5, .display, .numeral {
 .nav-mark:hover { opacity: 0.88; }
 .nav-mc-mark {
   display: block;
-  width: 44px;
-  height: 44px;
+  width: 132px;
+  height: 132px;
   flex-shrink: 0;
   /* Mark is now ivory-cream MC on transparent — reads correctly on both
      transparent-over-hero and scrolled-solid-navy nav states. */
@@ -263,7 +263,7 @@ h1, h2, h3, h4, h5, .display, .numeral {
   opacity: 0.82;
 }
 @media (max-width: 720px) {
-  .nav-mc-mark { width: 36px; height: 36px; }
+  .nav-mc-mark { width: 88px; height: 88px; }
   .nav-mark { gap: 10px; }
   .nav-mark .wm { font-size: 14px; letter-spacing: 0.14em; }
   .nav-mark .aff { font-size: 7.5px; }
