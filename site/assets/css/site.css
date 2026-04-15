@@ -1766,8 +1766,69 @@ h1, h2, h3, h4, h5, .display, .numeral {
 }
 
 /* Listings index — editorial listing cards */
-.listings-index { background: var(--ivory-cream); padding: clamp(72px, 10vw, 120px) 0 clamp(96px, 14vw, 160px); }
+.listings-index { background: var(--ivory-cream); padding: clamp(64px, 9vw, 110px) 0 clamp(80px, 12vw, 140px); }
+.listings-index.alt { background: #EEE7D6; }
 .listing-cards { display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 48px; }
+
+/* Category section header */
+.category-head { max-width: 720px; margin: 0 auto 8px; padding-bottom: 24px; border-bottom: 1px solid rgba(196, 169, 98, 0.45); text-align: left; }
+.category-head .eyebrow {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--champagne-dk);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.category-head .section-title {
+  font-family: var(--ff-display);
+  font-variation-settings: "opsz" 96;
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--navy-deep);
+  font-weight: 400;
+  margin: 0 0 14px;
+}
+.category-head .cat-sub {
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-size: clamp(17px, 1.5vw, 22px);
+  color: var(--navy-ink);
+  line-height: 1.45;
+  max-width: 56ch;
+}
+
+/* Page hero category jump nav */
+.page-hero-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 0;
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(245, 241, 232, 0.18);
+}
+.page-hero-nav a {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 22px 10px 0;
+  margin-right: 10px;
+  border-right: 1px solid rgba(196, 169, 98, 0.35);
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+.page-hero-nav a:last-child { border-right: 0; padding-right: 0; margin-right: 0; }
+.page-hero-nav a:hover { color: #FFFFFF; transform: translateY(-1px); }
+@media (max-width: 600px) {
+  .page-hero-nav a { padding: 8px 14px 8px 0; margin-right: 6px; font-size: 10px; letter-spacing: 0.22em; }
+}
 .listing-card {
   position: relative;
   display: grid;
