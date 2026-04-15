@@ -35,7 +35,7 @@
 
   --ease-out:     cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out:  cubic-bezier(0.65, 0, 0.35, 1);
-  --nav-h:        148px;
+  --nav-h:        136px;
 }
 
 /* ==========================================================================
@@ -231,8 +231,8 @@ h1, h2, h3, h4, h5, .display, .numeral {
 .nav-mark:hover { opacity: 0.88; }
 .nav-mc-mark {
   display: block;
-  width: 132px;
-  height: 132px;
+  width: 120px;
+  height: 120px;
   flex-shrink: 0;
   /* Mark is now ivory-cream MC on transparent — reads correctly on both
      transparent-over-hero and scrolled-solid-navy nav states. */
