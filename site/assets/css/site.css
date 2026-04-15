@@ -221,9 +221,29 @@ h1, h2, h3, h4, h5, .display, .numeral {
 }
 .nav-mark {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  align-items: center;
+  gap: 14px;
   color: var(--ivory-cream);
+  line-height: 1;
+  text-decoration: none;
+  transition: opacity 0.4s ease;
+}
+.nav-mark:hover { opacity: 0.88; }
+.nav-mc-mark {
+  display: block;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  /* Mark is now ivory-cream MC on transparent — reads correctly on both
+     transparent-over-hero and scrolled-solid-navy nav states. */
+  opacity: 0.95;
+  transition: opacity 0.4s ease;
+}
+.nav-mark:hover .nav-mc-mark { opacity: 1; }
+.nav-mark-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
   line-height: 1;
 }
 .nav-mark .wm {
@@ -241,6 +261,12 @@ h1, h2, h3, h4, h5, .display, .numeral {
   text-transform: uppercase;
   color: var(--champagne);
   opacity: 0.82;
+}
+@media (max-width: 720px) {
+  .nav-mc-mark { width: 36px; height: 36px; }
+  .nav-mark { gap: 10px; }
+  .nav-mark .wm { font-size: 14px; letter-spacing: 0.14em; }
+  .nav-mark .aff { font-size: 7.5px; }
 }
 .nav-links {
   display: flex;
@@ -1527,6 +1553,21 @@ h1, h2, h3, h4, h5, .display, .numeral {
   font-weight: 400;
 }
 .footer-col a:hover { color: var(--champagne-dk); }
+.footer-mc-lockup {
+  display: block;
+  text-decoration: none;
+  margin: -16px 0 6px -16px;
+  width: 100%;
+  max-width: 280px;
+  transition: opacity 0.4s ease;
+}
+.footer-mc-lockup img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.footer-mc-lockup:hover { opacity: 0.85; }
+
 .footer-mark .wordmark {
   font-family: var(--ff-display);
   font-size: 22px;

@@ -22,8 +22,11 @@ window.MC_NAV = `
 <header class="nav" id="nav" role="banner">
   <div class="nav-shell">
     <a class="nav-mark" href="/" aria-label="Mirtha Carolina — Home">
-      <span class="wm">MIRTHA CAROLINA</span>
-      <span class="aff" data-en="CHRISTIE'S INTERNATIONAL REAL ESTATE" data-es="CHRISTIE'S INTERNATIONAL REAL ESTATE">CHRISTIE'S INTERNATIONAL REAL ESTATE</span>
+      <img class="nav-mc-mark" src="/assets/images/mc-mark-light.png" alt="" width="600" height="600" decoding="async" />
+      <span class="nav-mark-text">
+        <span class="wm">MIRTHA CAROLINA</span>
+        <span class="aff" data-en="CHRISTIE'S INTERNATIONAL REAL ESTATE" data-es="CHRISTIE'S INTERNATIONAL REAL ESTATE">CHRISTIE'S INTERNATIONAL REAL ESTATE</span>
+      </span>
     </a>
 
     <nav aria-label="Primary">
@@ -66,8 +69,10 @@ window.MC_FOOTER = `
   <div class="shell">
     <div class="footer-grid">
       <div class="footer-col footer-mark">
-        <span class="wordmark">MIRTHA CAROLINA</span>
-        <span class="aff">CHRISTIE'S INTERNATIONAL REAL ESTATE GROUP · TERESA MINNICK GROUP</span>
+        <a class="footer-mc-lockup" href="/" aria-label="Mirtha Carolina">
+          <img src="/assets/images/mc-logo.png" alt="Mirtha Carolina · Christie's International Real Estate" width="1024" height="1024" loading="lazy" decoding="async" />
+        </a>
+        <span class="aff" data-en="TERESA MINNICK GROUP · MONMOUTH COUNTY, NJ" data-es="TERESA MINNICK GROUP · CONDADO DE MONMOUTH, NJ">TERESA MINNICK GROUP · MONMOUTH COUNTY, NJ</span>
         <p class="tag-line" data-en="Bilingual luxury concierge for the Navesink, Rumson, Holmdel, and the Atlantic shoreline." data-es="Concierge de lujo bilingüe para el Navesink, Rumson, Holmdel y el litoral Atlántico.">
           Bilingual luxury concierge for the Navesink, Rumson, Holmdel, and the Atlantic shoreline.
         </p>
