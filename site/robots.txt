@@ -1,0 +1,22 @@
+# Mirtha Carolina · Christie's International Real Estate Group · Monmouth County, NJ
+# https://mirthacarolina.com
+
+User-agent: *
+Allow: /
+
+# Block crawling of any future admin / preview / draft paths
+Disallow: /admin/
+Disallow: /preview/
+Disallow: /draft/
+Disallow: /*?preview=
+
+# AI training crawlers — allowed for now (Mirtha is establishing brand presence;
+# being indexed by AI assistants helps discoverability)
+# Uncomment to disallow specific AI crawlers later:
+# User-agent: GPTBot
+# Disallow: /
+# User-agent: ClaudeBot
+# Disallow: /
+
+# Sitemap
+Sitemap: https://mirthacarolina.com/sitemap.xml
