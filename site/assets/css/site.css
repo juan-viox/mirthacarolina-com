@@ -1578,6 +1578,51 @@ h1, h2, h3, h4, h5, .display, .numeral {
   .christies-lockup { max-width: 100%; }
   .christies-svg { width: 240px; }
 }
+/* Teresa Minnick Group / TCM Realty Group lockup — sits below Christie's */
+.tcm-lockup {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 22px 0 0;
+  margin-top: 18px;
+  border-top: 1px solid var(--hairline);
+  width: 100%;
+  max-width: 320px;
+  text-decoration: none;
+  color: var(--navy-deep);
+  opacity: 0.92;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.tcm-lockup:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+.tcm-logo-img {
+  display: block;
+  width: 240px;
+  max-width: 100%;
+  height: auto;
+  /* Official PNG is white-on-transparent. Invert to render dark on the ivory footer
+     while preserving the exact mark Mirtha provided. */
+  filter: invert(1);
+  opacity: 0.85;
+  transition: opacity 0.4s ease;
+}
+.tcm-lockup:hover .tcm-logo-img { opacity: 1; }
+.tcm-caption {
+  font-family: var(--ff-body);
+  font-size: 9.5px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--champagne-dk);
+  font-weight: 600;
+  margin-top: 4px;
+}
+@media (max-width: 768px) {
+  .tcm-lockup { max-width: 100%; }
+  .tcm-logo-img { width: 220px; }
+}
 .footer-contact .item { margin-bottom: 14px; }
 .footer-contact .item .label {
   font-family: var(--ff-body);

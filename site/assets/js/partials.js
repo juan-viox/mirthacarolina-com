@@ -75,6 +75,10 @@ window.MC_FOOTER = `
           <img class="christies-logo-img" src="/assets/images/christies-logo.png" alt="Christie's International Real Estate Group" width="2613" height="659" loading="lazy" decoding="async" />
           <span class="christies-caption" data-en="Independently Owned and Operated" data-es="Operada de Forma Independiente">Independently Owned and Operated</span>
         </a>
+        <a class="tcm-lockup" href="https://www.tcmrealtygroup.com/" target="_blank" rel="noopener" aria-label="Teresa Minnick Group · TCM Realty Group">
+          <img class="tcm-logo-img" src="/assets/images/tcm-logo-white.png" alt="Teresa Minnick Group · TCM Realty Group" width="1441" height="321" loading="lazy" decoding="async" />
+          <span class="tcm-caption" data-en="A Member of the Teresa Minnick Group" data-es="Miembro del Teresa Minnick Group">A Member of the Teresa Minnick Group</span>
+        </a>
       </div>
 
       <div class="footer-col">
