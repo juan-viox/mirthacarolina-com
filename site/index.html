@@ -1638,6 +1638,45 @@ h1, h2, h3, h4, h5, .display, .numeral {
   color: var(--navy-ink);
   line-height: 1.5;
   max-width: 34ch;
+  margin-bottom: 36px;
+}
+.christies-lockup {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 24px 0 0;
+  border-top: 1px solid var(--hairline);
+  width: 100%;
+  max-width: 320px;
+  text-decoration: none;
+  color: var(--navy-deep);
+  opacity: 0.92;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.christies-lockup:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+.christies-svg {
+  display: block;
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+  shape-rendering: geometricPrecision;
+}
+.christies-caption {
+  font-family: var(--ff-body);
+  font-size: 9.5px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--champagne-dk);
+  font-weight: 600;
+  margin-top: 4px;
+}
+@media (max-width: 768px) {
+  .christies-lockup { max-width: 100%; }
+  .christies-svg { width: 240px; }
 }
 .footer-contact .item { margin-bottom: 14px; }
 .footer-contact .item .label {
@@ -2460,6 +2499,27 @@ h1, h2, h3, h4, h5, .display, .numeral {
         <p class="tag-line" data-en="Bilingual luxury concierge for the Navesink, Rumson, Holmdel, and the Atlantic shoreline." data-es="Concierge de lujo bilingüe para el Navesink, Rumson, Holmdel y el litoral Atlántico.">
           Bilingual luxury concierge for the Navesink, Rumson, Holmdel, and the Atlantic shoreline.
         </p>
+        <a class="christies-lockup" href="https://www.christiesrealestategroup.com/" target="_blank" rel="noopener" aria-label="Christie's International Real Estate Group">
+          <svg class="christies-svg" viewBox="0 0 480 156" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cireg-title">
+            <title id="cireg-title">Christie's International Real Estate Group</title>
+            <defs>
+              <style>
+                .ch-display { font-family: 'Cormorant Garamond', 'Adobe Caslon', 'Trajan Pro', Georgia, serif; font-weight: 500; letter-spacing: 0.04em; }
+                .ch-sub     { font-family: 'Cormorant Garamond', 'Adobe Caslon', 'Trajan Pro', Georgia, serif; font-weight: 500; letter-spacing: 0.18em; }
+                .ch-group   { font-family: 'Cormorant Garamond', 'Adobe Caslon', 'Trajan Pro', Georgia, serif; font-weight: 600; letter-spacing: 0.42em; }
+              </style>
+            </defs>
+            <!-- CHRISTIE'S -->
+            <text class="ch-display" x="240" y="60" text-anchor="middle" font-size="62" fill="currentColor">CHRISTIE&#8217;S</text>
+            <!-- INTERNATIONAL REAL ESTATE -->
+            <text class="ch-sub" x="240" y="98" text-anchor="middle" font-size="16" fill="currentColor">INTERNATIONAL REAL ESTATE</text>
+            <!-- divider — GROUP — divider -->
+            <line x1="150" y1="132" x2="200" y2="132" stroke="currentColor" stroke-width="0.9" />
+            <text class="ch-group" x="240" y="138" text-anchor="middle" font-size="15" fill="currentColor">GROUP</text>
+            <line x1="280" y1="132" x2="330" y2="132" stroke="currentColor" stroke-width="0.9" />
+          </svg>
+          <span class="christies-caption" data-en="Independently Owned and Operated" data-es="Operada de Forma Independiente">Independently Owned and Operated</span>
+        </a>
       </div>
 
       <div class="footer-col">
