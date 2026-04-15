@@ -1,0 +1,291 @@
+{
+  "meta": {
+    "agent": "Phase 0 Step 0a Agent B - Design Pattern Analysis",
+    "project": "Carolina Realtor Monmouth County NJ",
+    "date": "2026-04-14",
+    "affiliation": "Christie's International Real Estate",
+    "target": "Agency-level ($150k+ look) cinematic scroll-driven site"
+  },
+  "competitors": [
+    {
+      "name": "Christie's International Real Estate",
+      "url": "christiesrealestate.com",
+      "heroStyle": "full-bleed static editorial image with slow Ken Burns zoom; occasional video loop",
+      "colorPalette": ["#0B1F3A", "#1A2B47", "#C4A962", "#F5F2EC", "#1F1F1F", "#8B8B8B"],
+      "navStyle": "transparent fixed that solidifies to deep navy on scroll; serif wordmark left, minimal right",
+      "typography": {
+        "display": "Canela / custom transitional serif (Google Fonts: Cormorant Garamond, Playfair Display)",
+        "body": "Proxima Nova (Google Fonts: Inter, Montserrat)"
+      },
+      "sections": ["Hero", "Featured Properties", "Search by Region", "Luxury Defined (editorial)", "Journal / Magazine", "Network map", "Auction tie-in", "Footer with network"],
+      "interactions": ["slow image reveal on scroll", "hover zoom on listing tiles", "cursor-follow on editorial modules"],
+      "ctaStrategy": "low-pressure: 'Explore Properties', 'Contact an Advisor'; no pop-ups",
+      "photographyStyle": "editorial architectural; twilight exteriors; heritage interiors; wide-angle drone",
+      "listingFlow": "price-on-request culture; full-bleed photo-first cards; map + grid toggle",
+      "mobileQuality": 9,
+      "designScore": 9
+    },
+    {
+      "name": "Sotheby's International Realty",
+      "url": "sothebysrealty.com",
+      "heroStyle": "muted video loop behind centered serif wordmark; search bar overlaid",
+      "colorPalette": ["#002349", "#0A2E52", "#B8976C", "#FFFFFF", "#F4F1EA", "#1C1C1C"],
+      "navStyle": "transparent fixed, solid navy on scroll, search-forward",
+      "typography": {
+        "display": "Benton Modern (Google Fonts: Libre Caslon Text, Playfair Display)",
+        "body": "Benton Sans (Google Fonts: Inter, Work Sans)"
+      },
+      "sections": ["Hero + global search", "Featured Listings carousel", "Regional brokerages", "Extraordinary Living Blog", "Art of Living lifestyle filters", "Agent finder", "Footer"],
+      "interactions": ["parallax on featured", "slow fade carousels", "subtle cursor states"],
+      "ctaStrategy": "search-first hero; 'Inquire' on each listing; minimal popups",
+      "photographyStyle": "twilight drone, architectural symmetry, editorial interiors",
+      "listingFlow": "hero image dominant, price prominent, agent-tied",
+      "mobileQuality": 9,
+      "designScore": 9
+    },
+    {
+      "name": "Compass",
+      "url": "compass.com",
+      "heroStyle": "clean search-forward with large photo hero; data-driven",
+      "colorPalette": ["#001952", "#D6F0FA", "#FFFFFF", "#16181D", "#7F8FA4"],
+      "navStyle": "sticky solid white with navy accents",
+      "typography": {
+        "display": "Compass Serif (Google Fonts: Source Serif 4)",
+        "body": "Compass Sans (Google Fonts: Inter)"
+      },
+      "sections": ["Search hero", "Buy/Sell/Agent tabs", "Market insights", "Featured listings", "Agent CTA", "Blog"],
+      "interactions": ["tab transitions", "skeleton loads", "map hover sync"],
+      "ctaStrategy": "tool-driven: 'Find a home', 'Get a CMA', 'Connect with agent'",
+      "photographyStyle": "clean, bright, data-overlayed",
+      "listingFlow": "aggregator grid with strong filters",
+      "mobileQuality": 9,
+      "designScore": 7
+    },
+    {
+      "name": "The Agency RE",
+      "url": "theagencyre.com",
+      "heroStyle": "full-bleed cinematic video loop with bold red wordmark",
+      "colorPalette": ["#C8102E", "#000000", "#FFFFFF", "#1A1A1A", "#E5E5E5"],
+      "navStyle": "transparent fixed, red wordmark, solid black on scroll",
+      "typography": {
+        "display": "custom geometric sans (Google Fonts: Montserrat, Archivo)",
+        "body": "neue haas grotesk (Google Fonts: Inter, Neue Haas Grotesk Text)"
+      },
+      "sections": ["Video hero", "Featured Properties", "Press / in the media", "Agent network", "Lifestyle content", "Red Carpet podcast tie-in", "Contact"],
+      "interactions": ["scroll-scrubbed video hero", "bold text reveals", "hover-zoom on tiles", "cursor-follow accents"],
+      "ctaStrategy": "branded 'Meet an Agent', lifestyle-led; PR-forward",
+      "photographyStyle": "editorial b&w portraits, Hollywood-glossy interiors, cinematic color grading",
+      "listingFlow": "story-driven, press features near listings, lifestyle framing",
+      "mobileQuality": 9,
+      "designScore": 10
+    },
+    {
+      "name": "Douglas Elliman",
+      "url": "elliman.com",
+      "heroStyle": "large static image hero with search; editorial layout",
+      "colorPalette": ["#003057", "#A6A6A6", "#FFFFFF", "#0F0F0F", "#D5B97E"],
+      "navStyle": "sticky white with navy serif wordmark",
+      "typography": {
+        "display": "Didot-like (Google Fonts: Playfair Display, Cormorant)",
+        "body": "Proxima Nova (Google Fonts: Inter)"
+      },
+      "sections": ["Hero + search", "Featured listings", "Market reports (Miller Samuel)", "Elliman magazine", "Agents", "Offices", "Footer"],
+      "interactions": ["fade-ins", "sticky market report banners"],
+      "ctaStrategy": "market-report download, 'Find an agent', listing inquiry",
+      "photographyStyle": "editorial, aspirational NYC/Hamptons/Miami",
+      "listingFlow": "grid with strong typography, price-forward",
+      "mobileQuality": 8,
+      "designScore": 7
+    },
+    {
+      "name": "Ryan Serhant / SERHANT.",
+      "url": "serhant.com",
+      "heroStyle": "bold typographic hero with video background; brand-forward black/yellow",
+      "colorPalette": ["#000000", "#F4D13D", "#FFFFFF", "#1A1A1A", "#8C8C8C"],
+      "navStyle": "sticky black with yellow CTA pill",
+      "typography": {
+        "display": "custom geometric sans, heavy weight (Google Fonts: Archivo Black, Space Grotesk)",
+        "body": "Space Grotesk / Inter"
+      },
+      "sections": ["Typographic hero", "Listings", "SERHANT. Ventures", "Education / SELLIT", "Media (Netflix)", "Agents", "Contact"],
+      "interactions": ["marquee scroll", "bold text kinetic typography", "video hover tiles"],
+      "ctaStrategy": "'Work with us', course upsell, content funnel",
+      "photographyStyle": "high-contrast, pop-y, personality-driven portraits",
+      "listingFlow": "video-first tiles, personality over property",
+      "mobileQuality": 9,
+      "designScore": 9
+    },
+    {
+      "name": "The Altman Brothers",
+      "url": "thealtmanbrothers.com",
+      "heroStyle": "video reel of LA mansions, black overlay, white serif",
+      "colorPalette": ["#000000", "#FFFFFF", "#B99F65", "#2A2A2A", "#5A5A5A"],
+      "navStyle": "transparent fixed, hamburger on scroll",
+      "typography": {
+        "display": "Playfair Display / Didot",
+        "body": "Inter / Montserrat"
+      },
+      "sections": ["Video hero", "Featured homes", "Press", "The Altmans (bio)", "Million Dollar Listing tie-in", "Contact"],
+      "interactions": ["video autoplay sequences", "hover-zoom", "scroll-pin press logos"],
+      "ctaStrategy": "'Schedule a Consultation'; concierge framing",
+      "photographyStyle": "LA modernist, pool twilight, sweeping drone",
+      "listingFlow": "feature-reel style, big video cards",
+      "mobileQuality": 8,
+      "designScore": 8
+    },
+    {
+      "name": "Oren Alexander / Alexander Team",
+      "url": "alexanderteam.com",
+      "heroStyle": "minimal typographic hero over muted architectural image",
+      "colorPalette": ["#0F0F0F", "#F2EFE9", "#B3986A", "#FFFFFF", "#6E6E6E"],
+      "navStyle": "transparent fixed, minimalist serif wordmark",
+      "typography": {
+        "display": "Canela-like display serif (Google Fonts: Cormorant Garamond, Fraunces)",
+        "body": "neue haas (Google Fonts: Inter)"
+      },
+      "sections": ["Minimal hero", "Portfolio", "Market insights", "The Team", "Press", "Inquire"],
+      "interactions": ["slow fades", "parallax listings", "magnetic cursor on CTAs"],
+      "ctaStrategy": "discreet 'Inquire'; ultra-high-end framing",
+      "photographyStyle": "architectural editorial, magazine-grade",
+      "listingFlow": "curated portfolio (not MLS firehose), fewer listings",
+      "mobileQuality": 9,
+      "designScore": 9
+    },
+    {
+      "name": "Aaron Kirman Group",
+      "url": "aaronkirman.com",
+      "heroStyle": "cinematic drone reel with muted grading and bold serif",
+      "colorPalette": ["#0A0A0A", "#FFFFFF", "#A88F5F", "#1C1C1C", "#E6E1D6"],
+      "navStyle": "transparent fixed, solid black on scroll",
+      "typography": {
+        "display": "Didot / Playfair Display",
+        "body": "Inter / Montserrat"
+      },
+      "sections": ["Drone hero reel", "Featured trophy listings", "Press (Buying Beverly Hills)", "Team", "Insights blog", "Contact"],
+      "interactions": ["scroll-scrubbed drone video", "hover-video tiles", "sticky side nav"],
+      "ctaStrategy": "'Private Showing', luxury-first CTA language",
+      "photographyStyle": "color-graded cinematic, aerial-heavy",
+      "listingFlow": "trophy-first, editorial captioning",
+      "mobileQuality": 8,
+      "designScore": 9
+    },
+    {
+      "name": "Mauricio Umansky / The Agency",
+      "url": "theagencyre.com (flagship)",
+      "heroStyle": "signature red wordmark over cinematic video",
+      "colorPalette": ["#C8102E", "#000000", "#FFFFFF", "#262626"],
+      "navStyle": "transparent fixed; solid black scroll",
+      "typography": {
+        "display": "Archivo / Montserrat heavy",
+        "body": "Inter"
+      },
+      "sections": ["Hero", "Listings", "Agents", "Lifestyle", "Press / Netflix", "Offices"],
+      "interactions": ["kinetic red accents", "cursor follow", "video reveals"],
+      "ctaStrategy": "lifestyle-branded; 'Meet our agents'",
+      "photographyStyle": "glossy editorial, celebrity-adjacent",
+      "listingFlow": "curated portfolio with bold typography",
+      "mobileQuality": 9,
+      "designScore": 9
+    },
+    {
+      "name": "Tracy Tutor Team",
+      "url": "tracytutorteam.com",
+      "heroStyle": "video of Tracy + LA architecture; brand-led",
+      "colorPalette": ["#1C1C1C", "#FFFFFF", "#C2A878", "#E8E4DD"],
+      "navStyle": "transparent fixed, serif wordmark",
+      "typography": {
+        "display": "Playfair / Cormorant",
+        "body": "Inter"
+      },
+      "sections": ["Video hero", "Bio", "Featured Listings", "Press (MDLLA)", "Blog", "Contact"],
+      "interactions": ["fade-in reveals", "hover tilt on tiles"],
+      "ctaStrategy": "'Work with Tracy'; personality-driven",
+      "photographyStyle": "portrait-forward, LA glossy",
+      "listingFlow": "curated grid, Tracy's voice in captions",
+      "mobileQuality": 8,
+      "designScore": 8
+    },
+    {
+      "name": "Chad Carroll",
+      "url": "chadcarroll.com",
+      "heroStyle": "drone reel of Miami waterfront with bold typographic overlay",
+      "colorPalette": ["#0B1E35", "#FFFFFF", "#C9A24A", "#0A0A0A"],
+      "navStyle": "transparent fixed",
+      "typography": {
+        "display": "Didot / Playfair",
+        "body": "Inter / Montserrat"
+      },
+      "sections": ["Video hero", "Trophy listings", "Press", "Team", "Miami lifestyle", "Contact"],
+      "interactions": ["drone scroll-scrub", "hover-zoom", "pinned stats"],
+      "ctaStrategy": "'Schedule a private tour'",
+      "photographyStyle": "Miami waterfront twilight, yachts, skyline",
+      "listingFlow": "trophy-first with big full-bleed",
+      "mobileQuality": 8,
+      "designScore": 8
+    }
+  ],
+  "patterns": {
+    "heroConsensus": "Cinematic video or scroll-scrubbed drone reel, serif wordmark, transparent-to-solid nav. Christie's/Sotheby's lean editorial-still; The Agency/Kirman/Altman lean cinematic-video.",
+    "paletteConsensus": "Deep navy OR true black as primary anchor + warm cream/ivory + metallic gold/champagne accent. Red is The Agency's ownable move (not recommended to copy).",
+    "typeConsensus": "Editorial transitional serif display (Canela/Didot/Playfair) + clean geometric sans body (Inter/Neue Haas/Proxima).",
+    "navConsensus": "Transparent fixed over hero that solidifies on scroll; serif wordmark left, minimal utility right.",
+    "ctaConsensus": "Low-pressure, high-signal: 'Inquire', 'Private Showing', 'Meet [name]'. Never 'Contact Me' or 'Get a Free Quote'."
+  },
+  "designRecommendations": {
+    "bestReference": "The Agency RE (theagencyre.com) — for cinematic execution and brand confidence; Christie's for editorial heritage anchoring. Blend: Christie's editorial gravitas + The Agency's cinematic scroll choreography.",
+    "heroConcept": "Scroll-driven drone cinematic over a Navesink River / Rumson waterfront estate at golden-twilight, with a secondary reveal of Pier Village boardwalk at dusk. Hero opens with a slow boom-out from a wood-shingle gable to a wide aerial crossing the river toward Sandy Hook. Christie's red + Carolina wordmark fades in on second beat. Scroll-scrubbed so the frame sequence advances as the user scrolls, ending locked on a Monmouth County skyline with the primary CTA 'Private Showing'.",
+    "heroAnimation": "GSAP ScrollTrigger-driven image-sequence playback (120-180 frames, AVIF), with parallax depth shift on foreground reeds and a subtle chromatic grade shift from cool-morning to warm-twilight across the scrub. Serif wordmark executes a 400ms weight-up reveal (regular to medium). Nav bar transitions transparent to deep-navy at 15% scroll. Subtle film-grain overlay at 4% opacity.",
+    "colorPaletteProposal": {
+      "navyDeep": "#0B1F3A",
+      "navyInk": "#162B4A",
+      "christiesRed": "#9B2032",
+      "shoreSand": "#E8DFCE",
+      "ivoryCream": "#F5F1E8",
+      "champagneGold": "#C4A962",
+      "seaFoam": "#7FA5A8",
+      "charcoal": "#1C1C1C"
+    },
+    "colorPaletteRationale": "Deep navy (#0B1F3A) honors Christie's heritage and reads as 'old-money Atlantic'. Shore sand + ivory cream evoke Monmouth's beach-town warmth without going tropical. Christie's Red (#9B2032) is a restrained brand tie-in used only for moments of emphasis (affiliation lockup, pullquotes, hover underlines). Champagne gold is the metallic accent for dividers, numerals, and key-figures. Seafoam is a single secondary accent reserved for Navesink/waterfront modules so the palette breathes.",
+    "typographyProposal": {
+      "display": "Fraunces (Google Fonts) — variable serif with optical-size axis; reads as Canela-adjacent editorial but modern and performant",
+      "displayAlt": "Cormorant Garamond as lighter alternate for pull-quotes",
+      "body": "Inter (Google Fonts) — clean neo-grotesque at 400/500 for body, 600 for UI",
+      "mono": "JetBrains Mono — used sparingly for MLS numbers and market-data stat blocks",
+      "rationale": "Fraunces delivers the Christie's/Sotheby's editorial-serif gravitas with the optical-size axis giving true display elegance at 80px+ while behaving well at body headings. Inter is the defensible modern body pairing used by Compass and every premium site of 2025-26. This pairing reads 'heritage Atlantic broker with a modern eye' — exactly Carolina's positioning."
+    },
+    "sectionOrder": [
+      "1. Scroll-scrubbed cinematic hero (Navesink/Rumson drone + wordmark + primary CTA)",
+      "2. Christie's International Real Estate affiliation lockup (trust bar, understated)",
+      "3. Featured Properties (3-5 trophy listings, full-bleed hover-reveal cards, price-on-request)",
+      "4. Neighborhood Films — Holmdel, Red Bank, Rumson, Long Branch/Pier Village (scroll-pinned neighborhood storyteller)",
+      "5. Bilingual Carolina (Spanish/English) — editorial split-scroll bio with toggle; personal story + credentials",
+      "6. The Monmouth Portfolio (curated current + sold portfolio, not MLS grid)",
+      "7. Market Insights (quarterly Monmouth luxury market report; gated PDF download as lead magnet)",
+      "8. Client Stories (video or quote testimonials from past high-net-worth clients)",
+      "9. The Process (editorial treatment of the buying/selling concierge process)",
+      "10. Private Showing / Inquire (form + calendar; concierge framing, not 'Contact Me')",
+      "11. Footer with Christie's network, bilingual switch, offices, credentials"
+    ],
+    "signatureInteractions": [
+      "1. Scroll-scrubbed drone hero sequence (GSAP ScrollTrigger + AVIF frame sequence): user literally pilots the drone over the Navesink as they scroll — signature moment.",
+      "2. Neighborhood Film scroll-pin: as user scrolls through Holmdel/Red Bank/Rumson/Long Branch, a pinned video panel cross-dissolves between neighborhoods with kinetic typography of median prices and lifestyle notes appearing in the margin.",
+      "3. Editorial split-scroll bilingual bio: left column holds a cinematic portrait of Carolina; right column scrolls through story chapters; user toggles EN/ES and text cross-fades with Spanish typography treated with equal editorial weight (not as an afterthought translation).",
+      "4. Hover-parallax trophy listings: featured property cards use a 3-layer parallax on hover (sky / architecture / foreground) with a micro-dolly feel — property appears to breathe.",
+      "5. Magnetic concierge CTA: the 'Private Showing' button has a magnetic cursor effect and a subtle gold underline-draw on approach; on-click opens an inline editorial form (not a modal blast)."
+    ],
+    "antiPatterns": [
+      "No Zillow/Realtor-style MLS firehose grids — curate, don't aggregate.",
+      "No stock photography of generic 'family with keys' or 'sold sign on lawn'.",
+      "No 'Contact Me' or 'Get a Free Home Valuation!' yellow CTA buttons.",
+      "No pop-up lead-capture blasts or chat widgets that slide in after 5 seconds.",
+      "No carousels with dots that auto-advance every 3 seconds (dated, feels 2015).",
+      "No drop shadows on cards, no rounded-2xl everything, no purple gradients — keep it editorial, not SaaS.",
+      "No emoji, no 'We sell dreams!' copy, no exclamation points in hero.",
+      "No generic 'About Me' page — it's a bilingual editorial bio or nothing.",
+      "No Comic/Lobster/script fonts anywhere. No Papyrus. No Montserrat-only (it's fine for body support, not display).",
+      "No tropical palette (turquoise/coral) — this is Atlantic old-money, not Miami.",
+      "No parallax everywhere — use it surgically on 2-3 moments so it feels intentional.",
+      "No auto-playing audio. Ever."
+    ]
+  }
+}

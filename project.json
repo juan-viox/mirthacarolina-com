@@ -7,12 +7,26 @@
     "title": "Realtor-Associate",
     "businessType": "real-estate",
     "tagline": "Heritage Atlantic Broker. Modern Cinematic Eye.",
-    "taglineEs": "Corredora del Atlántico Histórico. Mirada Cinematográfica Moderna.",
+    "taglineEs": "Corredora del Atl\u00e1ntico Hist\u00f3rico. Mirada Cinematogr\u00e1fica Moderna.",
     "founder": "Mirtha Carolina Solorzano",
     "location": "Holmdel, NJ",
     "region": "Monmouth County, New Jersey",
-    "submarkets": ["Holmdel", "Red Bank", "Rumson", "Long Branch", "Pier Village", "Colts Neck", "Middletown", "Fair Haven", "Little Silver", "Atlantic Highlands"],
-    "languages": ["English", "Spanish"],
+    "submarkets": [
+      "Holmdel",
+      "Red Bank",
+      "Rumson",
+      "Long Branch",
+      "Pier Village",
+      "Colts Neck",
+      "Middletown",
+      "Fair Haven",
+      "Little Silver",
+      "Atlantic Highlands"
+    ],
+    "languages": [
+      "English",
+      "Spanish"
+    ],
     "instagramUrl": "https://www.instagram.com/carolina.therealtor/",
     "instagramHandle": "@carolina.therealtor",
     "sourceUrl": "https://www.tcmrealtygroup.com/mirtha-solorzano",
@@ -42,26 +56,87 @@
       "Background in international diplomacy, education, and marketing",
       "Teresa Minnick Group platform ($800M+ team career sales)"
     ],
-    "moodWords": ["EDITORIAL", "ATLANTIC", "CINEMATIC"]
+    "moodWords": [
+      "EDITORIAL",
+      "ATLANTIC",
+      "CINEMATIC"
+    ]
   },
   "brand": {
     "colors": {
-      "navyDeep":     { "hex": "#0B1F3A", "use": "primary background, heritage anchor" },
-      "navyInk":      { "hex": "#162B4A", "use": "card backgrounds, secondary depth" },
-      "christiesRed": { "hex": "#9B2032", "use": "surgical brand tie-in, affiliate lockup, hover underlines" },
-      "shoreSand":    { "hex": "#E8DFCE", "use": "warm neutral, coastal warmth" },
-      "ivoryCream":   { "hex": "#F5F1E8", "use": "primary light surface, body copy in dark sections" },
-      "champagneGold":{ "hex": "#C4A962", "use": "metallic accent, dividers, numerals, key figures" },
-      "seaFoam":      { "hex": "#7FA5A8", "use": "Navesink/waterfront modules only" },
-      "charcoal":     { "hex": "#1C1C1C", "use": "body text on light surfaces" }
+      "navyDeep": {
+        "hex": "#0B1F3A",
+        "use": "primary background, heritage anchor"
+      },
+      "navyInk": {
+        "hex": "#162B4A",
+        "use": "card backgrounds, secondary depth"
+      },
+      "christiesRed": {
+        "hex": "#9B2032",
+        "use": "surgical brand tie-in, affiliate lockup, hover underlines"
+      },
+      "shoreSand": {
+        "hex": "#E8DFCE",
+        "use": "warm neutral, coastal warmth"
+      },
+      "ivoryCream": {
+        "hex": "#F5F1E8",
+        "use": "primary light surface, body copy in dark sections"
+      },
+      "champagneGold": {
+        "hex": "#C4A962",
+        "use": "metallic accent, dividers, numerals, key figures"
+      },
+      "seaFoam": {
+        "hex": "#7FA5A8",
+        "use": "Navesink/waterfront modules only"
+      },
+      "charcoal": {
+        "hex": "#1C1C1C",
+        "use": "body text on light surfaces"
+      }
     },
     "typography": {
-      "display": { "family": "Fraunces", "weights": [300, 400, 500, 600, 700], "axes": "opsz 9..144, ital", "use": "all editorial headings, hero, section titles" },
-      "body":    { "family": "Inter",    "weights": [300, 400, 500, 600, 700], "use": "body copy, UI, navigation, captions" },
-      "accent":  { "family": "Cormorant Garamond", "weights": [400, 500, 600], "axes": "ital", "use": "pull-quotes, ledes, italic accents" },
-      "mono":    { "family": "JetBrains Mono", "use": "MLS numbers, market-data stat blocks (sparingly)" }
+      "display": {
+        "family": "Fraunces",
+        "weights": [
+          300,
+          400,
+          500,
+          600,
+          700
+        ],
+        "axes": "opsz 9..144, ital",
+        "use": "all editorial headings, hero, section titles"
+      },
+      "body": {
+        "family": "Inter",
+        "weights": [
+          300,
+          400,
+          500,
+          600,
+          700
+        ],
+        "use": "body copy, UI, navigation, captions"
+      },
+      "accent": {
+        "family": "Cormorant Garamond",
+        "weights": [
+          400,
+          500,
+          600
+        ],
+        "axes": "ital",
+        "use": "pull-quotes, ledes, italic accents"
+      },
+      "mono": {
+        "family": "JetBrains Mono",
+        "use": "MLS numbers, market-data stat blocks (sparingly)"
+      }
     },
-    "logoTreatment": "Editorial wordmark — \"MIRTHA CAROLINA\" set in Fraunces 500 with letter-spacing 0.18em, all caps. Stacked treatment available with \"CHRISTIE'S INTERNATIONAL REAL ESTATE\" in Inter 500 small-caps below as affiliation lockup. Color: Navy Deep on light, Ivory Cream on dark, Champagne Gold for metallic premium contexts.",
+    "logoTreatment": "Editorial wordmark \u2014 \"MIRTHA CAROLINA\" set in Fraunces 500 with letter-spacing 0.18em, all caps. Stacked treatment available with \"CHRISTIE'S INTERNATIONAL REAL ESTATE\" in Inter 500 small-caps below as affiliation lockup. Color: Navy Deep on light, Ivory Cream on dark, Champagne Gold for metallic premium contexts.",
     "logoSvg": "INLINE_SVG_TO_BE_GENERATED_IN_BUILD_PHASE"
   },
   "hero": {
@@ -87,13 +162,19 @@
     "11. Footer (Christie's network lockup, bilingual switch, credentials, license placeholder)"
   ],
   "seo": {
-    "title": "Mirtha Carolina · Christie's International Real Estate · Monmouth County, NJ",
-    "titleEs": "Mirtha Carolina · Christie's International Real Estate · Condado de Monmouth, NJ",
-    "description": "Bilingual luxury real estate concierge serving Holmdel, Rumson, Red Bank, Colts Neck, and the Navesink River. Christie's International Real Estate Group · Teresa Minnick Group.",
-    "descriptionEs": "Asesora inmobiliaria de lujo bilingüe sirviendo Holmdel, Rumson, Red Bank, Colts Neck y el río Navesink. Christie's International Real Estate Group · Teresa Minnick Group.",
+    "title": "Mirtha Carolina \u00b7 Christie's International Real Estate \u00b7 Monmouth County, NJ",
+    "titleEs": "Mirtha Carolina \u00b7 Christie's International Real Estate \u00b7 Condado de Monmouth, NJ",
+    "description": "Bilingual luxury real estate concierge serving Holmdel, Rumson, Red Bank, Colts Neck, and the Navesink River. Christie's International Real Estate Group \u00b7 Teresa Minnick Group.",
+    "descriptionEs": "Asesora inmobiliaria de lujo biling\u00fce sirviendo Holmdel, Rumson, Red Bank, Colts Neck y el r\u00edo Navesink. Christie's International Real Estate Group \u00b7 Teresa Minnick Group.",
     "keywords": "Mirtha Carolina, Carolina Solorzano, Monmouth County realtor, Holmdel realtor, Rumson realtor, Red Bank realtor, Navesink waterfront, bilingual realtor NJ, Spanish speaking realtor New Jersey, Christie's International Real Estate, luxury Jersey Shore, Colts Neck estate, Long Branch Pier Village",
     "schemaType": "RealEstateAgent",
-    "geo": { "lat": 40.3676, "lng": -74.1721, "addressLocality": "Holmdel", "addressRegion": "NJ", "postalCode": "07733" }
+    "geo": {
+      "lat": 40.3676,
+      "lng": -74.1721,
+      "addressLocality": "Holmdel",
+      "addressRegion": "NJ",
+      "postalCode": "07733"
+    }
   },
   "deployment": {
     "domain": "mirthacarolina.com",
@@ -106,8 +187,10 @@
   "voiceAgent": {
     "name": "Mirtha Carolina Studio Concierge",
     "personaEn": "Warm, cultured, bilingual concierge for Mirtha Carolina's Monmouth County real estate practice. Speaks with the calm refinement of a Christie's auction catalog. Knows the difference between Rumson old-money and Holmdel estate-living, between a Pier Village loft buyer and a Navesink waterfront seller.",
-    "personaEs": "Concierge cálida, culta y bilingüe para la práctica inmobiliaria de Mirtha Carolina en el condado de Monmouth. Habla con el refinamiento sereno de un catálogo de subasta de Christie's.",
-    "twilioPhone": "TBD"
+    "personaEs": "Concierge c\u00e1lida, culta y biling\u00fce para la pr\u00e1ctica inmobiliaria de Mirtha Carolina en el condado de Monmouth. Habla con el refinamiento sereno de un cat\u00e1logo de subasta de Christie's.",
+    "twilioPhone": "TBD",
+    "agentId": "agent_4801kp773y4pe3rt1v1007yd8w4c",
+    "knowledgeBaseId": "CaUViWo1xTNQboPTkD3F"
   },
   "phaseStatus": {
     "0_competitiveAnalysis": "complete",

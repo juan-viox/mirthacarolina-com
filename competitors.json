@@ -1,0 +1,285 @@
+{
+  "competitors": [
+    {
+      "name": "Kelly Zaccaro",
+      "url": "https://kellyzaccaro.com",
+      "location": "Rumson, NJ",
+      "description": "#1 agent at Heritage House Sotheby's Rumson office for 6 consecutive years (2019-2024), with $466M+ in Monmouth County sales volume over 27 years. Dual-coast presence serving both Monmouth County and NYC's Upper West Side through Sotheby's International Realty.",
+      "standoutFeature": "Seamless NYC-to-Jersey Shore bridge, strategic pricing reputation, Sotheby's global marketing engine",
+      "priceRange": "$2M-$15M avg listing",
+      "designScore": 7,
+      "instagramFollowers": "~5,200",
+      "category": "direct-local"
+    },
+    {
+      "name": "Resources Real Estate",
+      "url": "https://www.resourcesrealestate.com",
+      "location": "Rumson, Colts Neck, Atlantic Highlands, Shrewsbury, Manasquan, NJ",
+      "description": "Independent luxury brokerage founded in 2000 by Thomas McCormack and Robert Diakon. Five offices blanket the wealthiest corridors of Monmouth County and they market themselves as the local alternative to national brands.",
+      "standoutFeature": "Independent local authority with hyper-curated featured-agents roster and strong town-by-town content hubs",
+      "priceRange": "$1.5M-$10M avg listing",
+      "designScore": 7,
+      "instagramFollowers": "~12,000",
+      "category": "direct-local"
+    },
+    {
+      "name": "O'Brien Realty",
+      "url": "https://www.obrienrealtyllc.com",
+      "location": "Monmouth Beach, NJ (6 offices county-wide)",
+      "description": "Family-founded luxury brokerage (Kerrin and Tammy O'Brien, 2013) with nearly 200 agents across six Monmouth County offices. Positions itself around 'Above and Beyond' client service and Jersey Shore luxury.",
+      "standoutFeature": "Deep beach-town footprint (Monmouth Beach, Sea Bright, Long Branch) and family-run narrative",
+      "priceRange": "$1.5M-$8M avg listing",
+      "designScore": 6,
+      "instagramFollowers": "~8,500",
+      "category": "direct-local"
+    },
+    {
+      "name": "Glen Kelly Real Estate",
+      "url": "https://www.glenkelly.com",
+      "location": "Monmouth & Ocean County, NJ",
+      "description": "30+ year veteran, CRS-designated Top 3% producer with a large own-branded site and deep town-level SEO pages across Monmouth and Ocean Counties.",
+      "standoutFeature": "Exhaustive town-by-town landing-page SEO, strong review and longevity signals",
+      "priceRange": "$700K-$5M avg listing",
+      "designScore": 5,
+      "instagramFollowers": "~3,100",
+      "category": "direct-local"
+    },
+    {
+      "name": "Fran Barone Judas",
+      "url": "https://www.coldwellbankerluxury.com/specialist/oW0hMH5gn/fran-judas",
+      "location": "Rumson / Monmouth County, NJ",
+      "description": "Coldwell Banker Global Luxury specialist, licensed since 1979, Broker since 1990, consistent top agent in her office specializing in Rumson, Fair Haven, Colts Neck, and Little Silver.",
+      "standoutFeature": "Multi-decade Rumson provenance and CB Global Luxury platform",
+      "priceRange": "$2M-$12M avg listing",
+      "designScore": 4,
+      "instagramFollowers": "~1,200",
+      "category": "direct-local"
+    },
+    {
+      "name": "Elaine Eadon (Heritage House SIR)",
+      "url": "https://www.sothebysrealty.com/eng/associate/180-a-888-4024148/elaine-eadon",
+      "location": "Rumson, NJ",
+      "description": "Long-standing Heritage House Sotheby's International Realty agent in Rumson, repeated top-producer alongside Kelly Zaccaro, Elizabeth Lubin, and Pauline Poyner.",
+      "standoutFeature": "Old-Rumson insider network and Sotheby's luxury listing reach",
+      "priceRange": "$2M-$10M avg listing",
+      "designScore": 5,
+      "instagramFollowers": "~900",
+      "category": "direct-local"
+    },
+    {
+      "name": "Diane Turton, Realtors",
+      "url": "https://www.dianeturton.com",
+      "location": "Jersey Shore - 17 offices including Rumson, Spring Lake, Sea Girt",
+      "description": "Flagship Jersey Shore independent luxury brokerage with the strongest brand recognition in coastal Monmouth/Ocean county luxury. Famous for Spring Lake and Bay Head listings.",
+      "standoutFeature": "Owns the 'Jersey Shore luxury' category by sheer listing share and 55+ years of brand equity",
+      "priceRange": "$1.5M-$15M avg listing",
+      "designScore": 6,
+      "instagramFollowers": "~18,000",
+      "category": "direct-local"
+    },
+    {
+      "name": "Ryan Serhant (SERHANT.)",
+      "url": "https://ryanserhant.com",
+      "location": "New York, NY (national)",
+      "description": "Star of Netflix's 'Owning Manhattan' and founder of SERHANT., a media-first brokerage. His personal site is the reference point for cinematic agent branding: Next.js build, draggable globe of listings, signature 'S.' identity, integrated YouTube and Studios content.",
+      "standoutFeature": "Media-brokerage hybrid - every property gets cinematic tour treatment from SERHANT. Studios",
+      "priceRange": "$3M-$50M+",
+      "designScore": 10,
+      "instagramFollowers": "1.9M",
+      "category": "aspirational-national"
+    },
+    {
+      "name": "The Altman Brothers",
+      "url": "https://www.thealtmanbrothers.com",
+      "location": "Los Angeles / Beverly Hills, CA",
+      "description": "Josh and Matt Altman have over $6B in career transactions and 20+ agents across LA and Orange County. Their site turns every listing into an interactive virtual walkthrough - marble counters, ocean views, all browsable.",
+      "standoutFeature": "Interactive property showcases that let buyers 'walk' homes from the homepage",
+      "priceRange": "$5M-$75M",
+      "designScore": 9,
+      "instagramFollowers": "470K (Josh Altman)",
+      "category": "aspirational-national"
+    },
+    {
+      "name": "The Agency (Mauricio Umansky)",
+      "url": "https://www.theagencyre.com",
+      "location": "Los Angeles, CA (global)",
+      "description": "Boutique luxury brokerage known for editorial photography, magazine-caliber listing pages, and cinematic brand films. Widely considered the design benchmark that Douglas Elliman and Sotheby's now chase.",
+      "standoutFeature": "Editorial-grade listing pages with brand-film-quality photography and motion typography",
+      "priceRange": "$3M-$100M+",
+      "designScore": 10,
+      "instagramFollowers": "1.1M",
+      "category": "aspirational-national"
+    },
+    {
+      "name": "Tracy Tutor",
+      "url": "https://www.tracytutorteam.com",
+      "location": "Beverly Hills, CA",
+      "description": "Million Dollar Listing LA star and top Douglas Elliman Beverly Hills producer (hundreds of millions in sales). Personal brand leans hard into confident female-founder identity with full-screen video and editorial typography.",
+      "standoutFeature": "Unapologetic personality-first branding - bold full-screen video hero, cinematic scroll",
+      "priceRange": "$5M-$50M",
+      "designScore": 9,
+      "instagramFollowers": "215K",
+      "category": "aspirational-national"
+    },
+    {
+      "name": "Tracy Allen (Coldwell Banker Pacific)",
+      "url": "https://www.tracyallenhawaii.com",
+      "location": "Honolulu, HI",
+      "description": "Top Hawaii luxury agent whose site is regularly cited as a benchmark for cinematic scroll experiences - full-screen career video, traveling top nav with a dedicated Videos menu item.",
+      "standoutFeature": "Traveling scroll nav with Videos as a first-class menu item",
+      "priceRange": "$4M-$30M",
+      "designScore": 9,
+      "instagramFollowers": "~25,000",
+      "category": "aspirational-national"
+    },
+    {
+      "name": "Oren / Tal Alexander (Official Partners)",
+      "url": "https://www.official.com",
+      "location": "New York / Miami",
+      "description": "Ultra-luxury boutique (formerly top Elliman team) now operating as Official Partners. Site sets the bar for minimalist, editorial, almost-fashion-house presentation of trophy listings.",
+      "standoutFeature": "Fashion-house minimalism - huge negative space, serif wordmark, slow reveal animations",
+      "priceRange": "$10M-$200M+",
+      "designScore": 10,
+      "instagramFollowers": "~150,000",
+      "category": "aspirational-national"
+    },
+    {
+      "name": "Heritage House Sotheby's International Realty",
+      "url": "https://www.sothebysrealty.com/heritagehousesir/eng",
+      "location": "Rumson, NJ",
+      "description": "Opened May 2001, 55+ agents, the default luxury brokerage for 'Old Rumson' money. Most direct brokerage-level competition for any Monmouth County luxury agent.",
+      "standoutFeature": "Sotheby's global marketing reach + deep local Rumson roots",
+      "priceRange": "$2M-$20M",
+      "designScore": 7,
+      "instagramFollowers": "~6,500",
+      "category": "experience"
+    },
+    {
+      "name": "Compass (Rumson & Red Bank)",
+      "url": "https://www.compass.com/agents/locations/rumson-nj/31222/",
+      "location": "Rumson & Red Bank, NJ",
+      "description": "23 agents in Rumson, 43 in Red Bank. Compass's tech platform (Collections, Coming Soon, concierge-staged prep) is the #1 structural threat to independents chasing the same $2M-$10M buyer.",
+      "standoutFeature": "Proprietary tech stack - Coming Soon listings, Compass Concierge staging capital, Collections",
+      "priceRange": "$1.5M-$12M",
+      "designScore": 9,
+      "instagramFollowers": "580K (national)",
+      "category": "experience"
+    },
+    {
+      "name": "Douglas Elliman Jersey Shore",
+      "url": "https://www.elliman.com",
+      "location": "Rumson / Jersey Shore, NJ",
+      "description": "Elliman's Jersey Shore push leverages its NYC brand halo and cross-state referrals. Challenges the 'why would I list with a local?' buyer who already knows the Elliman name from Manhattan.",
+      "standoutFeature": "NYC-to-Jersey referral pipeline and national PR/magazine reach",
+      "priceRange": "$2M-$15M",
+      "designScore": 8,
+      "instagramFollowers": "890K (national)",
+      "category": "experience"
+    },
+    {
+      "name": "Coldwell Banker Global Luxury (Rumson)",
+      "url": "https://www.coldwellbankerluxury.com",
+      "location": "Rumson, NJ",
+      "description": "CB's luxury-certified specialist program. Offers Global Luxury certified designation, Unique Homes magazine placement, and a distinct luxury website template separate from standard CB listings.",
+      "standoutFeature": "Global Luxury certification and Unique Homes print placement",
+      "priceRange": "$1.5M-$10M",
+      "designScore": 7,
+      "instagramFollowers": "~120,000 (global)",
+      "category": "experience"
+    },
+    {
+      "name": "Navesink Country Club",
+      "url": "https://www.navesinkcc.com",
+      "location": "Middletown/Red Bank, NJ",
+      "description": "Four-season private club on the Navesink River, roots to 1911. Membership here is a proxy for the exact affluent Monmouth County buyer Carolina wants - Rumson/Colts Neck/Holmdel C-suite families.",
+      "standoutFeature": "Historical provenance (1911) and Navesink River frontage - the social hub of the demographic",
+      "priceRange": "Private club membership",
+      "designScore": 6,
+      "instagramFollowers": "~2,400",
+      "category": "luxury-lifestyle"
+    },
+    {
+      "name": "Salt Creek Grille Rumson",
+      "url": "https://www.saltcreekgrille.com/rumson",
+      "location": "Rumson, NJ",
+      "description": "Panoramic Navesink River waterfront dining at 4 Bingham Ave - floor-to-ceiling windows on the river. Closing Dec 31, 2025 after 27 years, which opens a symbolic 'lifestyle landmark' vacancy the real estate narrative can lean into.",
+      "standoutFeature": "Iconic Navesink waterfront views - the dining-room version of a Rumson listing photo",
+      "priceRange": "Upscale dining",
+      "designScore": 6,
+      "instagramFollowers": "~9,000",
+      "category": "luxury-lifestyle"
+    },
+    {
+      "name": "Undici Taverna Rustica",
+      "url": "https://undici.com",
+      "location": "Rumson, NJ",
+      "description": "High-end Italian restaurant in Rumson, a consistent date-night and dealmaking spot for the exact Rumson/Fair Haven/Little Silver demographic. Site itself is cinematic - hero video, editorial food photography.",
+      "standoutFeature": "Rustic-Italian editorial branding with strong food photography and hero video",
+      "priceRange": "Upscale dining",
+      "designScore": 7,
+      "instagramFollowers": "~14,000",
+      "category": "luxury-lifestyle"
+    }
+  ],
+  "nicheOpportunities": [
+    {
+      "angle": "Bilingual luxury concierge for Latin American wealth migrating to the Jersey Shore",
+      "rationale": "Zero top-producing Monmouth County luxury agent is positioned in Spanish. Latin American (especially Colombian, Venezuelan, Mexican, Argentine) HNW families increasingly park capital in NY/NJ - Alexander Calle's JC Luxury Group owns the Gold Coast (Jersey City/Hoboken) version of this positioning but no one owns Monmouth/Rumson/Holmdel. Carolina's Christie's affiliation + native Spanish is a wedge no incumbent can copy.",
+      "targetBuyer": "Latin American C-suite, entrepreneurs, and second-generation families buying $2M-$8M primary or second homes within 50 min of Manhattan"
+    },
+    {
+      "angle": "The Navesink River waterfront specialist",
+      "rationale": "The Navesink River frontage from Rumson to Middletown is the single most aspirational micro-geography in NJ. Kelly Zaccaro is a generalist in Rumson but no one brands themselves specifically as the Navesink water expert. A map-first, geography-owned positioning is visually cinematic and defensible.",
+      "targetBuyer": "Second-home NYC buyers, boat-owning Wall Street families, multi-generational Rumson upgraders"
+    },
+    {
+      "angle": "Holmdel / Colts Neck estate-living expert for the Wall Street family relocating out of Manhattan",
+      "rationale": "Holmdel (Carolina's office) and Colts Neck are where NYC finance families go when they need 5+ acres, horses, or Bell Labs-era architecture. Most top Rumson agents treat Colts Neck as an afterthought. Owning 'estate living inside the commuter shed' is open.",
+      "targetBuyer": "Finance/tech family relocating from Manhattan/Brooklyn, $3M-$10M single-family estate buyers"
+    },
+    {
+      "angle": "Christie's International network as the Monmouth-to-global bridge",
+      "rationale": "Christie's International Real Estate is underused as a brand in Monmouth County - Sotheby's owns the narrative via Heritage House. A deliberate 'Christie's Monmouth' positioning (auction-house provenance, international buyer network, global PR) lets Carolina leapfrog Sotheby's default advantage.",
+      "targetBuyer": "Sellers with trophy homes who want international buyer exposure; international buyers (Latin America, Europe) entering the US market"
+    },
+    {
+      "angle": "Cinematic listing storytelling - the Serhant/Agency treatment for Jersey Shore homes",
+      "rationale": "No Monmouth County agent ships brand-film-quality listing videos. Diane Turton, Heritage House, and Resources all still use drone+Matterport formulas. Carolina can own 'every home gets a short film' and make it her structural moat.",
+      "targetBuyer": "Sellers of $3M+ homes who resent generic MLS treatment; buyers who discover her via YouTube/Reels not search"
+    }
+  ],
+  "marketGaps": [
+    "No Monmouth County luxury realtor website runs cinematic scroll-driven video; everyone defaults to hero-image + IDX search bar, which is 2018 design.",
+    "Zero bilingual Spanish-first luxury positioning in the Rumson/Holmdel/Colts Neck corridor - every site is English-only with no es/ locale.",
+    "No agent publishes editorial neighborhood content - town guides are generic SEO pages, not magazine-grade features with original photography and video.",
+    "AI/concierge-style buyer tools (smart shortlisting, lifestyle-fit matching, private-listing portals) are entirely absent - the stack is still public MLS IDX plus a contact form.",
+    "Sellers have no visible 'marketing package' page - no proof artifact showing brand films, editorial photography, print placement, international syndication. Buyers and sellers can't see why you would hire anyone specific vs. the brokerage brand alone."
+  ],
+  "designTrends": [
+    {
+      "trend": "Full-bleed cinematic hero video with scroll-locked horizontal reveal",
+      "exampleUrl": "https://ryanserhant.com",
+      "whyItWorks": "Replaces the stale 'photo + search bar' hero. Frames the agent as a brand, not an MLS gateway, within the first 2 seconds. Serhant, The Agency, and Official all use variations - no Monmouth County realtor does."
+    },
+    {
+      "trend": "Editorial serif typography with large negative space and slow-reveal animations",
+      "exampleUrl": "https://www.official.com",
+      "whyItWorks": "Signals fashion-house / auction-house luxury and differentiates from the identical sans-serif templates every Sotheby's/Compass/Elliman agent ships. Visually separates 'trophy listing' from 'transaction.'"
+    },
+    {
+      "trend": "Interactive map-driven listing exploration (draggable globe or parcel map as the primary nav)",
+      "exampleUrl": "https://ryanserhant.com",
+      "whyItWorks": "SERHANT.'s globe and The Agency's regional maps make geography itself the product. For a Navesink-river-centric positioning this is natively cinematic and competitors cannot quickly copy."
+    },
+    {
+      "trend": "Per-listing micro-sites with brand-film treatment (one URL per home, with custom film, narrative, and editorial layout)",
+      "exampleUrl": "https://serhant.com/studios",
+      "whyItWorks": "SERHANT. Studios and The Agency ship a bespoke film + mini-site per $10M+ listing. In Monmouth County, MLS-linked pages are still the norm - a per-listing microsite is instantly 'why am I hiring anyone else' proof."
+    },
+    {
+      "trend": "Bilingual locale switcher with fully translated long-form content (not a Google Translate widget)",
+      "exampleUrl": "https://www.theagencyre.com",
+      "whyItWorks": "The Agency and SERHANT. both ship genuine multi-locale content for international buyers. Zero Monmouth agent has a real /es route. A fully bilingual site is both a niche-ownership signal and an SEO moat."
+    }
+  ]
+}
