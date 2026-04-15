@@ -1,0 +1,3188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Case Study · Mirtha Carolina Solorzano — A 1-of-1 Cinematic Real Estate Platform · VioX AI</title>
+<meta name="description" content="Case study: how VioX AI Cinematic Design Studio built a 45-page cinematic real estate platform with bilingual AI voice concierge for Mirtha Carolina Solorzano of Christie's International Real Estate Group — in 18 days, at a fraction of traditional agency cost." />
+
+<!-- Google Fonts: Fraunces · Inter · Cormorant Garamond · JetBrains Mono -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   CASE STUDY · MIRTHA CAROLINA SOLORZANO
+   VioX AI — Cinematic Design Studio
+   Palette: Navy Deep #0B1F3A · Navy Ink #162B4A · Christie's Red #9B2032
+            Shore Sand #E8DFCE · Ivory Cream #F5F1E8 · Champagne Gold #C4A962
+            Champagne Dark #A88E4A · Charcoal #1C1C1C
+   ========================================================================== */
+
+:root {
+  --navy-deep:     #0B1F3A;
+  --navy-ink:      #162B4A;
+  --christies-red: #9B2032;
+  --shore-sand:    #E8DFCE;
+  --ivory-cream:   #F5F1E8;
+  --champagne:     #C4A962;
+  --champagne-dk:  #A88E4A;
+  --charcoal:      #1C1C1C;
+
+  --hairline:      rgba(196, 169, 98, 0.45);
+  --hairline-ink:  rgba(22, 43, 74, 0.18);
+  --hairline-ivory:rgba(245, 241, 232, 0.20);
+  --muted-ink:     rgba(28, 28, 28, 0.58);
+  --muted-ivory:   rgba(245, 241, 232, 0.68);
+
+  --ff-display:    "Fraunces", "Cormorant Garamond", Georgia, serif;
+  --ff-quote:      "Cormorant Garamond", "Fraunces", Georgia, serif;
+  --ff-body:       "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  --ff-mono:       "JetBrains Mono", "SF Mono", Menlo, monospace;
+
+  --max:           1200px;
+  --gutter:        48px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--charcoal);
+  background: var(--ivory-cream);
+  font-weight: 400;
+  letter-spacing: 0.005em;
+}
+
+/* -------------------- Display Type -------------------- */
+h1, h2, h3, h4, h5, .display, .numeral {
+  font-family: var(--ff-display);
+  font-feature-settings: "ss01", "ss02";
+  color: var(--navy-deep);
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+}
+
+.italic-quote {
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--navy-ink);
+}
+
+/* -------------------- Utility -------------------- */
+.shell {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.shell-wide {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.section {
+  padding: 140px 0;
+  position: relative;
+}
+.section + .section {
+  border-top: 1px solid var(--hairline);
+}
+
+.hairline {
+  width: 100%;
+  height: 1px;
+  background: var(--champagne);
+  opacity: 0.55;
+  margin: 56px 0;
+  border: 0;
+}
+.hairline-short {
+  width: 72px;
+  height: 1px;
+  background: var(--champagne);
+  margin: 32px 0;
+  border: 0;
+}
+
+.tag {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  font-weight: 500;
+}
+.tag-ink { color: var(--navy-ink); }
+
+.eyebrow {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--navy-ink);
+  font-weight: 600;
+  margin-bottom: 28px;
+  display: inline-block;
+}
+.eyebrow-gold {
+  color: var(--champagne);
+}
+
+.section-title {
+  font-size: clamp(42px, 5.5vw, 64px);
+  font-weight: 400;
+  font-variation-settings: "opsz" 96;
+  color: var(--navy-deep);
+  margin-bottom: 28px;
+  line-height: 1.02;
+}
+.section-title em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--navy-ink);
+  font-family: var(--ff-display);
+}
+
+.section-lede {
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(22px, 2.2vw, 26px);
+  line-height: 1.55;
+  color: var(--navy-ink);
+  max-width: 820px;
+  margin-bottom: 56px;
+}
+
+/* Gold underline-draw for links */
+a {
+  color: var(--navy-ink);
+  text-decoration: none;
+  background-image: linear-gradient(var(--champagne), var(--champagne));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.45s ease;
+  padding-bottom: 2px;
+}
+a:hover { background-size: 100% 1px; }
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   1 · COVER
+   ========================================================================== */
+.cover {
+  background: var(--ivory-cream);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 64px var(--gutter);
+  position: relative;
+  overflow: hidden;
+}
+.cover::before {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border: 1px solid var(--hairline);
+  pointer-events: none;
+}
+.cover-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 40px;
+  position: relative;
+  z-index: 2;
+}
+.cover-tag {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  font-weight: 600;
+}
+.cover-mark img {
+  height: 48px;
+  width: auto;
+  opacity: 0.88;
+}
+.cover-center {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 0;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.cover-h1 {
+  font-family: var(--ff-display);
+  font-size: clamp(68px, 11.5vw, 140px);
+  font-weight: 400;
+  font-variation-settings: "opsz" 144;
+  color: var(--navy-deep);
+  line-height: 0.96;
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+}
+.cover-h2 {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-weight: 300;
+  font-variation-settings: "opsz" 144;
+  font-size: clamp(56px, 10vw, 130px);
+  color: var(--champagne);
+  line-height: 0.96;
+  letter-spacing: -0.025em;
+  margin-bottom: 56px;
+}
+.cover-divider {
+  width: 120px;
+  height: 1px;
+  background: var(--champagne);
+  margin: 48px 0 36px;
+}
+.cover-subline {
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(22px, 2.2vw, 30px);
+  color: var(--navy-ink);
+  max-width: 720px;
+  line-height: 1.5;
+  margin-bottom: 56px;
+}
+.cover-meta {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  column-gap: 36px;
+  row-gap: 14px;
+  max-width: 720px;
+  font-family: var(--ff-body);
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--navy-ink);
+}
+.cover-meta dt {
+  font-weight: 600;
+  color: var(--champagne);
+}
+.cover-meta dd {
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--navy-ink);
+  text-transform: none;
+  font-size: 13px;
+}
+.cover-meta dd strong {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  color: var(--navy-deep);
+  letter-spacing: -0.005em;
+}
+.cover-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--navy-ink);
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+.gold-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--champagne);
+  border-radius: 50%;
+  margin: 0 14px 2px;
+  vertical-align: middle;
+}
+.scroll-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--champagne);
+  font-weight: 600;
+}
+.scroll-cue::after {
+  content: "";
+  width: 1px;
+  height: 32px;
+  background: var(--champagne);
+  display: inline-block;
+  animation: cueFall 2.4s ease-in-out infinite;
+}
+@keyframes cueFall {
+  0%, 100% { transform: scaleY(0.4); transform-origin: top; opacity: 0.5; }
+  50%      { transform: scaleY(1);   transform-origin: top; opacity: 1;   }
+}
+
+/* ==========================================================================
+   2 · EXECUTIVE SUMMARY
+   ========================================================================== */
+.exec { background: var(--ivory-cream); }
+.exec-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 72px;
+  align-items: flex-start;
+}
+.exec-side .index {
+  font-family: var(--ff-display);
+  font-size: 96px;
+  font-weight: 300;
+  font-variation-settings: "opsz" 144;
+  color: var(--champagne);
+  line-height: 1;
+  margin-bottom: 18px;
+}
+.exec-side .label {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--navy-ink);
+  font-weight: 600;
+}
+.exec-body p {
+  font-size: 18px;
+  line-height: 1.85;
+  color: var(--charcoal);
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+.exec-body p:first-of-type {
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.55;
+  color: var(--navy-ink);
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.exec-body p strong {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  color: var(--navy-deep);
+  letter-spacing: -0.005em;
+}
+
+/* Stat row */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--champagne);
+  border-bottom: 1px solid var(--champagne);
+  margin-top: 72px;
+}
+.stat-cell {
+  padding: 40px 28px;
+  border-left: 1px solid var(--hairline);
+  text-align: center;
+}
+.stat-cell:first-child { border-left: none; }
+.stat-cell .fig {
+  font-family: var(--ff-display);
+  font-variation-settings: "opsz" 144;
+  font-size: clamp(64px, 8vw, 104px);
+  font-weight: 300;
+  color: var(--navy-deep);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+}
+.stat-cell .fig em {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--champagne);
+}
+.stat-cell .caption {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--navy-ink);
+  font-weight: 600;
+}
+
+.money-reveal {
+  margin-top: 72px;
+  padding: 48px 40px;
+  border: 1px solid var(--champagne);
+  background: rgba(232, 223, 206, 0.28);
+  text-align: center;
+}
+.money-reveal .line {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--navy-ink);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.money-reveal .amt {
+  font-family: var(--ff-mono);
+  font-size: clamp(28px, 3.4vw, 44px);
+  font-weight: 500;
+  color: var(--navy-deep);
+  letter-spacing: 0.02em;
+  margin-bottom: 36px;
+}
+.money-reveal .vs {
+  width: 42px;
+  height: 1px;
+  background: var(--champagne);
+  margin: 0 auto 24px;
+}
+.money-reveal .viox {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  font-size: clamp(30px, 3.6vw, 46px);
+  color: var(--champagne-dk);
+  letter-spacing: -0.015em;
+}
+.money-reveal .viox em {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--navy-ink);
+}
+
+/* ==========================================================================
+   3 · THE CLIENT
+   ========================================================================== */
+.client { background: var(--ivory-cream); }
+.client-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+.client-text p {
+  font-size: 17px;
+  line-height: 1.85;
+  margin-bottom: 22px;
+}
+.client-text p:first-of-type {
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.6;
+  color: var(--navy-ink);
+  margin-bottom: 32px;
+}
+.client-diff {
+  list-style: none;
+  margin: 36px 0 40px;
+  border-top: 1px solid var(--hairline);
+}
+.client-diff li {
+  padding: 16px 0 16px 32px;
+  border-bottom: 1px solid var(--hairline-ink);
+  position: relative;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--charcoal);
+}
+.client-diff li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 27px;
+  width: 16px;
+  height: 1px;
+  background: var(--champagne);
+}
+.client-diff li strong {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  color: var(--navy-deep);
+  letter-spacing: -0.005em;
+  display: block;
+  margin-bottom: 2px;
+  font-size: 17px;
+}
+
+.portrait-card {
+  position: relative;
+  padding: 14px;
+  border: 1px solid var(--champagne);
+  background: var(--shore-sand);
+}
+.portrait-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+}
+.portrait-meta {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+  font-family: var(--ff-body);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--navy-ink);
+}
+.portrait-meta strong { color: var(--champagne); font-weight: 600; }
+
+.affil-lockup {
+  margin-top: 36px;
+  padding: 28px 24px;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.affil-lockup .affil-rule {
+  width: 1px;
+  height: 42px;
+  background: var(--hairline);
+  justify-self: center;
+}
+.affil-lockup img {
+  max-height: 44px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.92;
+}
+.license-callout {
+  margin-top: 24px;
+  text-align: center;
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--navy-ink);
+  font-weight: 500;
+}
+.license-callout strong { color: var(--champagne-dk); font-weight: 600; }
+
+/* ==========================================================================
+   4 · THE BRIEF (Navy)
+   ========================================================================== */
+.brief {
+  background: var(--navy-deep);
+  color: var(--shore-sand);
+}
+.brief .section-title { color: var(--ivory-cream); }
+.brief .eyebrow { color: var(--champagne); }
+
+.brief-pull {
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(26px, 2.6vw, 34px);
+  line-height: 1.45;
+  color: var(--ivory-cream);
+  max-width: 860px;
+  margin-bottom: 72px;
+  border-left: 1px solid var(--champagne);
+  padding-left: 32px;
+}
+.brief-pull::first-letter {
+  font-family: var(--ff-display);
+  font-size: 1.4em;
+  color: var(--champagne);
+}
+
+.brief-goals {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: var(--hairline-ivory);
+}
+.goal {
+  background: var(--navy-deep);
+  padding: 48px 40px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  column-gap: 28px;
+  align-items: flex-start;
+}
+.goal .num {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-weight: 300;
+  font-variation-settings: "opsz" 96;
+  font-size: 52px;
+  color: var(--champagne);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.goal h4 {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  font-variation-settings: "opsz" 48;
+  font-size: 22px;
+  color: var(--ivory-cream);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+.goal p {
+  font-family: var(--ff-body);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--muted-ivory);
+}
+
+/* ==========================================================================
+   5 · WHAT WE BUILT
+   ========================================================================== */
+.scope { background: var(--ivory-cream); }
+
+.scope-heading {
+  margin-bottom: 72px;
+}
+
+/* Page inventory editorial table */
+.inv-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 36px 0 96px;
+}
+.inv-table th {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--navy-ink);
+  text-align: left;
+  padding: 0 20px 18px;
+  border-bottom: 1px solid var(--champagne);
+}
+.inv-table td {
+  padding: 26px 20px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--hairline);
+}
+.inv-table td.inv-cat {
+  width: 22%;
+  font-family: var(--ff-display);
+  font-weight: 500;
+  font-size: 20px;
+  font-variation-settings: "opsz" 48;
+  color: var(--navy-deep);
+  letter-spacing: -0.005em;
+}
+.inv-table td.inv-count {
+  width: 12%;
+  font-family: var(--ff-mono);
+  font-size: 15px;
+  color: var(--champagne-dk);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+.inv-table td.inv-desc {
+  font-family: var(--ff-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--charcoal);
+}
+.inv-total {
+  border-top: 1px solid var(--champagne);
+  padding: 24px 20px;
+  font-family: var(--ff-display);
+  font-size: 20px;
+  color: var(--navy-deep);
+  letter-spacing: -0.005em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inv-total span { font-family: var(--ff-mono); color: var(--champagne-dk); font-size: 17px; }
+
+/* Cinematic hero explainer */
+.feature-hero {
+  margin: 96px 0;
+}
+.feature-hero h3 {
+  font-size: clamp(34px, 3.4vw, 44px);
+  font-weight: 400;
+  font-variation-settings: "opsz" 72;
+  color: var(--navy-deep);
+  margin-bottom: 24px;
+  letter-spacing: -0.015em;
+}
+.feature-hero h3 em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--navy-ink);
+}
+.fh-lede {
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.55;
+  color: var(--navy-ink);
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+.fh-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.fh-visual {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--champagne);
+  overflow: hidden;
+  background: var(--navy-deep);
+}
+.fh-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.78);
+}
+.fh-visual .fh-label {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  font-family: var(--ff-body);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  font-weight: 600;
+  padding: 8px 14px;
+  border: 1px solid var(--champagne);
+  background: rgba(11, 31, 58, 0.55);
+  backdrop-filter: blur(4px);
+}
+.fh-cols {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 28px;
+}
+.fh-col {
+  padding-left: 24px;
+  border-left: 1px solid var(--champagne);
+}
+.fh-col .tag { margin-bottom: 8px; display: block; }
+.fh-col h4 {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  font-variation-settings: "opsz" 48;
+  font-size: 20px;
+  color: var(--navy-deep);
+  margin-bottom: 8px;
+  letter-spacing: -0.005em;
+}
+.fh-col p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--charcoal);
+}
+.fh-col .tech {
+  margin-top: 10px;
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  color: var(--champagne-dk);
+  letter-spacing: 0.01em;
+}
+
+/* Jessica AI concierge card */
+.concierge {
+  margin: 96px 0;
+  padding: 56px 48px;
+  border: 1px solid var(--champagne);
+  background: rgba(232, 223, 206, 0.35);
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 56px;
+  align-items: flex-start;
+}
+.jessica-avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #2a4d78 0%, var(--navy-deep) 80%);
+  border: 1px solid var(--champagne);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 0 1px rgba(196,169,98,0.12);
+}
+.jessica-avatar .initials {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-weight: 300;
+  font-variation-settings: "opsz" 144;
+  font-size: 84px;
+  color: var(--champagne);
+  letter-spacing: -0.04em;
+}
+.jessica-avatar::after {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  border: 1px dashed rgba(196,169,98,0.35);
+  border-radius: 50%;
+  animation: rot 24s linear infinite;
+}
+@keyframes rot { to { transform: rotate(360deg); } }
+
+.concierge h3 {
+  font-size: clamp(28px, 2.8vw, 36px);
+  font-weight: 400;
+  font-variation-settings: "opsz" 72;
+  margin-bottom: 14px;
+}
+.concierge h3 em {
+  font-style: italic;
+  color: var(--navy-ink);
+  font-weight: 300;
+}
+.concierge p.intro {
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--navy-ink);
+  margin-bottom: 28px;
+}
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 40px;
+  margin-top: 14px;
+}
+.tool {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  column-gap: 14px;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--hairline-ink);
+}
+.tool .n {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--champagne);
+  font-size: 22px;
+  line-height: 1;
+}
+.tool .tname {
+  font-family: var(--ff-mono);
+  font-size: 13px;
+  color: var(--navy-deep);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  display: block;
+  margin-bottom: 2px;
+}
+.tool .tdesc {
+  font-family: var(--ff-body);
+  font-size: 13px;
+  color: var(--charcoal);
+  line-height: 1.5;
+}
+
+/* Brand identity */
+.brand-section { margin: 120px 0 96px; }
+.brand-section h3 {
+  font-size: clamp(34px, 3.4vw, 44px);
+  font-weight: 400;
+  font-variation-settings: "opsz" 72;
+  margin-bottom: 24px;
+}
+.brand-section h3 em { font-style: italic; font-weight: 300; color: var(--navy-ink); }
+
+.swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 12px;
+  margin: 32px 0 48px;
+}
+.swatch {
+  aspect-ratio: 1 / 1;
+  position: relative;
+  border: 1px solid var(--hairline-ink);
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  transition: transform 0.4s ease;
+}
+.swatch:hover { transform: translateY(-2px); }
+.swatch .sw-info {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+}
+.swatch .sw-name {
+  font-family: var(--ff-body);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+}
+.sw-navy      { background: var(--navy-deep); }
+.sw-navy .sw-info { color: var(--ivory-cream); }
+.sw-navy-ink  { background: var(--navy-ink); }
+.sw-navy-ink .sw-info { color: var(--ivory-cream); }
+.sw-red       { background: var(--christies-red); }
+.sw-red .sw-info { color: var(--ivory-cream); }
+.sw-sand      { background: var(--shore-sand); }
+.sw-sand .sw-info { color: var(--navy-deep); }
+.sw-ivory     { background: var(--ivory-cream); border-color: var(--hairline); }
+.sw-ivory .sw-info { color: var(--navy-deep); }
+.sw-gold      { background: var(--champagne); }
+.sw-gold .sw-info { color: var(--navy-deep); }
+.sw-gold-dk   { background: var(--champagne-dk); }
+.sw-gold-dk .sw-info { color: var(--ivory-cream); }
+.sw-charcoal  { background: var(--charcoal); }
+.sw-charcoal .sw-info { color: var(--ivory-cream); }
+
+.type-specimens {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  margin: 24px 0 48px;
+}
+.specimen {
+  padding: 36px 24px;
+  border-left: 1px solid var(--hairline);
+}
+.specimen:first-child { border-left: none; }
+.specimen .tag { margin-bottom: 16px; display: block; }
+.specimen .sp-show {
+  line-height: 1.05;
+  color: var(--navy-deep);
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+.specimen .sp-info {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  color: var(--navy-ink);
+  letter-spacing: 0.08em;
+}
+.sp-fraunces {
+  font-family: var(--ff-display);
+  font-variation-settings: "opsz" 96;
+  font-weight: 400;
+  font-size: 56px;
+}
+.sp-fraunces-it {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-variation-settings: "opsz" 96;
+  font-weight: 300;
+  font-size: 56px;
+  color: var(--navy-ink);
+}
+.sp-inter {
+  font-family: var(--ff-body);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+.sp-cormorant {
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 1.25;
+}
+
+.logo-variants {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 24px 0 0;
+}
+.logo-variant {
+  aspect-ratio: 1.2 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  border: 1px solid var(--hairline-ink);
+  position: relative;
+}
+.logo-variant img {
+  max-width: 72%;
+  max-height: 72%;
+  object-fit: contain;
+}
+.lv-ivory { background: var(--ivory-cream); }
+.lv-navy  { background: var(--navy-deep); }
+.lv-sand  { background: var(--shore-sand); }
+.lv-gold  { background: linear-gradient(135deg, var(--champagne) 0%, var(--champagne-dk) 100%); }
+.logo-variant .lv-label {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  font-family: var(--ff-body);
+  font-size: 9px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted-ink);
+  font-weight: 600;
+}
+.lv-navy .lv-label, .lv-gold .lv-label { color: var(--ivory-cream); }
+.lv-sand .lv-label { color: var(--navy-ink); }
+
+/* Image grid */
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 32px 0 24px;
+}
+.img-thumb {
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--hairline-ink);
+}
+.img-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s ease;
+}
+.img-thumb:hover img { transform: scale(1.05); }
+
+.img-caption {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--navy-ink);
+  font-weight: 600;
+  margin-top: 12px;
+}
+.img-caption strong { color: var(--champagne-dk); }
+
+/* Schema graph */
+.schema-graph {
+  margin: 24px 0 0;
+  padding: 40px;
+  background: var(--shore-sand);
+  border: 1px solid var(--hairline);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.schema-tag {
+  font-family: var(--ff-mono);
+  font-size: 13px;
+  padding: 10px 18px;
+  border: 1px solid var(--navy-ink);
+  color: var(--navy-deep);
+  background: var(--ivory-cream);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+.schema-tag.primary {
+  background: var(--navy-deep);
+  color: var(--champagne);
+  border-color: var(--navy-deep);
+}
+
+/* SEO checklist */
+.seo-check {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 64px;
+  margin: 32px 0 0;
+  border-top: 1px solid var(--hairline);
+}
+.seo-check li {
+  list-style: none;
+  padding: 18px 0 18px 32px;
+  border-bottom: 1px solid var(--hairline-ink);
+  position: relative;
+  font-size: 15px;
+  line-height: 1.55;
+}
+.seo-check li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 22px;
+  width: 16px;
+  height: 8px;
+  border-left: 1px solid var(--champagne);
+  border-bottom: 1px solid var(--champagne);
+  transform: rotate(-45deg);
+}
+.seo-check li strong {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  color: var(--navy-deep);
+  letter-spacing: -0.005em;
+}
+
+/* ==========================================================================
+   6 · THE PROCESS (Navy)
+   ========================================================================== */
+.process {
+  background: var(--navy-deep);
+  color: var(--shore-sand);
+}
+.process .section-title { color: var(--ivory-cream); }
+.process .eyebrow { color: var(--champagne); }
+.process .section-lede { color: var(--muted-ivory); }
+
+.phase-rail {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  column-gap: 40px;
+  margin-top: 48px;
+}
+.phase-rail .spine {
+  width: 1px;
+  background: var(--champagne);
+  margin: 0 auto;
+  opacity: 0.5;
+}
+.phases {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--hairline-ivory);
+}
+.phase {
+  background: var(--navy-deep);
+  padding: 34px 0;
+  display: grid;
+  grid-template-columns: 100px 180px 1fr;
+  gap: 32px;
+  align-items: flex-start;
+}
+.phase .pn {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-weight: 300;
+  font-variation-settings: "opsz" 96;
+  font-size: 48px;
+  color: var(--champagne);
+  line-height: 1;
+}
+.phase .pday {
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  padding-top: 14px;
+  font-weight: 500;
+}
+.phase h4 {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  font-variation-settings: "opsz" 48;
+  font-size: 22px;
+  color: var(--ivory-cream);
+  margin-bottom: 8px;
+  letter-spacing: -0.005em;
+}
+.phase p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--muted-ivory);
+  max-width: 680px;
+}
+
+/* ==========================================================================
+   7 · TECHNOLOGY STACK
+   ========================================================================== */
+.stack { background: var(--ivory-cream); }
+.stack-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 32px;
+}
+.stack-table th {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--navy-ink);
+  text-align: left;
+  padding: 0 20px 18px;
+  border-bottom: 1px solid var(--champagne);
+}
+.stack-table td {
+  padding: 24px 20px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--hairline);
+  font-family: var(--ff-body);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.stack-table td.st-layer {
+  width: 20%;
+  font-family: var(--ff-display);
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--navy-deep);
+  font-variation-settings: "opsz" 48;
+  letter-spacing: -0.005em;
+}
+.stack-table td.st-tech {
+  width: 36%;
+  font-family: var(--ff-mono);
+  font-size: 13px;
+  color: var(--champagne-dk);
+  letter-spacing: 0.01em;
+  font-weight: 500;
+}
+.stack-table td.st-why { color: var(--charcoal); }
+
+/* ==========================================================================
+   8 · PROJECTED IMPACT
+   ========================================================================== */
+.impact { background: var(--shore-sand); }
+.impact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--champagne);
+  border-bottom: 1px solid var(--champagne);
+  margin-top: 32px;
+}
+.impact-col {
+  padding: 56px 48px;
+  border-left: 1px solid var(--hairline);
+}
+.impact-col:first-child { border-left: none; }
+.impact-col h4 {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  font-variation-settings: "opsz" 72;
+  font-size: 24px;
+  color: var(--navy-deep);
+  margin-bottom: 32px;
+  letter-spacing: -0.005em;
+}
+.impact-col h4 em { font-style: italic; font-weight: 300; color: var(--navy-ink); }
+.impact-col ul {
+  list-style: none;
+}
+.impact-col li {
+  padding: 16px 0 16px 28px;
+  border-bottom: 1px solid var(--hairline-ink);
+  position: relative;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--charcoal);
+}
+.impact-col li:last-child { border-bottom: none; }
+.impact-col li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 27px;
+  width: 14px;
+  height: 1px;
+  background: var(--champagne);
+}
+.impact-col li strong {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  color: var(--navy-deep);
+  letter-spacing: -0.005em;
+  display: block;
+  margin-bottom: 2px;
+  font-size: 16px;
+}
+
+.impact-pull {
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(26px, 2.8vw, 36px);
+  line-height: 1.4;
+  color: var(--navy-deep);
+  max-width: 720px;
+  text-align: center;
+  margin: 72px auto 0;
+  padding: 0 24px;
+  position: relative;
+}
+.impact-pull::before, .impact-pull::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--champagne);
+  margin: 24px auto;
+}
+
+/* ==========================================================================
+   9 · COST — TRADITIONAL AGENCY (Navy, centerpiece)
+   ========================================================================== */
+.cost-trad {
+  background: var(--navy-deep);
+  color: var(--shore-sand);
+}
+.cost-trad .eyebrow { color: var(--champagne); }
+.cost-trad .section-title { color: var(--ivory-cream); }
+.cost-trad .section-lede { color: var(--muted-ivory); max-width: 860px; }
+
+.cost-cat {
+  margin-top: 48px;
+  padding: 0;
+  border-top: 1px solid var(--champagne);
+}
+.cost-cat-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 28px 0 16px;
+  border-bottom: 1px solid var(--hairline-ivory);
+}
+.cost-cat-head h4 {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  font-variation-settings: "opsz" 48;
+  font-size: 22px;
+  color: var(--ivory-cream);
+  letter-spacing: -0.005em;
+}
+.cost-cat-head .sub {
+  font-family: var(--ff-mono);
+  font-size: 13px;
+  color: var(--champagne);
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+.cost-line {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 32px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--hairline-ivory);
+  align-items: baseline;
+}
+.cost-line:last-of-type { border-bottom: none; }
+.cost-line .li-desc {
+  font-family: var(--ff-body);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--muted-ivory);
+}
+.cost-line .li-range {
+  font-family: var(--ff-mono);
+  font-size: 14px;
+  color: var(--ivory-cream);
+  text-align: right;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+.cost-subtot {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 32px;
+  padding: 22px 0;
+  border-top: 1px solid var(--champagne);
+  align-items: baseline;
+  margin-top: 6px;
+}
+.cost-subtot .li-desc {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  font-variation-settings: "opsz" 48;
+  font-size: 17px;
+  color: var(--champagne);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+.cost-subtot .li-range {
+  font-family: var(--ff-mono);
+  font-size: 16px;
+  color: var(--champagne);
+  text-align: right;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.grand-panel {
+  margin-top: 96px;
+  padding: 64px 48px;
+  border: 1px solid var(--champagne);
+  background: var(--navy-ink);
+  text-align: center;
+  position: relative;
+}
+.grand-panel::before,
+.grand-panel::after {
+  content: "";
+  position: absolute;
+  top: 16px; bottom: 16px;
+  width: 1px;
+  background: var(--champagne);
+  opacity: 0.35;
+}
+.grand-panel::before { left: 16px; }
+.grand-panel::after  { right: 16px; }
+.grand-panel .gp-eyebrow {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+.grand-panel .gp-total {
+  font-family: var(--ff-mono);
+  font-weight: 500;
+  font-size: clamp(42px, 6vw, 80px);
+  color: var(--champagne);
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin-bottom: 40px;
+}
+.grand-panel .gp-rows {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.grand-panel .gp-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 16px 0;
+  border-top: 1px solid var(--hairline-ivory);
+  font-family: var(--ff-body);
+  font-size: 14px;
+  color: var(--muted-ivory);
+}
+.grand-panel .gp-row:last-of-type {
+  border-bottom: 1px solid var(--hairline-ivory);
+}
+.grand-panel .gp-row strong {
+  font-family: var(--ff-mono);
+  font-size: 15px;
+  color: var(--ivory-cream);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.grand-panel .gp-disclaimer {
+  margin-top: 36px;
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--muted-ivory);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   10 · COST — VIOX AI (the reveal)
+   ========================================================================== */
+.cost-viox { background: var(--ivory-cream); }
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0 96px;
+}
+.compare-table th {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--navy-ink);
+  text-align: left;
+  padding: 0 20px 18px;
+  border-bottom: 1px solid var(--champagne);
+}
+.compare-table td {
+  padding: 26px 20px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--hairline);
+  font-size: 15px;
+  line-height: 1.55;
+}
+.compare-table td.ct-cat {
+  width: 22%;
+  font-family: var(--ff-display);
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--navy-deep);
+  font-variation-settings: "opsz" 48;
+  letter-spacing: -0.005em;
+}
+.compare-table td.ct-trad {
+  width: 22%;
+  font-family: var(--ff-mono);
+  font-size: 14px;
+  color: var(--muted-ink);
+  text-decoration: line-through;
+  text-decoration-color: var(--champagne-dk);
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+.compare-table td.ct-viox {
+  width: 22%;
+  font-family: var(--ff-mono);
+  font-size: 14px;
+  color: var(--champagne-dk);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+.compare-table td.ct-how {
+  color: var(--charcoal);
+  font-family: var(--ff-body);
+}
+
+/* Pricing tiers */
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 48px 0;
+}
+.tier {
+  border: 1px solid var(--hairline-ink);
+  padding: 40px 32px;
+  background: var(--ivory-cream);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.5s ease, border-color 0.5s ease;
+}
+.tier:hover {
+  transform: translateY(-4px);
+  border-color: var(--champagne);
+}
+.tier.flagship {
+  background: var(--navy-deep);
+  border-color: var(--champagne);
+  color: var(--shore-sand);
+}
+.tier .tier-badge {
+  position: absolute;
+  top: -12px;
+  left: 28px;
+  background: var(--champagne);
+  color: var(--navy-deep);
+  font-family: var(--ff-body);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 5px 14px;
+}
+.tier .tier-name {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--navy-ink);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.tier.flagship .tier-name { color: var(--champagne); }
+.tier h4 {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  font-variation-settings: "opsz" 96;
+  font-size: 34px;
+  color: var(--navy-deep);
+  margin-bottom: 6px;
+  letter-spacing: -0.015em;
+}
+.tier.flagship h4 { color: var(--ivory-cream); }
+.tier .tier-price {
+  font-family: var(--ff-mono);
+  font-size: 17px;
+  color: var(--champagne-dk);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.tier.flagship .tier-price { color: var(--champagne); }
+.tier .tier-timeline {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--navy-ink);
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+.tier.flagship .tier-timeline { color: var(--muted-ivory); }
+.tier .tier-rule {
+  width: 40px;
+  height: 1px;
+  background: var(--champagne);
+  margin-bottom: 24px;
+}
+.tier ul {
+  list-style: none;
+  margin-bottom: 28px;
+  flex-grow: 1;
+}
+.tier li {
+  padding: 10px 0 10px 22px;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--charcoal);
+  border-bottom: 1px solid var(--hairline-ink);
+}
+.tier.flagship li {
+  color: var(--muted-ivory);
+  border-bottom-color: var(--hairline-ivory);
+}
+.tier li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 18px;
+  width: 12px; height: 1px;
+  background: var(--champagne);
+}
+.tier li strong {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  color: var(--navy-deep);
+  letter-spacing: -0.005em;
+}
+.tier.flagship li strong { color: var(--ivory-cream); }
+.tier .tier-ideal {
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--navy-ink);
+  line-height: 1.5;
+  border-top: 1px solid var(--hairline-ink);
+  padding-top: 20px;
+}
+.tier.flagship .tier-ideal {
+  color: var(--champagne);
+  border-top-color: var(--hairline-ivory);
+}
+
+/* Mirtha's build reveal */
+.mirtha-build {
+  margin: 48px 0 0;
+  padding: 48px;
+  background: var(--shore-sand);
+  border: 1px solid var(--champagne);
+  text-align: center;
+}
+.mirtha-build .mb-tag {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: var(--champagne-dk);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.mirtha-build h3 {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-variation-settings: "opsz" 144;
+  font-size: clamp(36px, 4.4vw, 56px);
+  color: var(--navy-deep);
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+}
+.mirtha-build h3 em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--champagne-dk);
+}
+.mirtha-build p {
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--navy-ink);
+  line-height: 1.55;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   11 · TIMELINE COMPARISON (Navy)
+   ========================================================================== */
+.timeline {
+  background: var(--navy-deep);
+  color: var(--shore-sand);
+}
+.timeline .eyebrow { color: var(--champagne); }
+.timeline .section-title { color: var(--ivory-cream); }
+
+.tl-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--hairline-ivory);
+  margin-top: 48px;
+}
+.tl-col {
+  padding: 48px 40px;
+  position: relative;
+}
+.tl-col + .tl-col { border-left: 1px solid var(--hairline-ivory); }
+.tl-col .tl-head {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  font-variation-settings: "opsz" 48;
+  font-size: 22px;
+  margin-bottom: 6px;
+  letter-spacing: -0.005em;
+}
+.tl-trad .tl-head { color: var(--muted-ivory); }
+.tl-viox .tl-head { color: var(--champagne); }
+.tl-col .tl-total {
+  font-family: var(--ff-mono);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  font-weight: 500;
+}
+.tl-trad .tl-total { color: var(--muted-ivory); }
+.tl-viox .tl-total { color: var(--champagne); }
+
+.tl-ms {
+  list-style: none;
+}
+.tl-ms li {
+  display: grid;
+  grid-template-columns: 1fr 140px;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--hairline-ivory);
+  font-family: var(--ff-body);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.tl-ms li span {
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-align: right;
+}
+.tl-trad .tl-ms li { color: var(--muted-ivory); }
+.tl-trad .tl-ms li span { color: rgba(245,241,232,0.55); }
+.tl-viox .tl-ms li { color: var(--ivory-cream); }
+.tl-viox .tl-ms li span { color: var(--champagne); }
+
+.tl-reveal {
+  margin-top: 72px;
+  text-align: center;
+}
+.tl-reveal .tl-fig {
+  font-family: var(--ff-display);
+  font-weight: 300;
+  font-variation-settings: "opsz" 144;
+  font-size: clamp(96px, 14vw, 200px);
+  color: var(--champagne);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+.tl-reveal .tl-cap {
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(24px, 2.4vw, 32px);
+  color: var(--ivory-cream);
+  margin-top: 14px;
+  letter-spacing: -0.005em;
+}
+
+/* ==========================================================================
+   12 · 1-OF-1
+   ========================================================================== */
+.one-of-one { background: var(--ivory-cream); }
+.oo-intro {
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(22px, 2.4vw, 28px);
+  line-height: 1.55;
+  color: var(--navy-ink);
+  max-width: 840px;
+  margin-bottom: 64px;
+}
+.oo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 64px;
+  border-top: 1px solid var(--hairline);
+}
+.oo-grid li {
+  list-style: none;
+  padding: 24px 0 24px 56px;
+  border-bottom: 1px solid var(--hairline-ink);
+  position: relative;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--charcoal);
+  counter-increment: oo;
+}
+.oo-grid { counter-reset: oo; }
+.oo-grid li::before {
+  content: counter(oo, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 22px;
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--champagne);
+  font-size: 22px;
+  letter-spacing: 0;
+}
+.oo-grid li strong {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  color: var(--navy-deep);
+  letter-spacing: -0.005em;
+  display: block;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.oo-pull {
+  margin: 72px auto 0;
+  max-width: 820px;
+  text-align: center;
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.35;
+  color: var(--navy-deep);
+  padding: 0 24px;
+}
+.oo-pull::before, .oo-pull::after {
+  content: "";
+  display: block;
+  width: 56px; height: 1px;
+  background: var(--champagne);
+  margin: 28px auto;
+}
+
+/* ==========================================================================
+   13 · WHAT MIRTHA CONTROLS
+   ========================================================================== */
+.control { background: var(--shore-sand); }
+.ctrl-list {
+  list-style: none;
+  margin-top: 32px;
+  border-top: 1px solid var(--champagne);
+  border-bottom: 1px solid var(--champagne);
+  max-width: 960px;
+}
+.ctrl-list li {
+  display: grid;
+  grid-template-columns: 48px 260px 1fr;
+  gap: 24px;
+  padding: 22px 16px;
+  border-bottom: 1px solid var(--hairline-ink);
+  align-items: center;
+}
+.ctrl-list li:last-child { border-bottom: none; }
+.ctrl-check {
+  width: 24px; height: 24px;
+  border: 1px solid var(--champagne);
+  position: relative;
+  justify-self: center;
+}
+.ctrl-check::after {
+  content: "";
+  position: absolute;
+  left: 5px; top: 3px;
+  width: 14px; height: 8px;
+  border-left: 1.5px solid var(--champagne);
+  border-bottom: 1.5px solid var(--champagne);
+  transform: rotate(-45deg);
+}
+.ctrl-list li .label {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  color: var(--navy-deep);
+  font-size: 18px;
+  letter-spacing: -0.005em;
+}
+.ctrl-list li .desc {
+  font-size: 14px;
+  color: var(--charcoal);
+  line-height: 1.55;
+  font-family: var(--ff-body);
+}
+.ctrl-list li .desc code {
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  color: var(--champagne-dk);
+  letter-spacing: 0.01em;
+}
+
+.ctrl-close {
+  margin-top: 48px;
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(22px, 2.2vw, 28px);
+  color: var(--navy-deep);
+  text-align: center;
+  letter-spacing: -0.005em;
+}
+
+/* ==========================================================================
+   14 · CLOSING (Navy, full-bleed)
+   ========================================================================== */
+.closing {
+  background: var(--navy-deep);
+  color: var(--shore-sand);
+  text-align: center;
+  padding: 160px var(--gutter);
+}
+.closing .eyebrow { color: var(--champagne); }
+.closing h2 {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-variation-settings: "opsz" 144;
+  font-size: clamp(44px, 5.4vw, 72px);
+  color: var(--ivory-cream);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0 auto 32px;
+  max-width: 1040px;
+}
+.closing h2 em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--champagne);
+}
+.closing .co-compare {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 32px;
+  max-width: 860px;
+  margin: 64px auto;
+  padding: 36px 0;
+  border-top: 1px solid var(--champagne);
+  border-bottom: 1px solid var(--champagne);
+  align-items: center;
+}
+.co-compare .rule { background: var(--champagne); height: 60%; justify-self: center; }
+.co-compare .side .lab {
+  font-family: var(--ff-body);
+  font-size: 10px;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: var(--muted-ivory);
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+.co-compare .side .fig {
+  font-family: var(--ff-mono);
+  font-size: clamp(20px, 2.2vw, 28px);
+  color: var(--ivory-cream);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+.co-compare .side.viox .fig { color: var(--champagne); }
+.co-compare .side .time {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--muted-ivory);
+  margin-top: 8px;
+}
+.co-line {
+  font-family: var(--ff-quote);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(22px, 2.4vw, 30px);
+  color: var(--ivory-cream);
+  max-width: 820px;
+  margin: 0 auto 56px;
+  line-height: 1.5;
+}
+.co-sig {
+  display: inline-block;
+  padding-top: 32px;
+  border-top: 1px solid var(--champagne);
+  font-family: var(--ff-body);
+  font-size: 12px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  font-weight: 600;
+  margin-top: 48px;
+}
+.co-contact {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  font-variation-settings: "opsz" 48;
+  font-size: 22px;
+  color: var(--ivory-cream);
+  margin-top: 24px;
+  letter-spacing: -0.005em;
+}
+.co-contact a {
+  color: var(--champagne);
+  background-image: none;
+  padding-bottom: 0;
+}
+.co-contact a:hover { color: var(--ivory-cream); }
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.foot {
+  background: var(--navy-ink);
+  color: var(--muted-ivory);
+  padding: 48px var(--gutter);
+  text-align: center;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+.foot span { color: var(--champagne); }
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 1200px) {
+  :root { --gutter: 40px; }
+  .swatch-grid { grid-template-columns: repeat(4, 1fr); }
+  .img-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .section { padding: 96px 0; }
+  .exec-grid,
+  .client-grid,
+  .fh-grid,
+  .impact-grid,
+  .tier-grid,
+  .tl-grid { grid-template-columns: 1fr; gap: 48px; }
+  .impact-col { border-left: none; border-top: 1px solid var(--hairline); }
+  .impact-col:first-child { border-top: none; }
+  .tl-col + .tl-col { border-left: none; border-top: 1px solid var(--hairline-ivory); }
+  .type-specimens { grid-template-columns: repeat(2, 1fr); }
+  .specimen:nth-child(3) { border-left: none; }
+  .specimen:nth-child(n+3) { border-top: 1px solid var(--hairline); }
+  .logo-variants { grid-template-columns: repeat(2, 1fr); }
+  .oo-grid { grid-template-columns: 1fr; }
+  .phase { grid-template-columns: 80px 1fr; grid-template-rows: auto auto; }
+  .phase .pday { grid-column: 1 / -1; padding-top: 0; padding-bottom: 8px; order: -1; }
+  .concierge { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+  .jessica-avatar { margin: 0 auto; }
+  .tool-grid { grid-template-columns: 1fr; }
+  .brief-goals { grid-template-columns: 1fr; }
+  .goal { grid-template-columns: 64px 1fr; }
+  .ctrl-list li { grid-template-columns: 36px 1fr; grid-template-rows: auto auto; }
+  .ctrl-list li .desc { grid-column: 2; }
+  .co-compare { grid-template-columns: 1fr; }
+  .co-compare .rule { width: 60%; height: 1px; }
+}
+@media (max-width: 768px) {
+  .cover-h1 { font-size: 56px; }
+  .cover-h2 { font-size: 48px; }
+  .stat-row { grid-template-columns: 1fr; }
+  .stat-cell { border-left: none; border-bottom: 1px solid var(--hairline); }
+  .stat-cell:last-child { border-bottom: none; }
+  .swatch-grid { grid-template-columns: repeat(4, 1fr); }
+  .img-grid { grid-template-columns: repeat(2, 1fr); }
+  .inv-table, .stack-table, .compare-table { font-size: 13px; display: block; overflow-x: auto; }
+  .cost-line, .cost-subtot { grid-template-columns: 1fr; gap: 8px; }
+  .cost-line .li-range, .cost-subtot .li-range { text-align: left; }
+  .tl-ms li { grid-template-columns: 1fr; }
+  .tl-ms li span { text-align: left; }
+}
+@media (max-width: 480px) {
+  :root { --gutter: 24px; }
+  .section { padding: 72px 0; }
+  .swatch-grid { grid-template-columns: repeat(2, 1fr); }
+  .img-grid { grid-template-columns: repeat(2, 1fr); }
+  .cover { padding: 40px 24px; }
+  .cover::before { inset: 12px; }
+  .cover-h1 { font-size: 44px; }
+  .cover-h2 { font-size: 36px; }
+  .grand-panel { padding: 40px 24px; }
+  .affil-lockup { grid-template-columns: 1fr; }
+  .affil-lockup .affil-rule { width: 60%; height: 1px; }
+}
+
+/* ==========================================================================
+   PRINT
+   ========================================================================== */
+@media print {
+  body { background: #fff; color: #000; font-size: 11pt; line-height: 1.5; }
+  .section { padding: 32pt 0; page-break-inside: avoid; }
+  .cover, .brief, .process, .cost-trad, .timeline, .closing {
+    background: #fff !important;
+    color: #000 !important;
+    border: 1px solid var(--navy-deep);
+  }
+  .cover .cover-h1, .cover .cover-h2,
+  .brief .section-title, .brief h4,
+  .process .section-title, .process h4,
+  .cost-trad .section-title, .cost-trad h4,
+  .timeline .section-title,
+  .closing h2, .closing .co-contact { color: var(--navy-deep) !important; }
+  .brief-pull, .goal p, .phase p, .impact-col li,
+  .cost-line .li-desc, .co-line, .tl-ms li { color: #000 !important; }
+  .grand-panel, .tier.flagship, .mirtha-build { background: #fff !important; color: #000 !important; border: 1px solid var(--navy-deep); }
+  .grand-panel .gp-total, .tl-reveal .tl-fig { color: var(--champagne-dk) !important; }
+  a { color: var(--navy-deep) !important; background: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .scroll-cue, .cover::before { display: none; }
+  h2, h3, h4 { page-break-after: avoid; }
+  tr, li { page-break-inside: avoid; }
+  .section + .section { page-break-before: auto; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ==================================================================== -->
+<!-- 1 · COVER                                                             -->
+<!-- ==================================================================== -->
+<section class="cover" aria-label="Cover">
+  <div class="cover-top">
+    <div class="cover-tag">Case Study · VioX AI · Cinematic Design Studio · April 2026</div>
+    <div class="cover-mark">
+      <img src="https://mirthacarolina.com/assets/images/mc-mark-transparent.png" alt="Mirtha Carolina monogram" />
+    </div>
+  </div>
+
+  <div class="cover-center">
+    <h1 class="cover-h1">Mirtha Carolina.</h1>
+    <h2 class="cover-h2"><em>A 1-of-1.</em></h2>
+    <div class="cover-divider" aria-hidden="true"></div>
+    <p class="cover-subline">A cinematic real estate platform for the bilingual luxury market — built in eighteen days.</p>
+
+    <dl class="cover-meta">
+      <dt>Client</dt>
+      <dd><strong>Mirtha Carolina Solorzano</strong> · Christie's International Real Estate Group</dd>
+      <dt>Market</dt>
+      <dd>Monmouth County, New Jersey &middot; twenty-two submarkets</dd>
+      <dt>Live</dt>
+      <dd><a href="https://mirthacarolina.com" target="_blank" rel="noreferrer">mirthacarolina.com</a></dd>
+    </dl>
+  </div>
+
+  <div class="cover-bottom">
+    <span>VioX AI<span class="gold-dot" aria-hidden="true"></span>Cinematic Design Studio</span>
+    <span class="scroll-cue">Scroll</span>
+    <span>Document Ref. VXA-MC-CS-01</span>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- 2 · EXECUTIVE SUMMARY                                                -->
+<!-- ==================================================================== -->
+<section class="section exec" aria-labelledby="exec-title">
+  <div class="shell reveal">
+    <div class="exec-grid">
+      <aside class="exec-side">
+        <div class="index">01</div>
+        <div class="label">Executive Summary</div>
+      </aside>
+      <div class="exec-body">
+        <h2 id="exec-title" class="section-title" style="margin-bottom: 40px;">A platform that did not exist three weeks ago.</h2>
+        <p>A single bilingual Realtor-Associate wanted a personal-brand website that could compete with — and differentiate against — Compass, Sotheby's, and The Agency. Not a template. A 1-of-1 editorial platform with cinematic video, bilingual parity, a live MLS feed, a branded AI voice concierge, and a 22-neighborhood content library.</p>
+        <p>We delivered <strong>45 content pages</strong> across a multi-page cinematic architecture, a custom AI voice agent that can drive the site in English or Spanish, and a full production brand identity — in <strong>under three weeks</strong>.</p>
+        <p>The equivalent scope at a traditional creative agency runs four to six months and carries a six-figure invoice at the low end. The work that follows documents exactly what was built, how it was built, and what it would have cost anywhere else.</p>
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-cell">
+        <div class="fig">45</div>
+        <div class="caption">Content Pages</div>
+      </div>
+      <div class="stat-cell">
+        <div class="fig">22</div>
+        <div class="caption">Neighborhoods</div>
+      </div>
+      <div class="stat-cell">
+        <div class="fig"><em>18</em></div>
+        <div class="caption">Days to Deliver</div>
+      </div>
+    </div>
+
+    <div class="money-reveal">
+      <div class="line">Traditional Agency Range</div>
+      <div class="amt">$348,000 &ndash; $855,500</div>
+      <div class="vs" aria-hidden="true"></div>
+      <div class="line" style="color: var(--champagne-dk); margin-bottom: 12px;">VioX AI Cinematic Design Studio</div>
+      <div class="viox">A fraction. <em>Eighteen days.</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- 3 · THE CLIENT                                                        -->
+<!-- ==================================================================== -->
+<section class="section client" aria-labelledby="client-title">
+  <div class="shell reveal">
+    <div class="eyebrow">02 &middot; The Client</div>
+    <h2 id="client-title" class="section-title">Mirtha Carolina Solorzano.</h2>
+    <p class="section-lede">Bilingual Realtor-Associate. Christie's International Real Estate Group. Teresa Minnick Group — a team with eight hundred million in career sales.</p>
+
+    <div class="client-grid">
+      <div class="client-text">
+        <p>Based in Holmdel, New Jersey, Mirtha represents luxury listings across all twenty-two submarkets of Monmouth County — from Rumson old-money estates to Pier Village oceanfront condos to Keyport commercial revivals.</p>
+        <p>Her core differentiator in the market:</p>
+        <ul class="client-diff">
+          <li><strong>Editorial-grade bilingual representation</strong>Not a Google-Translate widget, but a fully translated experience with hand-tuned editorial Spanish.</li>
+          <li><strong>Christie's International network access</strong>The only global real estate firm owned by an art auction house.</li>
+          <li><strong>Background in international diplomacy, education, and marketing</strong>Rare among competitors in the Monmouth luxury segment.</li>
+        </ul>
+        <p>The problem: none of this was visible online. Her only web footprint was a templated Christie's agent profile and a thin Teresa Minnick Group team page. No personal domain. No SEO presence. No lead capture. No bilingual content. No visual brand.</p>
+      </div>
+
+      <aside>
+        <figure class="portrait-card">
+          <img src="https://mirthacarolina.com/assets/images/mirtha-portrait.jpg" alt="Editorial portrait of Mirtha Carolina Solorzano" />
+        </figure>
+        <div class="portrait-meta">
+          <span>Holmdel, NJ</span>
+          <strong>REALTOR-ASSOCIATE</strong>
+          <span>2026</span>
+        </div>
+
+        <div class="affil-lockup">
+          <img src="https://mirthacarolina.com/assets/images/christies-logo.png" alt="Christie's International Real Estate Group" />
+          <div class="affil-rule" aria-hidden="true"></div>
+          <img src="https://mirthacarolina.com/assets/images/tcm-logo.png" alt="Teresa Minnick Group" />
+        </div>
+        <div class="license-callout">NJ REALTOR LICENSE &middot; <strong>#1755940</strong></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- 4 · THE BRIEF (Navy)                                                  -->
+<!-- ==================================================================== -->
+<section class="section brief" aria-labelledby="brief-title">
+  <div class="shell reveal">
+    <div class="eyebrow">03 &middot; The Brief</div>
+    <h2 id="brief-title" class="section-title">Six goals. <em>One mandate.</em></h2>
+
+    <p class="brief-pull">Target: agency-level quality — without the agency timeline or agency invoice.</p>
+
+    <div class="brief-goals">
+      <article class="goal">
+        <div class="num">01</div>
+        <div>
+          <h4>Position at the top.</h4>
+          <p>Position Mirtha at the top of the Monmouth County luxury market against incumbents with decades of local presence.</p>
+        </div>
+      </article>
+      <article class="goal">
+        <div class="num">02</div>
+        <div>
+          <h4>Capture the bilingual buyer.</h4>
+          <p>Capture the bilingual Latin American buyer segment moving capital to the Jersey Shore — with zero top-producing Spanish-speaking options in the $1M+ range.</p>
+        </div>
+      </article>
+      <article class="goal">
+        <div class="num">03</div>
+        <div>
+          <h4>Support active inventory.</h4>
+          <p>Support her active listing inventory — eight properties across five property-type categories — with editorial-grade showcase pages.</p>
+        </div>
+      </article>
+      <article class="goal">
+        <div class="num">04</div>
+        <div>
+          <h4>Educate the buyer.</h4>
+          <p>Educate prospective buyers about Monmouth County's twenty-two distinct submarkets so she becomes the definitive local authority.</p>
+        </div>
+      </article>
+      <article class="goal">
+        <div class="num">05</div>
+        <div>
+          <h4>Convert.</h4>
+          <p>Convert. Private-showing inquiries — not a generic "contact me" form.</p>
+        </div>
+      </article>
+      <article class="goal">
+        <div class="num">06</div>
+        <div>
+          <h4>Scale.</h4>
+          <p>Scale. New listings, new neighborhoods, new languages should add in minutes, not weeks.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- 5 · WHAT WE BUILT                                                     -->
+<!-- ==================================================================== -->
+<section class="section scope" aria-labelledby="scope-title">
+  <div class="shell-wide reveal">
+    <div class="scope-heading">
+      <div class="eyebrow">04 &middot; What We Built</div>
+      <h2 id="scope-title" class="section-title">Complete scope — <em>the full inventory.</em></h2>
+      <p class="section-lede">Forty-five indexable content pages across a multi-page cinematic architecture. Thirty-eight production images. A bilingual AI voice concierge with seven client tools. Full Schema.org graph. A brand identity system built to print.</p>
+    </div>
+
+    <!-- PAGE INVENTORY -->
+    <h3 style="font-size: 32px; font-weight: 400; font-variation-settings: 'opsz' 72; margin-bottom: 8px; letter-spacing: -0.01em;">Page Inventory</h3>
+    <p style="color: var(--muted-ink); margin-bottom: 8px; font-size: 15px;">Forty-five content pages, four infrastructure files — built, indexed, and deployed.</p>
+
+    <table class="inv-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Pages</th>
+          <th>What's On Each</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="inv-cat">Landing</td><td class="inv-count">01</td><td class="inv-desc">Scroll-scrubbed drone hero (121 video frames) · 4-card featured listings teaser · bilingual bio teaser · Christie's + TCM affiliation lockup · Monmouth County map · newsletter signup.</td></tr>
+        <tr><td class="inv-cat">About</td><td class="inv-count">01</td><td class="inv-desc">Full editorial bio with real portrait · 3-chapter split-scroll story · 6-step process · client testimonial marquee · cross-links.</td></tr>
+        <tr><td class="inv-cat">Listings</td><td class="inv-count">01 + 08</td><td class="inv-desc">Atlantic Club Residences · The Seashore at Long Branch · The Willow at Long Branch · 30 Melrose at Lofts at Pier Village · 114 Wellington · 55 Lower Main · 537 S Atlantic · 522 Amboy.</td></tr>
+        <tr><td class="inv-cat">Portfolio</td><td class="inv-count">01 + 04</td><td class="inv-desc">Live FlexMLS embeds per category — Rentals, Residential, Luxury Residential, Commercial.</td></tr>
+        <tr><td class="inv-cat">Neighborhoods</td><td class="inv-count">01 + 22</td><td class="inv-desc">Twenty-two Monmouth County submarkets — each with 3-paragraph editorial overview (bilingual), 4-stat grid, 8 lifestyle pillars, cross-linked to other neighborhoods and relevant listings.</td></tr>
+        <tr><td class="inv-cat">Insights</td><td class="inv-count">01</td><td class="inv-desc">Q2 2026 Monmouth luxury market report with article placeholders for ongoing content.</td></tr>
+        <tr><td class="inv-cat">Contact</td><td class="inv-count">01</td><td class="inv-desc">Private Showing inquiry form with listing-reference auto-populate · 4-column contact block · magnetic CTA.</td></tr>
+        <tr><td class="inv-cat">Legal / Infra</td><td class="inv-count">04</td><td class="inv-desc">Bilingual custom 404 · 41-URL sitemap with hreflang + image entries · AI crawler policy · team transparency signal (humans.txt).</td></tr>
+      </tbody>
+    </table>
+    <div class="inv-total">
+      <span>Total — indexable content</span>
+      <span>45 pages + 4 infrastructure files</span>
+    </div>
+
+    <!-- CINEMATIC HERO FEATURE -->
+    <div class="feature-hero">
+      <div class="eyebrow eyebrow-gold" style="color: var(--champagne-dk);">Signature Moment</div>
+      <h3>The cinematic hero. <em>Piloted by the scroll.</em></h3>
+      <p class="fh-lede">A custom drone sequence — slow boom-out from a Navesink River waterfront estate at golden twilight. Generated, animated, and scroll-scrubbed. The user does not watch the film. They fly it.</p>
+
+      <div class="fh-grid">
+        <figure class="fh-visual">
+          <img src="https://mirthacarolina.com/assets/images/og-cover.jpg" alt="Navesink waterfront hero frame" />
+          <div class="fh-label">Press Scroll &middot; 121 Frames &middot; 24 fps</div>
+        </figure>
+        <div class="fh-cols">
+          <div class="fh-col">
+            <span class="tag">What it is</span>
+            <h4>A canvas-rendered drone film.</h4>
+            <p>A four-beat sequence that reveals Monmouth as the user moves through the page — cedar gable, aerial, golden-hour shift, skyline lock with CTA fade.</p>
+          </div>
+          <div class="fh-col">
+            <span class="tag">How it works</span>
+            <h4>Frames tied to scroll position.</h4>
+            <p>GSAP ScrollTrigger drives a canvas that paints the correct frame for every scroll offset. Frame 1 is preloaded for instant paint. Reduced-motion is honored.</p>
+          </div>
+          <div class="fh-col">
+            <span class="tag">The stack</span>
+            <h4>Gemini &rarr; Kling &rarr; ffmpeg &rarr; GSAP.</h4>
+            <p>Gemini 3.1 Flash generates the 2K still. WaveSpeed Kling v3 Pro animates to 5s video. ffmpeg extracts 121 frames. GSAP paints them on scroll.</p>
+            <div class="tech">gemini-3.1-flash · kling-v3-pro · ffmpeg · gsap-scrolltrigger</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JESSICA CONCIERGE -->
+    <div class="concierge">
+      <div class="jessica-avatar" aria-hidden="true">
+        <span class="initials">J</span>
+      </div>
+      <div>
+        <div class="eyebrow" style="margin-bottom: 12px;">The Bilingual Concierge</div>
+        <h3>Jessica. <em>She drives the site.</em></h3>
+        <p class="intro">Trained on a custom knowledge base with Mirtha's full bio, all eight listings, all twenty-two neighborhoods, and Christie's affiliation details. Auto-detects Spanish the moment a caller speaks it and flips the entire experience.</p>
+
+        <div class="tool-grid">
+          <div class="tool"><div class="n">01</div><div><span class="tname">scroll_to_section</span><span class="tdesc">Jumps to any section on demand.</span></div></div>
+          <div class="tool"><div class="n">02</div><div><span class="tname">scroll_direction</span><span class="tdesc">Top · bottom · next · previous.</span></div></div>
+          <div class="tool"><div class="n">03</div><div><span class="tname">change_language</span><span class="tdesc">Flips EN &harr; ES and follows the caller there.</span></div></div>
+          <div class="tool"><div class="n">04</div><div><span class="tname">highlight_property</span><span class="tdesc">Pulses a featured trophy card.</span></div></div>
+          <div class="tool"><div class="n">05</div><div><span class="tname">highlight_neighborhood</span><span class="tdesc">Navigates any of 22 neighborhood pages.</span></div></div>
+          <div class="tool"><div class="n">06</div><div><span class="tname">open_inquiry_form</span><span class="tdesc">Scrolls to and focuses the contact form.</span></div></div>
+          <div class="tool"><div class="n">07</div><div><span class="tname">show_market_report</span><span class="tdesc">Surfaces the Q2 insights card.</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BRAND IDENTITY -->
+    <div class="brand-section">
+      <div class="eyebrow">Brand Identity</div>
+      <h3>A system built to print. <em>And to scale.</em></h3>
+      <p class="fh-lede" style="max-width: 900px;">Palette, typography, and a custom Editorial Monogram logo — produced in four production variants, wired through nav, footer, favicon, trust bar, and social share cards across all forty-five pages.</p>
+
+      <div class="swatch-grid" role="img" aria-label="Eight-color brand palette">
+        <div class="swatch sw-navy"><div class="sw-info"><span class="sw-name">Navy Deep</span>#0B1F3A</div></div>
+        <div class="swatch sw-navy-ink"><div class="sw-info"><span class="sw-name">Navy Ink</span>#162B4A</div></div>
+        <div class="swatch sw-red"><div class="sw-info"><span class="sw-name">Christie's Red</span>#9B2032</div></div>
+        <div class="swatch sw-sand"><div class="sw-info"><span class="sw-name">Shore Sand</span>#E8DFCE</div></div>
+        <div class="swatch sw-ivory"><div class="sw-info"><span class="sw-name">Ivory Cream</span>#F5F1E8</div></div>
+        <div class="swatch sw-gold"><div class="sw-info"><span class="sw-name">Champagne</span>#C4A962</div></div>
+        <div class="swatch sw-gold-dk"><div class="sw-info"><span class="sw-name">Champagne Dk</span>#A88E4A</div></div>
+        <div class="swatch sw-charcoal"><div class="sw-info"><span class="sw-name">Charcoal</span>#1C1C1C</div></div>
+      </div>
+
+      <div class="type-specimens">
+        <div class="specimen">
+          <span class="tag">Display</span>
+          <div class="sp-show sp-fraunces">Aa</div>
+          <div class="sp-info">Fraunces &middot; Variable &middot; opsz 9..144</div>
+        </div>
+        <div class="specimen">
+          <span class="tag">Display Italic</span>
+          <div class="sp-show sp-fraunces-it">Aa</div>
+          <div class="sp-info">Fraunces Italic &middot; 300</div>
+        </div>
+        <div class="specimen">
+          <span class="tag">Body</span>
+          <div class="sp-show sp-inter">Aa Bb Cc</div>
+          <div class="sp-info">Inter &middot; 300-700</div>
+        </div>
+        <div class="specimen">
+          <span class="tag">Accent</span>
+          <div class="sp-show sp-cormorant">Editorial</div>
+          <div class="sp-info">Cormorant Garamond Italic</div>
+        </div>
+      </div>
+
+      <div class="eyebrow" style="margin-top: 8px;">Editorial Monogram &middot; Four Variants</div>
+      <div class="logo-variants">
+        <div class="logo-variant lv-ivory">
+          <img src="https://mirthacarolina.com/assets/images/mc-mark.png" alt="MC monogram on ivory" />
+          <span class="lv-label">Primary &middot; Ivory</span>
+        </div>
+        <div class="logo-variant lv-navy">
+          <img src="https://mirthacarolina.com/assets/images/mc-mark-light.png" alt="MC monogram on navy" />
+          <span class="lv-label">Inverted &middot; Navy</span>
+        </div>
+        <div class="logo-variant lv-sand">
+          <img src="https://mirthacarolina.com/assets/images/mc-mark.png" alt="MC monogram on sand" />
+          <span class="lv-label">Shore &middot; Sand</span>
+        </div>
+        <div class="logo-variant lv-gold">
+          <img src="https://mirthacarolina.com/assets/images/mc-mark-light.png" alt="MC monogram gold foil" />
+          <span class="lv-label">Foil &middot; Champagne</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCTION IMAGES -->
+    <div class="brand-section">
+      <div class="eyebrow">Production</div>
+      <h3>Thirty-eight production images. <em>Zero stock.</em></h3>
+      <p class="fh-lede" style="max-width: 900px;">One hero still, 121 hero frames, one real editorial portrait, twenty-two neighborhood heroes, and fifteen property and brand photos — every asset descriptively alt-texted with city, subject, and context.</p>
+
+      <div class="img-grid">
+        <div class="img-thumb"><img src="https://mirthacarolina.com/assets/images/og-cover.jpg" alt="Navesink aerial hero" /></div>
+        <div class="img-thumb"><img src="https://mirthacarolina.com/assets/images/mirtha-portrait.jpg" alt="Mirtha Carolina editorial portrait" /></div>
+        <div class="img-thumb"><img src="https://mirthacarolina.com/assets/images/atlantic-club-1.jpg" alt="Atlantic Club Residences" /></div>
+        <div class="img-thumb"><img src="https://mirthacarolina.com/assets/images/seashore-1.jpg" alt="The Seashore at Long Branch" /></div>
+        <div class="img-thumb"><img src="https://mirthacarolina.com/assets/images/willow-1.jpg" alt="The Willow at Long Branch" /></div>
+        <div class="img-thumb"><img src="https://mirthacarolina.com/assets/images/melrose-1.jpg" alt="30 Melrose at Lofts at Pier Village" /></div>
+        <div class="img-thumb"><img src="https://mirthacarolina.com/assets/images/neighborhood-rumson.jpg" alt="Rumson neighborhood" /></div>
+        <div class="img-thumb"><img src="https://mirthacarolina.com/assets/images/neighborhood-spring-lake.jpg" alt="Spring Lake neighborhood" /></div>
+        <div class="img-thumb"><img src="https://mirthacarolina.com/assets/images/neighborhood-asbury-park.jpg" alt="Asbury Park neighborhood" /></div>
+        <div class="img-thumb"><img src="https://mirthacarolina.com/assets/images/neighborhood-long-branch.jpg" alt="Long Branch neighborhood" /></div>
+        <div class="img-thumb"><img src="https://mirthacarolina.com/assets/images/neighborhood-red-bank.jpg" alt="Red Bank neighborhood" /></div>
+        <div class="img-thumb"><img src="https://mirthacarolina.com/assets/images/neighborhood-fair-haven.jpg" alt="Fair Haven neighborhood" /></div>
+        <div class="img-thumb"><img src="https://mirthacarolina.com/assets/images/neighborhood-holmdel.jpg" alt="Holmdel neighborhood" /></div>
+        <div class="img-thumb"><img src="https://mirthacarolina.com/assets/images/neighborhood-colts-neck.jpg" alt="Colts Neck neighborhood" /></div>
+        <div class="img-thumb"><img src="https://mirthacarolina.com/assets/images/neighborhood-manasquan.jpg" alt="Manasquan neighborhood" /></div>
+        <div class="img-thumb"><img src="https://mirthacarolina.com/assets/images/neighborhood-sea-bright.jpg" alt="Sea Bright neighborhood" /></div>
+      </div>
+      <div class="img-caption">Sixteen of <strong>thirty-eight</strong> production images shown &middot; full library across all forty-five pages</div>
+    </div>
+
+    <!-- SCHEMA GRAPH -->
+    <div class="brand-section">
+      <div class="eyebrow">Structured Data</div>
+      <h3>A full Schema.org graph. <em>Fifteen schema types.</em></h3>
+      <p class="fh-lede" style="max-width: 900px;">Not a token JSON-LD block. A cross-referenced graph where every entity — agent, listing, place, breadcrumb — points to the others with named relationships.</p>
+
+      <div class="schema-graph">
+        <span class="schema-tag primary">RealEstateAgent</span>
+        <span class="schema-tag primary">WebSite</span>
+        <span class="schema-tag">SearchAction</span>
+        <span class="schema-tag primary">LocalBusiness</span>
+        <span class="schema-tag">BreadcrumbList</span>
+        <span class="schema-tag primary">Person</span>
+        <span class="schema-tag">knowsAbout</span>
+        <span class="schema-tag">knowsLanguage</span>
+        <span class="schema-tag">affiliation</span>
+        <span class="schema-tag primary">Apartment</span>
+        <span class="schema-tag primary">SingleFamilyResidence</span>
+        <span class="schema-tag primary">RealEstateListing</span>
+        <span class="schema-tag">amenityFeature</span>
+        <span class="schema-tag">floorSize</span>
+        <span class="schema-tag">geo</span>
+        <span class="schema-tag primary">CollectionPage</span>
+        <span class="schema-tag">ItemList</span>
+        <span class="schema-tag primary">Place</span>
+        <span class="schema-tag">containedInPlace</span>
+        <span class="schema-tag">additionalProperty</span>
+        <span class="schema-tag primary">ContactPage</span>
+      </div>
+    </div>
+
+    <!-- SEO HARDENING -->
+    <div class="brand-section">
+      <div class="eyebrow">Technical Hardening</div>
+      <h3>SEO &middot; Accessibility &middot; <em>Core Web Vitals.</em></h3>
+      <p class="fh-lede" style="max-width: 900px;">Everything Google rewards and every audit score — built into the template layer, not bolted on at the end.</p>
+
+      <ol class="seo-check">
+        <li><strong>Bilingual parity</strong>1,700+ paired data-en / data-es attributes across the site — editorial Spanish, hand-tuned, not machine-translated.</li>
+        <li><strong>Hreflang</strong>en + es + x-default declared on every page.</li>
+        <li><strong>Open Graph + Twitter</strong>Per-page cards with 1200&times;630 imagery and Twitter handle linked.</li>
+        <li><strong>Canonical URLs</strong>Declared on all 45 pages to suppress duplicate-content risk.</li>
+        <li><strong>Sitemap.xml</strong>41 URLs · hreflang xhtml:link · image:image with captions.</li>
+        <li><strong>Robots.txt</strong>Sitemap pointer and explicit AI crawler policy.</li>
+        <li><strong>Custom 404</strong>Bilingual, with noindex for crawl hygiene.</li>
+        <li><strong>Resource hints</strong>preload hero frame 1 · dns-prefetch · preconnect Google Fonts.</li>
+        <li><strong>Core Web Vitals</strong>Explicit width/height on every image, below-fold lazy-loading, CLS prevented.</li>
+        <li><strong>Accessibility</strong>ARIA on 30+ decorative divs, semantic HTML landmarks, reduced-motion honored.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- 6 · THE PROCESS (Navy)                                                -->
+<!-- ==================================================================== -->
+<section class="section process" aria-labelledby="process-title">
+  <div class="shell reveal">
+    <div class="eyebrow">05 &middot; The Process</div>
+    <h2 id="process-title" class="section-title">Eleven phases. <em>Eighteen days.</em></h2>
+    <p class="section-lede">From Day 1 competitive intelligence through Day 18 handoff documents — sequenced in parallel where quality allowed, serial where it did not.</p>
+
+    <div class="phases">
+      <article class="phase">
+        <div class="pn">00</div>
+        <div class="pday">Day 1</div>
+        <div>
+          <h4>Competitive Intelligence.</h4>
+          <p>Twenty competitors researched across four categories — direct Monmouth County, aspirational national, experience/brokerage, luxury lifestyle. Five niche opportunities and five design trends no local competitor was running. Key finding: no Monmouth County luxury realtor ran scroll-driven cinematic video, a genuine /es locale, or per-listing microsites.</p>
+        </div>
+      </article>
+      <article class="phase">
+        <div class="pn">01</div>
+        <div class="pday">Day 1-2</div>
+        <div>
+          <h4>Brand Analysis.</h4>
+          <p>Complete brand system — palette, typography, logo direction, positioning. "Heritage Atlantic Broker. Modern Cinematic Eye." locked as the positioning line.</p>
+        </div>
+      </article>
+      <article class="phase">
+        <div class="pn">02</div>
+        <div class="pday">Day 2</div>
+        <div>
+          <h4>Hero Concept.</h4>
+          <p>Storyboarded the four-beat scroll-scrubbed drone sequence: cedar gable, Navesink aerial, golden-hour chromatic shift, Monmouth skyline lock with CTA fade-in.</p>
+        </div>
+      </article>
+      <article class="phase">
+        <div class="pn">03</div>
+        <div class="pday">Day 2-3</div>
+        <div>
+          <h4>Scene Generation.</h4>
+          <p>Gemini 3.1 Flash &rarr; 2K hero still. WaveSpeed Kling v3 Pro &rarr; five-second cinematic video. ffmpeg &rarr; 121 frames at 24fps.</p>
+        </div>
+      </article>
+      <article class="phase">
+        <div class="pn">04</div>
+        <div class="pday">Day 3-7</div>
+        <div>
+          <h4>Site Build.</h4>
+          <p>Initial site built as a single-page monolith, then refactored into multi-page architecture with shared CSS, JS, and partials. Progressive enhancement from minimal to 45-page system across four deployment waves.</p>
+        </div>
+      </article>
+      <article class="phase">
+        <div class="pn">05</div>
+        <div class="pday">Day 3-10</div>
+        <div>
+          <h4>Image Production.</h4>
+          <p>Thirty-eight images total — twenty-two neighborhood heroes in Architectural Digest editorial style, sixteen property and brand photos mixing real listings from brokerage sites, Spark Platform CDN, and Gemini synthesis.</p>
+        </div>
+      </article>
+      <article class="phase">
+        <div class="pn">06</div>
+        <div class="pday">Day 8-10</div>
+        <div>
+          <h4>SEO + Schema.</h4>
+          <p>Comprehensive on-page audit and Schema.org graph expansion touching all forty-five pages. Sitemap, robots, hreflang, OG, Twitter, dns-prefetch, resource hints, ARIA, semantic HTML.</p>
+        </div>
+      </article>
+      <article class="phase">
+        <div class="pn">07</div>
+        <div class="pday">Day 10-11</div>
+        <div>
+          <h4>Deploy + Integrate.</h4>
+          <p>GitHub repo &rarr; Vercel &rarr; custom domain pipeline. ElevenLabs agent creation with bilingual knowledge base and seven client tools. FlexMLS iframe integration per portfolio category.</p>
+        </div>
+      </article>
+      <article class="phase">
+        <div class="pn">08</div>
+        <div class="pday">Day 12-14</div>
+        <div>
+          <h4>Brand Integration.</h4>
+          <p>Editorial Monogram &rarr; four production variants. Logo wired through nav, footer, favicon, trust bar, and social share cards. Christie's International Real Estate and Teresa Minnick Group official logos integrated.</p>
+        </div>
+      </article>
+      <article class="phase">
+        <div class="pn">09</div>
+        <div class="pday">Day 15-18</div>
+        <div>
+          <h4>Expansion.</h4>
+          <p>Neighborhood system expanded from four to twenty-two. Cross-links retrofitted. Content corrections (license number, 30 Melrose &rarr; Lofts at Pier Village, Long Branch rename).</p>
+        </div>
+      </article>
+      <article class="phase">
+        <div class="pn">10</div>
+        <div class="pday">Day 18</div>
+        <div>
+          <h4>Handoff Documents.</h4>
+          <p>Competitive report, proposal, brand system export, Google Business Profile checklist, broker authorization email drafts, case study — all saved as persistent deliverables Mirtha owns.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- 7 · TECHNOLOGY STACK                                                  -->
+<!-- ==================================================================== -->
+<section class="section stack" aria-labelledby="stack-title">
+  <div class="shell reveal">
+    <div class="eyebrow">06 &middot; Technology Stack</div>
+    <h2 id="stack-title" class="section-title">Twelve layers. <em>No framework bloat.</em></h2>
+    <p class="section-lede">Every technology choice had to justify itself against three criteria: loads instantly, Mirtha owns it, and it scales without a rebuild.</p>
+
+    <table class="stack-table">
+      <thead>
+        <tr>
+          <th>Layer</th>
+          <th>Technology</th>
+          <th>Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="st-layer">Frontend</td><td class="st-tech">vanilla html5 &middot; css3 &middot; modern es</td><td class="st-why">No framework bloat. Loads instantly.</td></tr>
+        <tr><td class="st-layer">Animation</td><td class="st-tech">gsap 3.12.5 + scrolltrigger</td><td class="st-why">Industry-standard for cinematic scroll work.</td></tr>
+        <tr><td class="st-layer">Typography</td><td class="st-tech">google fonts &middot; fraunces · inter · cormorant · jetbrains mono</td><td class="st-why">Free, performant, Christie's-aligned.</td></tr>
+        <tr><td class="st-layer">Hero video</td><td class="st-tech">gemini-3.1-flash &rarr; kling-v3-pro &rarr; ffmpeg</td><td class="st-why">AI-accelerated production, drone-film quality.</td></tr>
+        <tr><td class="st-layer">Images</td><td class="st-tech">gemini-3.1-flash (editorial realism)</td><td class="st-why">10&times; faster and cheaper than staged photo shoots.</td></tr>
+        <tr><td class="st-layer">Logo</td><td class="st-tech">gemini-nano-banana + python pil</td><td class="st-why">Custom mark in 60 seconds, four variants in five minutes.</td></tr>
+        <tr><td class="st-layer">Voice agent</td><td class="st-tech">elevenlabs conversational ai + custom kb</td><td class="st-why">Best-in-class multilingual voice, seven custom client tools.</td></tr>
+        <tr><td class="st-layer">MLS data</td><td class="st-tech">flexmls public share iframe (spark api-ready)</td><td class="st-why">No lock-in, works immediately, zero auth required.</td></tr>
+        <tr><td class="st-layer">Hosting</td><td class="st-tech">vercel production</td><td class="st-why">Instant global CDN, free SSL, auto-deploy from GitHub.</td></tr>
+        <tr><td class="st-layer">Version control</td><td class="st-tech">github</td><td class="st-why">Industry standard, auto-deploy pipeline, audit trail.</td></tr>
+        <tr><td class="st-layer">Domain</td><td class="st-tech">cloudflare dns + vercel</td><td class="st-why">Customer keeps registrar control.</td></tr>
+        <tr><td class="st-layer">SEO</td><td class="st-tech">schema.org json-ld + hreflang + sitemap.xml</td><td class="st-why">W3C-compliant, Google-recommended.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- 8 · PROJECTED IMPACT                                                  -->
+<!-- ==================================================================== -->
+<section class="section impact" aria-labelledby="impact-title">
+  <div class="shell reveal">
+    <div class="eyebrow">07 &middot; Projected Impact</div>
+    <h2 id="impact-title" class="section-title">What this platform unlocks.</h2>
+
+    <div class="impact-grid">
+      <div class="impact-col">
+        <h4>Next 90 days. <em>Commercial.</em></h4>
+        <ul>
+          <li><strong>Greenfield SEO positioning.</strong>No legacy to unwind. Google indexes all 45 pages within ~2 weeks of sitemap submission. Expected ranking for "bilingual realtor Monmouth County," "Spanish speaking realtor New Jersey," "Christie's Monmouth," and 22 neighborhood long-tails.</li>
+          <li><strong>Voice Concierge lead capture.</strong>Every visitor gets a 24/7 bilingual docent. Expected conversion lift vs. a static form: 3 to 5&times;.</li>
+          <li><strong>Listing-support SEO.</strong>Every active listing has a dedicated editorial page. Listing URLs become shareable assets.</li>
+          <li><strong>Neighborhood authority.</strong>Twenty-two neighborhood pages position her as the encyclopedic local guide.</li>
+          <li><strong>Bilingual differentiation.</strong>Zero other Monmouth County luxury realtors have an editorial-grade /es experience. Immediate capture of the Latin American international buyer segment.</li>
+        </ul>
+      </div>
+      <div class="impact-col">
+        <h4>Long-term. <em>Structural.</em></h4>
+        <ul>
+          <li><strong>Listings plug in as 120 lines of HTML + 1 image.</strong>The template is now a known quantity.</li>
+          <li><strong>Neighborhoods plug in as 320 lines of HTML + 1 image.</strong>Template exists; content is the only variable.</li>
+          <li><strong>New languages plug in as attributes.</strong>data-en, data-es, data-fr, data-it — the system is language-agnostic.</li>
+          <li><strong>Spark API slot is already wired.</strong>The moment Teresa Minnick's broker authorization lands, the portfolio upgrades from iframe to native IDX with one paste.</li>
+          <li><strong>Google Business Profile playbook complete.</strong>Mirtha can have GBP live in 30 minutes from the checklist we delivered.</li>
+        </ul>
+      </div>
+    </div>
+
+    <blockquote class="impact-pull">Greenfield SEO positioning. Zero legacy to unwind.</blockquote>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- 9 · COST · TRADITIONAL AGENCY (Navy, centerpiece)                    -->
+<!-- ==================================================================== -->
+<section class="section cost-trad" aria-labelledby="cost-trad-title">
+  <div class="shell reveal">
+    <div class="eyebrow">The Agency Alternative</div>
+    <h2 id="cost-trad-title" class="section-title">What other firms would charge.</h2>
+    <p class="section-lede">At the quality and scope VioX AI delivered to Mirtha, here is what a traditional creative agency in New York or San Francisco would invoice. Each line item reflects published rates at boutique and major US creative agencies, 2025-2026.</p>
+
+    <!-- Discovery -->
+    <div class="cost-cat">
+      <div class="cost-cat-head">
+        <h4>01 &middot; Discovery + Strategy</h4>
+        <span class="sub">Research &middot; positioning &middot; IA</span>
+      </div>
+      <div class="cost-line"><div class="li-desc">Twenty-competitor competitive intelligence report</div><div class="li-range">$8,000 &ndash; $15,000</div></div>
+      <div class="cost-line"><div class="li-desc">Brand strategy + positioning workshop</div><div class="li-range">$10,000 &ndash; $25,000</div></div>
+      <div class="cost-line"><div class="li-desc">Content strategy + information architecture for 45 pages</div><div class="li-range">$8,000 &ndash; $18,000</div></div>
+      <div class="cost-subtot"><div class="li-desc">Subtotal</div><div class="li-range">$26,000 &ndash; $58,000</div></div>
+    </div>
+
+    <!-- Brand Identity -->
+    <div class="cost-cat">
+      <div class="cost-cat-head">
+        <h4>02 &middot; Brand Identity</h4>
+        <span class="sub">Logo &middot; system &middot; guidelines</span>
+      </div>
+      <div class="cost-line"><div class="li-desc">Custom logo system (primary + 3 production variants)</div><div class="li-range">$8,000 &ndash; $25,000</div></div>
+      <div class="cost-line"><div class="li-desc">Eight-color palette + typography pairing + design system export</div><div class="li-range">$6,000 &ndash; $18,000</div></div>
+      <div class="cost-line"><div class="li-desc">Brand guidelines document</div><div class="li-range">$4,000 &ndash; $12,000</div></div>
+      <div class="cost-subtot"><div class="li-desc">Subtotal</div><div class="li-range">$18,000 &ndash; $55,000</div></div>
+    </div>
+
+    <!-- Design -->
+    <div class="cost-cat">
+      <div class="cost-cat-head">
+        <h4>03 &middot; Design</h4>
+        <span class="sub">UI &middot; UX &middot; interaction</span>
+      </div>
+      <div class="cost-line"><div class="li-desc">UI/UX design for 45 pages (at $500&ndash;$1,500/page)</div><div class="li-range">$22,500 &ndash; $67,500</div></div>
+      <div class="cost-line"><div class="li-desc">Interaction design (scroll-scrubbed hero, parallax, magnetic CTA, etc.)</div><div class="li-range">$12,000 &ndash; $30,000</div></div>
+      <div class="cost-line"><div class="li-desc">Responsive design + mobile adaptations</div><div class="li-range">$6,000 &ndash; $15,000</div></div>
+      <div class="cost-subtot"><div class="li-desc">Subtotal</div><div class="li-range">$40,500 &ndash; $112,500</div></div>
+    </div>
+
+    <!-- Content -->
+    <div class="cost-cat">
+      <div class="cost-cat-head">
+        <h4>04 &middot; Content</h4>
+        <span class="sub">Editorial &middot; bilingual</span>
+      </div>
+      <div class="cost-line"><div class="li-desc">Editorial copywriting (EN) for 45 pages</div><div class="li-range">$22,500 &ndash; $45,000</div></div>
+      <div class="cost-line"><div class="li-desc">Bilingual translation to editorial-quality Spanish</div><div class="li-range">$15,000 &ndash; $35,000</div></div>
+      <div class="cost-line"><div class="li-desc">Twenty-two neighborhood rich-editorial narratives</div><div class="li-range">$11,000 &ndash; $22,000</div></div>
+      <div class="cost-line"><div class="li-desc">Eight listing editorial narratives</div><div class="li-range">$4,000 &ndash; $10,000</div></div>
+      <div class="cost-subtot"><div class="li-desc">Subtotal</div><div class="li-range">$52,500 &ndash; $112,000</div></div>
+    </div>
+
+    <!-- Production Assets -->
+    <div class="cost-cat">
+      <div class="cost-cat-head">
+        <h4>05 &middot; Production Assets</h4>
+        <span class="sub">Video &middot; photography</span>
+      </div>
+      <div class="cost-line"><div class="li-desc">Hero drone video (drone pilot + grading + 5-day post)</div><div class="li-range">$15,000 &ndash; $45,000</div></div>
+      <div class="cost-line"><div class="li-desc">Twenty-two neighborhood hero photography (editorial shoots)</div><div class="li-range">$22,000 &ndash; $66,000</div></div>
+      <div class="cost-line"><div class="li-desc">Sixteen property / brand photos (mix of licensed stock + shoots)</div><div class="li-range">$8,000 &ndash; $20,000</div></div>
+      <div class="cost-line"><div class="li-desc">Editorial portrait shoot</div><div class="li-range">$2,500 &ndash; $8,000</div></div>
+      <div class="cost-subtot"><div class="li-desc">Subtotal</div><div class="li-range">$47,500 &ndash; $139,000</div></div>
+    </div>
+
+    <!-- Development -->
+    <div class="cost-cat">
+      <div class="cost-cat-head">
+        <h4>06 &middot; Development</h4>
+        <span class="sub">Frontend &middot; integrations</span>
+      </div>
+      <div class="cost-line"><div class="li-desc">Frontend development (45 pages, custom interactions)</div><div class="li-range">$35,000 &ndash; $85,000</div></div>
+      <div class="cost-line"><div class="li-desc">Canvas-based scroll-scrubbed hero engine</div><div class="li-range">$12,000 &ndash; $30,000</div></div>
+      <div class="cost-line"><div class="li-desc">Multi-page architecture + shared asset system</div><div class="li-range">$8,000 &ndash; $18,000</div></div>
+      <div class="cost-line"><div class="li-desc">FlexMLS iframe integration + portfolio category logic</div><div class="li-range">$8,000 &ndash; $18,000</div></div>
+      <div class="cost-line"><div class="li-desc">AI voice agent integration (ElevenLabs + 7 tools + KB)</div><div class="li-range">$18,000 &ndash; $40,000</div></div>
+      <div class="cost-subtot"><div class="li-desc">Subtotal</div><div class="li-range">$81,000 &ndash; $191,000</div></div>
+    </div>
+
+    <!-- SEO -->
+    <div class="cost-cat">
+      <div class="cost-cat-head">
+        <h4>07 &middot; SEO + Technical</h4>
+        <span class="sub">On-page &middot; schema &middot; a11y</span>
+      </div>
+      <div class="cost-line"><div class="li-desc">On-page SEO audit + implementation across 45 pages</div><div class="li-range">$10,000 &ndash; $25,000</div></div>
+      <div class="cost-line"><div class="li-desc">Schema.org JSON-LD graph (15+ schema types)</div><div class="li-range">$6,000 &ndash; $15,000</div></div>
+      <div class="cost-line"><div class="li-desc">Sitemap, robots, hreflang, OG, Twitter, Core Web Vitals</div><div class="li-range">$5,000 &ndash; $12,000</div></div>
+      <div class="cost-line"><div class="li-desc">Accessibility (WCAG 2.1 AA) audit + remediation</div><div class="li-range">$6,000 &ndash; $15,000</div></div>
+      <div class="cost-subtot"><div class="li-desc">Subtotal</div><div class="li-range">$27,000 &ndash; $67,000</div></div>
+    </div>
+
+    <!-- PM + Launch -->
+    <div class="cost-cat">
+      <div class="cost-cat-head">
+        <h4>08 &middot; Project Management + QA + Launch</h4>
+        <span class="sub">PM &middot; revisions &middot; deployment</span>
+      </div>
+      <div class="cost-line"><div class="li-desc">Project management (senior PM, 14-18 weeks at 15% of total)</div><div class="li-range">$30,000 &ndash; $65,000</div></div>
+      <div class="cost-line"><div class="li-desc">Client review cycles + revision rounds (typically 3&ndash;5 per phase)</div><div class="li-range">$15,000 &ndash; $30,000</div></div>
+      <div class="cost-line"><div class="li-desc">GitHub + Vercel + custom domain + SSL + auto-deploy</div><div class="li-range">$3,000 &ndash; $8,000</div></div>
+      <div class="cost-line"><div class="li-desc">Google Business Profile + Search Console + Bing Webmaster</div><div class="li-range">$2,500 &ndash; $6,000</div></div>
+      <div class="cost-line"><div class="li-desc">Launch QA across 45 pages &middot; 3 browsers &middot; 3 devices</div><div class="li-range">$5,000 &ndash; $12,000</div></div>
+      <div class="cost-subtot"><div class="li-desc">Subtotal</div><div class="li-range">$55,500 &ndash; $121,000</div></div>
+    </div>
+
+    <!-- Grand panel -->
+    <div class="grand-panel">
+      <div class="gp-eyebrow">Traditional Agency &middot; Total Range</div>
+      <div class="gp-total">$348,000 &ndash; $855,500</div>
+      <div class="gp-rows">
+        <div class="gp-row"><span>Boutique creative agency (14-22 weeks)</span><strong>~$470,000</strong></div>
+        <div class="gp-row"><span>NYC / SF premium agency (Ogilvy, R/GA, Huge tier)</span><strong>$650,000 &ndash; $1.2M+</strong></div>
+      </div>
+      <div class="gp-disclaimer">Ranges reflect published rates at boutique and major US creative agencies, 2025&ndash;2026. Excludes annual retainer, ongoing content production, and media spend.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- 10 · COST · VIOX AI                                                   -->
+<!-- ==================================================================== -->
+<section class="section cost-viox" aria-labelledby="cost-viox-title">
+  <div class="shell reveal">
+    <div class="eyebrow eyebrow-gold" style="color: var(--champagne-dk);">The VioX AI Advantage</div>
+    <h2 id="cost-viox-title" class="section-title">Same quality. <em>Compressed time. AI-accelerated production.</em></h2>
+    <p class="section-lede">The VioX AI advantage isn't lower quality. It's the same quality, compressed time, and AI-accelerated production. Here is exactly how each line item on the agency invoice dissolved.</p>
+
+    <!-- How comparison -->
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Cost Category</th>
+          <th>Traditional</th>
+          <th>VioX AI</th>
+          <th>How</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="ct-cat">Hero video production</td><td class="ct-trad">$15K &ndash; $45K</td><td class="ct-viox">~$50 compute</td><td class="ct-how">Gemini 3.1 Flash + WaveSpeed Kling v3 Pro generate cinematic drone video in minutes, not a 5-day post cycle.</td></tr>
+        <tr><td class="ct-cat">Photography (38 images)</td><td class="ct-trad">$32K &ndash; $94K</td><td class="ct-viox">~$200 compute</td><td class="ct-how">Gemini Nano Banana generates editorial-grade imagery; real photography sourced from official sites + MLS where applicable.</td></tr>
+        <tr><td class="ct-cat">Custom logo design</td><td class="ct-trad">$8K &ndash; $25K</td><td class="ct-viox">~$10 compute</td><td class="ct-how">Gemini Nano Banana generates 4 concepts in 90 seconds; Python PIL produces production variants in seconds.</td></tr>
+        <tr><td class="ct-cat">Copywriting (45 pages EN + ES)</td><td class="ct-trad">$37K &ndash; $80K</td><td class="ct-viox">AI + editorial review</td><td class="ct-how">Claude-scale LLM drafts editorial-grade copy; human editorial pass keeps it brand-aligned.</td></tr>
+        <tr><td class="ct-cat">Development (45 pages + voice + scroll engine)</td><td class="ct-trad">$81K &ndash; $191K</td><td class="ct-viox">AI-paired engineering</td><td class="ct-how">Multi-agent orchestration compresses 14 weeks of frontend dev into ~2 weeks.</td></tr>
+        <tr><td class="ct-cat">Schema.org + SEO across 45 pages</td><td class="ct-trad">$27K &ndash; $67K</td><td class="ct-viox">Built-in</td><td class="ct-how">Our pipeline bakes Schema.org + SEO into the template layer, not bolted on.</td></tr>
+        <tr><td class="ct-cat">PM + revision cycles</td><td class="ct-trad">$45K &ndash; $95K</td><td class="ct-viox">Single-threaded</td><td class="ct-how">AI-accelerated iteration means fewer rounds; tighter feedback loops; one senior owner end-to-end.</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Pricing tiers -->
+    <div class="eyebrow">Packaging &middot; Three Tiers</div>
+    <h3 style="font-size: clamp(32px, 3.4vw, 42px); font-weight: 400; font-variation-settings: 'opsz' 72; margin-bottom: 32px; letter-spacing: -0.015em;">Choose the depth. <em>We choose the pace.</em></h3>
+
+    <div class="tier-grid">
+      <article class="tier">
+        <div class="tier-name">Essential Launch</div>
+        <h4>Essential.</h4>
+        <div class="tier-price">$15,000 &ndash; $25,000</div>
+        <div class="tier-timeline">10 &ndash; 14 days</div>
+        <div class="tier-rule" aria-hidden="true"></div>
+        <ul>
+          <li><strong>Up to 15 pages</strong>Landing, about, listings &times;4-6, contact, neighborhoods &times;4-6</li>
+          <li><strong>Standard cinematic hero</strong>Single video, no scroll-scrubbed engine</li>
+          <li><strong>Bilingual EN / ES</strong>Hand-reviewed translation</li>
+          <li><strong>Basic Schema.org + SEO</strong></li>
+          <li><strong>Voice agent</strong>English only, 3 client tools</li>
+          <li><strong>Custom logo</strong>2 variants</li>
+          <li><strong>15 images</strong></li>
+        </ul>
+        <div class="tier-ideal">Ideal for a single agent launching their first personal-brand site.</div>
+      </article>
+
+      <article class="tier">
+        <div class="tier-name">Cinematic Professional</div>
+        <h4>Professional.</h4>
+        <div class="tier-price">$35,000 &ndash; $55,000</div>
+        <div class="tier-timeline">14 &ndash; 21 days</div>
+        <div class="tier-rule" aria-hidden="true"></div>
+        <ul>
+          <li><strong>Up to 30 pages</strong>Multi-page architecture</li>
+          <li><strong>Full scroll-scrubbed canvas hero</strong>121 frames, WaveSpeed Kling v3</li>
+          <li><strong>Bilingual EN / ES</strong>Editorial translation</li>
+          <li><strong>Full Schema.org graph + GBP setup</strong></li>
+          <li><strong>Bilingual voice agent</strong>5 client tools</li>
+          <li><strong>Custom logo</strong>4 variants</li>
+          <li><strong>25 images + editorial portrait treatment</strong></li>
+          <li><strong>FlexMLS iframe integration</strong></li>
+        </ul>
+        <div class="tier-ideal">Ideal for an established agent or small team looking to leapfrog the market.</div>
+      </article>
+
+      <article class="tier flagship">
+        <span class="tier-badge">Mirtha's Build</span>
+        <div class="tier-name">Cinematic Flagship</div>
+        <h4>Flagship.</h4>
+        <div class="tier-price">$75,000 &ndash; $125,000</div>
+        <div class="tier-timeline">18 &ndash; 28 days</div>
+        <div class="tier-rule" aria-hidden="true"></div>
+        <ul>
+          <li><strong>Unlimited pages</strong>We built 45 for Mirtha</li>
+          <li><strong>Full scroll-scrubbed cinematic hero</strong></li>
+          <li><strong>Bilingual EN / ES</strong>Editorial Spanish, hand-tuned</li>
+          <li><strong>Full Schema graph + GBP + GSC + Bing</strong></li>
+          <li><strong>Bilingual voice agent</strong>7+ client tools, drives the entire site</li>
+          <li><strong>Brand system export</strong>4+ logo variants, design system JSON</li>
+          <li><strong>Unlimited images</strong>38 for Mirtha</li>
+          <li><strong>Full neighborhood content system</strong>22 for Mirtha</li>
+          <li><strong>FlexMLS &rarr; Spark API-ready</strong></li>
+          <li><strong>Deliverable documents</strong>Competitive report, proposal, brand system, GBP checklist, broker emails, case study</li>
+        </ul>
+        <div class="tier-ideal">Ideal for top producers and boutique teams competing at the Serhant / The Agency / Official Partners level.</div>
+      </article>
+    </div>
+
+    <div class="mirtha-build">
+      <div class="mb-tag">Mirtha's Build &middot; Cinematic Flagship</div>
+      <h3>Delivered in eighteen days. <em>At a fraction of the agency number.</em></h3>
+      <p>Equivalent traditional-agency cost at delivered quality and scope — three hundred forty-eight thousand to eight hundred fifty-five thousand five hundred dollars. VioX AI Cinematic Flagship price: a small fraction of that, delivered faster.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- 11 · TIMELINE COMPARISON (Navy)                                       -->
+<!-- ==================================================================== -->
+<section class="section timeline" aria-labelledby="tl-title">
+  <div class="shell reveal">
+    <div class="eyebrow">08 &middot; Timeline Comparison</div>
+    <h2 id="tl-title" class="section-title">Fourteen weeks. <em>Or fourteen days.</em></h2>
+    <p class="section-lede">Same scope, same quality bar, same nine milestones. The difference is the calendar.</p>
+
+    <div class="tl-grid">
+      <div class="tl-col tl-trad">
+        <div class="tl-head">Traditional Agency</div>
+        <div class="tl-total">Total &middot; 14 &ndash; 22 weeks</div>
+        <ul class="tl-ms">
+          <li>Kickoff + discovery <span>Week 1&ndash;3</span></li>
+          <li>Brand identity <span>Week 4&ndash;7</span></li>
+          <li>Design system <span>Week 5&ndash;9</span></li>
+          <li>Copywriting EN <span>Week 6&ndash;12</span></li>
+          <li>Copywriting ES translation <span>Week 12&ndash;16</span></li>
+          <li>Photography + video production <span>Week 4&ndash;10</span></li>
+          <li>Development <span>Week 8&ndash;18</span></li>
+          <li>SEO + Schema <span>Week 16&ndash;20</span></li>
+          <li>QA + launch <span>Week 20&ndash;22</span></li>
+        </ul>
+      </div>
+      <div class="tl-col tl-viox">
+        <div class="tl-head">VioX AI Cinematic Flagship</div>
+        <div class="tl-total">Total &middot; 14 &ndash; 18 days</div>
+        <ul class="tl-ms">
+          <li>Kickoff + discovery <span>Day 1</span></li>
+          <li>Brand identity <span>Day 2&ndash;5</span></li>
+          <li>Design system <span>Day 3&ndash;6</span></li>
+          <li>Copywriting EN <span>Day 4&ndash;10</span></li>
+          <li>Copywriting ES translation <span>Day 4&ndash;10 (parallel)</span></li>
+          <li>Photography + video production <span>Day 2&ndash;6</span></li>
+          <li>Development <span>Day 5&ndash;15</span></li>
+          <li>SEO + Schema <span>Day 13&ndash;16</span></li>
+          <li>QA + launch <span>Day 17&ndash;18</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tl-reveal">
+      <div class="tl-fig">~10%</div>
+      <div class="tl-cap"><em>of the calendar time.</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- 12 · WHAT MAKES THIS 1-OF-1                                          -->
+<!-- ==================================================================== -->
+<section class="section one-of-one" aria-labelledby="oo-title">
+  <div class="shell reveal">
+    <div class="eyebrow">09 &middot; One of One</div>
+    <h2 id="oo-title" class="section-title">Eight load-bearing decisions.</h2>
+    <p class="oo-intro">This is not a template. It is not a theme. It is not configurable by a non-technical user — and that is the point. Every decision was load-bearing.</p>
+
+    <ol class="oo-grid">
+      <li><strong>The Navesink drone hero.</strong>Not stock footage. A custom scene generated specifically to match Mirtha's geographic specialty.</li>
+      <li><strong>Twenty-two hand-tuned narratives.</strong>Neighborhood pages are not auto-generated. Each is editorially calibrated to the town it describes.</li>
+      <li><strong>Editorial Spanish.</strong>Hand-drafted. Not machine-translated. The tone shifts when Spanish readers arrive.</li>
+      <li><strong>Heritage Atlantic Broker. Modern Cinematic Eye.</strong>The positioning came out of a specific competitive finding — not a brainstorm.</li>
+      <li><strong>Christie's Red used surgically.</strong>Exactly three moments per page — affiliate lockup, hover underline, a single stat. Never decoratively.</li>
+      <li><strong>Champagne Gold rules instead of shadows.</strong>An intentional anti-SaaS decision. Rules where a template would reach for drop shadows.</li>
+      <li><strong>Magnetic cursor on "Private Showing."</strong>A cursor-follow specific to the editorial-luxury voice. Not a generic hover state.</li>
+      <li><strong>Seven voice-agent tools.</strong>Jessica does not answer questions. She gives guided tours.</li>
+    </ol>
+
+    <p class="oo-pull">A template site has no soul. A cinematic design-studio build <em>has a specific one.</em></p>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- 13 · WHAT MIRTHA CONTROLS                                             -->
+<!-- ==================================================================== -->
+<section class="section control" aria-labelledby="ctrl-title">
+  <div class="shell reveal">
+    <div class="eyebrow">10 &middot; Ownership</div>
+    <h2 id="ctrl-title" class="section-title">What Mirtha controls. <em>Long-term.</em></h2>
+    <p class="section-lede">No vendor lock. No hostage keys. No subscription floor. Every asset, every account, every repository — in her name.</p>
+
+    <ul class="ctrl-list">
+      <li>
+        <span class="ctrl-check" aria-hidden="true"></span>
+        <span class="label">GitHub repository</span>
+        <span class="desc">Full source ownership — <code>github.com/juan-viox/mirthacarolina-com</code>.</span>
+      </li>
+      <li>
+        <span class="ctrl-check" aria-hidden="true"></span>
+        <span class="label">Vercel deployment</span>
+        <span class="desc">Zero lock-in. Instant rollbacks. Auto-deploy on push.</span>
+      </li>
+      <li>
+        <span class="ctrl-check" aria-hidden="true"></span>
+        <span class="label">Custom domain</span>
+        <span class="desc">Stays with her registrar. Portable to any host.</span>
+      </li>
+      <li>
+        <span class="ctrl-check" aria-hidden="true"></span>
+        <span class="label">ElevenLabs voice agent</span>
+        <span class="desc">Her account. Her knowledge base. Her voice preferences.</span>
+      </li>
+      <li>
+        <span class="ctrl-check" aria-hidden="true"></span>
+        <span class="label">FlexMLS share</span>
+        <span class="desc">No third-party auth required. Portfolio upgradeable to Spark API when authorization lands.</span>
+      </li>
+      <li>
+        <span class="ctrl-check" aria-hidden="true"></span>
+        <span class="label">Brand assets</span>
+        <span class="desc">Logo in 4 variants, color swatches, typography, design system JSON.</span>
+      </li>
+      <li>
+        <span class="ctrl-check" aria-hidden="true"></span>
+        <span class="label">Deliverable documents</span>
+        <span class="desc">Competitive report, proposal, brand system, GBP checklist, case study, email drafts.</span>
+      </li>
+    </ul>
+
+    <p class="ctrl-close">Nothing VioX-owned. <em>Nothing vendor-locked.</em></p>
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- 14 · CLOSING (Navy, full-bleed)                                       -->
+<!-- ==================================================================== -->
+<section class="closing" aria-labelledby="close-title">
+  <div class="reveal">
+    <div class="eyebrow">Closing Statement</div>
+    <h2 id="close-title">
+      For the price of a single New York agency's discovery phase, Mirtha Carolina now has an agency-level cinematic website, bilingual parity across forty-five pages, a branded AI voice concierge, a twenty-two-neighborhood content library, and a deployment pipeline that scales. <em>In eighteen days.</em>
+    </h2>
+
+    <div class="co-compare">
+      <div class="side trad">
+        <div class="lab">Traditional Agency</div>
+        <div class="fig">$348,000 &ndash; $855,500</div>
+        <div class="time">14 &ndash; 22 weeks</div>
+      </div>
+      <div class="rule" aria-hidden="true"></div>
+      <div class="side viox">
+        <div class="lab">VioX AI Cinematic Flagship</div>
+        <div class="fig">A fraction of that</div>
+        <div class="time">18 days</div>
+      </div>
+    </div>
+
+    <p class="co-line">This is what 1-of-1 looks like when AI takes on the production grind and human taste drives the decisions.</p>
+
+    <div class="co-sig">— VioX AI &middot; Cinematic Design Studio</div>
+    <div class="co-contact">For the next build &middot; <a href="mailto:hello@viox.ai">hello@viox.ai</a></div>
+  </div>
+</section>
+
+<footer class="foot">
+  VioX AI <span>·</span> Cinematic Design Studio <span>·</span> Case Study VXA-MC-CS-01 <span>·</span> April 2026
+</footer>
+
+<!-- Reveal-on-scroll -->
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+})();
+</script>
+
+</body>
+</html>
