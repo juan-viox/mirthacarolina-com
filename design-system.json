@@ -1,0 +1,138 @@
+{
+  "$schema": "https://schemas.cinematic-design-studio.com/design-system-v1.json",
+  "name": "Mirtha Carolina · Cinematic Editorial Atlantic",
+  "version": "1.0.0",
+  "client": "Mirtha Carolina Solorzano",
+  "brokerage": "Christie's International Real Estate Group",
+  "domain": "mirthacarolina.com",
+  "createdAt": "2026-04-14",
+  "createdBy": "VioX AI · Cinematic Design Studio",
+  "moodWords": ["EDITORIAL", "ATLANTIC", "CINEMATIC"],
+  "positioning": "Heritage Atlantic Broker. Modern Cinematic Eye.",
+  "color": {
+    "navyDeep":      { "hex": "#0B1F3A", "rgb": "11,31,58",   "hsl": "217,68%,14%", "use": "primary background, heritage anchor" },
+    "navyInk":       { "hex": "#162B4A", "rgb": "22,43,74",   "hsl": "217,54%,19%", "use": "card backgrounds, secondary depth" },
+    "christiesRed":  { "hex": "#9B2032", "rgb": "155,32,50",  "hsl": "351,66%,37%", "use": "surgical brand tie-in only — affiliate lockup, hover underlines, single-stat emphasis" },
+    "shoreSand":     { "hex": "#E8DFCE", "rgb": "232,223,206","hsl": "39,40%,86%",  "use": "warm neutral, coastal warmth, SOLD badges" },
+    "ivoryCream":    { "hex": "#F5F1E8", "rgb": "245,241,232","hsl": "41,43%,93%",  "use": "primary light surface, body copy in dark sections" },
+    "champagneGold": { "hex": "#C4A962", "rgb": "196,169,98", "hsl": "42,46%,58%",  "use": "metallic accent, dividers, numerals, key figures, ACTIVE badges" },
+    "seafoam":       { "hex": "#7FA5A8", "rgb": "127,165,168","hsl": "184,18%,58%", "use": "Navesink/waterfront modules only" },
+    "charcoal":      { "hex": "#1C1C1C", "rgb": "28,28,28",   "hsl": "0,0%,11%",    "use": "body text on light surfaces" }
+  },
+  "typography": {
+    "display": {
+      "family": "Fraunces",
+      "googleFonts": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Fraunces:opsz,ital,wght@9..144,1,300..700",
+      "axes": ["opsz 9..144", "ital 0/1"],
+      "weights": [300, 400, 500, 600, 700],
+      "use": "all editorial headings, hero, section titles",
+      "scale": {
+        "hero":    "clamp(56px, 9vw, 140px)",
+        "section": "clamp(40px, 5.5vw, 96px)",
+        "card":    "clamp(24px, 2.2vw, 36px)",
+        "lede":    "clamp(20px, 1.6vw, 28px)"
+      },
+      "tracking": {
+        "displayTight":  "-0.025em",
+        "wordmark":      "0.18em (uppercase)"
+      }
+    },
+    "body": {
+      "family": "Inter",
+      "googleFonts": "https://fonts.googleapis.com/css2?family=Inter:wght@300..700",
+      "weights": [300, 400, 500, 600, 700],
+      "use": "body, UI, navigation, captions, form fields",
+      "scale": {
+        "body":    "17px / 1.7 line-height",
+        "small":   "14px / 1.6 line-height",
+        "caption": "12px uppercase letter-spacing 0.18em"
+      }
+    },
+    "accent": {
+      "family": "Cormorant Garamond",
+      "googleFonts": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400..600;1,400..600",
+      "axes": ["ital 0/1"],
+      "use": "pull-quotes, ledes, italic accents, marquee row 1, testimonial quotes",
+      "scale": {
+        "pullQuote": "clamp(22px, 2vw, 32px) italic"
+      }
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "googleFonts": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500",
+      "use": "MLS numbers, market-data stat blocks (sparingly)"
+    }
+  },
+  "spacing": {
+    "containerMaxWidth": "1400px",
+    "sectionPadY":       "clamp(80px, 12vh, 160px)",
+    "sectionPadX":       "clamp(20px, 4vw, 64px)",
+    "cardGap":           "clamp(20px, 2vw, 40px)",
+    "stackGap":          "clamp(40px, 6vh, 96px)"
+  },
+  "border": {
+    "rule":         "1px solid #C4A962",
+    "ruleStrong":   "2px solid #C4A962",
+    "borderRadius": "0px (intentional — editorial flatness, no rounded corners)"
+  },
+  "motion": {
+    "easing":  "cubic-bezier(0.16, 1, 0.3, 1)",
+    "duration": { "fast": "200ms", "default": "400ms", "slow": "800ms", "scrub": "ScrollTrigger scrub: 0.4" },
+    "respectsReducedMotion": true
+  },
+  "components": {
+    "navigation": {
+      "initialState": "transparent over hero, ivory text/wordmark",
+      "scrolledState": "navy-deep solid background, gold 1px bottom border, ivory text",
+      "wordmark": "MIRTHA CAROLINA in Fraunces 500 letter-spacing 0.18em uppercase",
+      "affiliation": "CHRISTIE'S INTERNATIONAL REAL ESTATE in Inter 500 small-caps below wordmark",
+      "languageToggle": "EN | ES pill, top-right"
+    },
+    "hero": {
+      "type": "scroll-scrubbed canvas frame engine",
+      "frameCount": 121,
+      "frameSource": "assets/frames/frame_NNNN.jpg",
+      "frameRate": "24fps source, scroll-scrubbed playback",
+      "fallback": "assets/images/hero-fallback.jpg behind canvas",
+      "overlay": "linear-gradient(rgba(11,31,58,0.45) 0%, rgba(11,31,58,0.65) 100%)",
+      "height": "150vh, 100vh sticky",
+      "primaryCta": { "label": "Private Showing / Visita Privada", "style": "glass-morphism, gold border" }
+    },
+    "card": {
+      "background": "ivoryCream OR navyInk",
+      "border": "0px (no rounded corners)",
+      "hoverState": "translateY(-8px) + gold top accent rule",
+      "shadow": "none — use gold rules and color depth instead"
+    },
+    "cta": {
+      "primary": { "bg": "navyDeep", "text": "ivoryCream", "border": "1px champagneGold", "hover": "magnetic cursor follow within 80px" },
+      "secondary": { "bg": "transparent", "text": "navyDeep", "border": "1px navyDeep", "hover": "fill navyDeep, text ivoryCream" },
+      "languageNeverUse": ["Contact Me", "Get a Free Quote", "Submit", "Send"],
+      "languagePreferred": ["Private Showing", "Inquire", "Begin a Conversation", "Visita Privada", "Consultar"]
+    },
+    "marquee": {
+      "rowA": { "font": "Cormorant Garamond italic 32px ivory", "direction": "left" },
+      "rowB": { "font": "Inter 14px uppercase letter-spacing 0.3em gold", "direction": "right" },
+      "scrollVelocityAware": true
+    }
+  },
+  "antiPatterns": [
+    "No purple gradients",
+    "No SaaS rounded-2xl on cards (use gold rules instead)",
+    "No drop shadows on cards (use color depth instead)",
+    "No 'Contact Me' / 'Get a Free Quote' yellow CTA buttons",
+    "No popup lead-capture blasts or chat widgets that slide in after 5s",
+    "No carousels with auto-advancing dots every 3s",
+    "No emoji or exclamation points in headlines",
+    "No tropical palette accents (turquoise/coral) — Atlantic, not Miami",
+    "No script fonts (Comic, Lobster, Papyrus)",
+    "No autoplay audio",
+    "No parallax everywhere — use surgically on 2-3 moments only",
+    "No Spanish as a translation footnote — first-class editorial citizen"
+  ],
+  "stitchExportNotes": {
+    "compatibleWith": "Stitch 2.0 design canvas import format",
+    "tokens": "All design tokens are W3C Design Tokens compatible",
+    "componentLibrary": "Cinematic Modules at ../cinematic-site-components/ — referenced sections: text-mask, sticky-stack, magnetic-grid, kinetic-marquee, sticky-cards, mesh-gradient"
+  }
+}
