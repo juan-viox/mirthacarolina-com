@@ -2244,8 +2244,8 @@ h1, h2, h3, h4, h5, .display, .numeral {
 .features-teaser { background: var(--ivory-cream); }
 .features-teaser .teaser-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 .features-teaser .teaser-card {
   position: relative;
@@ -2312,7 +2312,8 @@ h1, h2, h3, h4, h5, .display, .numeral {
   display: flex;
   justify-content: center;
 }
-@media (max-width: 900px) { .features-teaser .teaser-grid { grid-template-columns: 1fr; } }
+@media (max-width: 1100px) { .features-teaser .teaser-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; } }
+@media (max-width: 600px)  { .features-teaser .teaser-grid { grid-template-columns: 1fr; } }
 
 /* About teaser */
 .about-teaser {
