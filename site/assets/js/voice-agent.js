@@ -159,22 +159,58 @@
       return { ok: true, index: idx };
     },
 
+    // highlight_neighborhood routes across all 22 Monmouth County submarkets:
+    //   holmdel, red-bank, rumson, long-branch, asbury-park, little-silver,
+    //   fair-haven, oceanport, ocean-township, oakhurst, eatontown,
+    //   monmouth-beach, wall, spring-lake, sea-bright, atlantic-highlands,
+    //   colts-neck, deal, manasquan, aberdeen, matawan, keyport
     highlight_neighborhood: function (args) {
       var name = (args && args.name || '').toString().trim().toLowerCase();
       // Normalize aliases → canonical slug used in /neighborhoods/{slug}/ URLs
       var aliases = {
         'red bank':'red-bank',
         'redbank':'red-bank',
-        'long branch':'pier-village',
-        'longbranch':'pier-village',
-        'piervillage':'pier-village',
-        'pier village':'pier-village',
-        'pier_village':'pier-village',
-        'pier':'pier-village'
+        // Long Branch: canonical is now 'long-branch' (detail path) but legacy 'pier-village' still resolves
+        'long branch':'long-branch',
+        'longbranch':'long-branch',
+        'piervillage':'long-branch',
+        'pier village':'long-branch',
+        'pier_village':'long-branch',
+        'pier':'long-branch',
+        'pier-village':'long-branch',
+        // New 18
+        'asbury':'asbury-park',
+        'asbury park':'asbury-park',
+        'asburypark':'asbury-park',
+        'little silver':'little-silver',
+        'littlesilver':'little-silver',
+        'fair haven':'fair-haven',
+        'fairhaven':'fair-haven',
+        'ocean township':'ocean-township',
+        'oceantownship':'ocean-township',
+        'monmouth beach':'monmouth-beach',
+        'monmouthbeach':'monmouth-beach',
+        'wall township':'wall',
+        'walltownship':'wall',
+        'spring lake':'spring-lake',
+        'springlake':'spring-lake',
+        'sea bright':'sea-bright',
+        'seabright':'sea-bright',
+        'atlantic highlands':'atlantic-highlands',
+        'atlantichighlands':'atlantic-highlands',
+        'colts neck':'colts-neck',
+        'coltsneck':'colts-neck'
       };
       name = aliases[name] || name;
 
-      var validSlugs = ['holmdel', 'red-bank', 'rumson', 'pier-village'];
+      var validSlugs = [
+        'holmdel', 'red-bank', 'rumson', 'long-branch',
+        'asbury-park', 'little-silver', 'fair-haven', 'oceanport',
+        'ocean-township', 'oakhurst', 'eatontown', 'monmouth-beach',
+        'wall', 'spring-lake', 'sea-bright', 'atlantic-highlands',
+        'colts-neck', 'deal', 'manasquan', 'aberdeen',
+        'matawan', 'keyport'
+      ];
       if (validSlugs.indexOf(name) === -1) {
         // Unknown neighborhood → default to the index page
         window.location.href = '/neighborhoods/';
@@ -198,7 +234,8 @@
                      document.getElementById('nbh-' + name) ||
                      // legacy fallback (old pinned-scroll entries)
                      document.querySelector('.nbh-entry[data-nbh="' + name.replace('-','') + '"]') ||
-                     document.querySelector('.nbh-entry[data-nbh="' + (name === 'pier-village' ? 'pier' : name) + '"]');
+                     (name === 'long-branch' ? document.getElementById('nbh-pier-village') : null) ||
+                     (name === 'long-branch' ? document.querySelector('.nbh-entry[data-nbh="pier"]') : null);
           if (card) {
             smoothScrollTo(card, 160);
             pulse(card, 3000);

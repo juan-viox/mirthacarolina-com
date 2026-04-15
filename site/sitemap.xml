@@ -200,7 +200,7 @@
     <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-rumson.jpg</image:loc><image:caption>Rumson, NJ — old-money Atlantic shingled estates, median $2.7M</image:caption></image:image>
     <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-holmdel.jpg</image:loc><image:caption>Holmdel, NJ — estate living 50 min from Manhattan, median $1.4M</image:caption></image:image>
     <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-red-bank.jpg</image:loc><image:caption>Red Bank, NJ — riverfront restaurants and boutique living, median $980K</image:caption></image:image>
-    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-pier-village.jpg</image:loc><image:caption>Long Branch / Pier Village, NJ — Atlantic-front lofts, median $1.1M</image:caption></image:image>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-long-branch.jpg</image:loc><image:caption>Long Branch, NJ — Atlantic-front lofts, median $1.1M</image:caption></image:image>
   </url>
 
   <!-- NEIGHBORHOOD DETAIL: HOLMDEL -->
@@ -239,16 +239,232 @@
     <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-rumson.jpg</image:loc><image:caption>Rumson, NJ — shingled Old-Atlantic estates, prep schools, Navesink waterfront, median $2.7M</image:caption></image:image>
   </url>
 
-  <!-- NEIGHBORHOOD DETAIL: LONG BRANCH / PIER VILLAGE -->
+  <!-- NEIGHBORHOOD DETAIL: LONG BRANCH -->
   <url>
-    <loc>https://mirthacarolina.com/neighborhoods/pier-village/</loc>
+    <loc>https://mirthacarolina.com/neighborhoods/long-branch/</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/pier-village/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/pier-village/?lang=es"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/pier-village/"/>
-    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-pier-village.jpg</image:loc><image:caption>Long Branch / Pier Village, NJ — Atlantic-front lofts, boardwalk, Mirtha's most active submarket, median $1.1M</image:caption></image:image>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/long-branch/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/long-branch/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/long-branch/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-long-branch.jpg</image:loc><image:caption>Long Branch, NJ — Atlantic-front lofts, boardwalk, Mirtha's most active submarket, median $1.1M</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: ASBURY PARK -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/asbury-park/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/asbury-park/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/asbury-park/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/asbury-park/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-asbury-park.jpg</image:loc><image:caption>Asbury Park, NJ — Stone Pony, Convention Hall, Cookman Avenue dining, cultural revival on the boardwalk, median $650K</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: LITTLE SILVER -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/little-silver/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/little-silver/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/little-silver/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/little-silver/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-little-silver.jpg</image:loc><image:caption>Little Silver, NJ — NJ Transit commuter stop, Rumson-Fair Haven Regional schools, sycamore-lined streets, median $1.2M</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: FAIR HAVEN -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/fair-haven/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/fair-haven/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/fair-haven/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/fair-haven/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-fair-haven.jpg</image:loc><image:caption>Fair Haven, NJ — Navesink River village, Knollwood School, restored Colonials, median $1.3M</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: OCEANPORT -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/oceanport/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/oceanport/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/oceanport/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/oceanport/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-oceanport.jpg</image:loc><image:caption>Oceanport, NJ — Monmouth Park Racetrack, Shrewsbury River, Fort Monmouth redevelopment, median $1.1M</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: OCEAN TOWNSHIP -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/ocean-township/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/ocean-township/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/ocean-township/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/ocean-township/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-ocean-township.jpg</image:loc><image:caption>Ocean Township, NJ — Deal Lake, Wanamassa and Oakhurst, diverse shore township, median $700K</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: OAKHURST -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/oakhurst/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/oakhurst/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/oakhurst/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/oakhurst/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-oakhurst.jpg</image:loc><image:caption>Oakhurst, NJ — tree-canopied neighborhood in Ocean Township, Tudor Revivals and Dutch Colonials, median $750K</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: EATONTOWN -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/eatontown/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/eatontown/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/eatontown/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/eatontown/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-eatontown.jpg</image:loc><image:caption>Eatontown, NJ — Route 35 retail corridor, Monmouth Mall redevelopment, Fort Monmouth Mews, median $620K</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: MONMOUTH BEACH -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/monmouth-beach/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/monmouth-beach/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/monmouth-beach/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/monmouth-beach/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-monmouth-beach.jpg</image:loc><image:caption>Monmouth Beach, NJ — private-club beach community between Shrewsbury River and Atlantic Ocean, median $1.8M</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: WALL TOWNSHIP -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/wall/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/wall/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/wall/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/wall/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-wall.jpg</image:loc><image:caption>Wall Township, NJ — Manasquan Reservoir, horse farms, Garden State Parkway access, median $750K</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: SPRING LAKE -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/spring-lake/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/spring-lake/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/spring-lake/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/spring-lake/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-spring-lake.jpg</image:loc><image:caption>Spring Lake, NJ — the Irish Riviera, Victorian boardwalk, Essex and Sussex residences, median $2.0M</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: SEA BRIGHT -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/sea-bright/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/sea-bright/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/sea-bright/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/sea-bright/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-sea-bright.jpg</image:loc><image:caption>Sea Bright, NJ — barrier-island borough, private beach clubs, Rumson-Sea Bright Bridge, median $1.0M</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: ATLANTIC HIGHLANDS -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/atlantic-highlands/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/atlantic-highlands/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/atlantic-highlands/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/atlantic-highlands/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-atlantic-highlands.jpg</image:loc><image:caption>Atlantic Highlands, NJ — Seastreak ferry to Wall Street, Sandy Hook Bay, Mount Mitchill overlook, median $700K</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: COLTS NECK -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/colts-neck/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/colts-neck/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/colts-neck/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/colts-neck/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-colts-neck.jpg</image:loc><image:caption>Colts Neck, NJ — horse-country estates, Delicious Orchards, five-acre zoning, median $1.5M+</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: DEAL -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/deal/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/deal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/deal/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/deal/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-deal.jpg</image:loc><image:caption>Deal, NJ — private oceanfront enclave, Italianate and Mediterranean Revival mansions, median $2.5M+</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: MANASQUAN -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/manasquan/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/manasquan/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/manasquan/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/manasquan/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-manasquan.jpg</image:loc><image:caption>Manasquan, NJ — inlet surf break, top-ranked high school, mile-long Atlantic beach, median $1.1M</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: ABERDEEN -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/aberdeen/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/aberdeen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/aberdeen/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/aberdeen/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-aberdeen.jpg</image:loc><image:caption>Aberdeen, NJ — 53-minute NJ Transit commute to Penn Station, Cliffwood Beach on Raritan Bay, median $575K</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: MATAWAN -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/matawan/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/matawan/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/matawan/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/matawan/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-matawan.jpg</image:loc><image:caption>Matawan, NJ — restored 19th-century Main Street, Victorian side streets, 53-minute commute, median $525K</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: KEYPORT -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/keyport/</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/keyport/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/keyport/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/keyport/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-keyport.jpg</image:loc><image:caption>Keyport, NJ — Raritan Bay waterfront revival, American Hotel, West Front Street dining, median $475K</image:caption></image:image>
   </url>
 
   <!-- INSIGHTS -->

@@ -495,6 +495,44 @@ h1, h2, h3, h4, h5, .display, .numeral {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
+/* NJ License lockup inside the hero — sits under the CTAs, subtle but visible */
+.hero-license {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 30px;
+  font-family: var(--ff-body);
+  color: var(--champagne);
+  white-space: nowrap;
+}
+.hero-license .divider {
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--champagne);
+  opacity: 0.6;
+}
+.hero-license .label {
+  font-size: 10px;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--champagne);
+  opacity: 0.82;
+}
+.hero-license .num {
+  font-family: var(--ff-mono);
+  font-size: 13.5px;
+  letter-spacing: 0.08em;
+  color: var(--ivory-cream);
+  font-weight: 500;
+}
+@media (max-width: 540px) {
+  .hero-license { margin-top: 22px; gap: 10px; }
+  .hero-license .divider { width: 18px; }
+  .hero-license .label { font-size: 9px; letter-spacing: 0.28em; }
+  .hero-license .num { font-size: 12px; }
+}
 .hero-meta {
   position: absolute;
   left: var(--gutter);
@@ -851,7 +889,7 @@ h1, h2, h3, h4, h5, .display, .numeral {
 .nbh-layer[data-nbh="holmdel"]   { background-image: url('/assets/images/neighborhood-holmdel.jpg'), linear-gradient(145deg, #2A3E60, #485E80); }
 .nbh-layer[data-nbh="redbank"]   { background-image: url('/assets/images/neighborhood-red-bank.jpg'), linear-gradient(145deg, #3a5466, #7FA5A8); }
 .nbh-layer[data-nbh="rumson"]    { background-image: url('/assets/images/neighborhood-rumson.jpg'), linear-gradient(145deg, #162B4A, #3a5466); }
-.nbh-layer[data-nbh="pier"]      { background-image: url('/assets/images/neighborhood-pier-village.jpg'), linear-gradient(145deg, #486085, #7FA5A8); }
+.nbh-layer[data-nbh="pier"]      { background-image: url('/assets/images/neighborhood-long-branch.jpg'), linear-gradient(145deg, #486085, #7FA5A8); }
 .nbh-layer::after {
   content: "";
   position: absolute; inset: 0;

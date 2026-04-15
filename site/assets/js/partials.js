@@ -110,7 +110,7 @@ window.MC_FOOTER = `
 
     <div class="footer-bottom">
       <p class="copy">© 2026 Mirtha Carolina Solorzano. All rights reserved.</p>
-      <p class="licenses" data-en="NJ REALTOR LICENSE #__________ · CHRISTIE'S AFFILIATE" data-es="LIC. NJ #__________ · AFILIADA CHRISTIE'S">NJ REALTOR LICENSE #__________ · CHRISTIE'S AFFILIATE</p>
+      <p class="licenses" data-en="NJ REALTOR LICENSE #1755940 · CHRISTIE'S AFFILIATE" data-es="LIC. NJ #1755940 · AFILIADA CHRISTIE'S">NJ REALTOR LICENSE #1755940 · CHRISTIE'S AFFILIATE</p>
       <div class="footer-lang" role="group" aria-label="Language toggle footer">
         <button class="lang-pill active" data-lang="en">EN</button>
         <button class="lang-pill"        data-lang="es">ES</button>
