@@ -1,0 +1,10 @@
+/* SITE */
+Last update: 2026-04-15
+Standards: HTML5, CSS3, GSAP 3.12.5
+Components: Vanilla HTML/CSS/JS, no framework
+Software: Vercel, GitHub, ElevenLabs ConvAI
+
+/* TEAM */
+Realtor: Mirtha Carolina Solorzano · @carolina.therealtor
+Brokerage: Christie's International Real Estate Group · Teresa Minnick Group
+Build: VioX AI · Cinematic Design Studio
