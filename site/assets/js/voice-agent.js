@@ -161,30 +161,55 @@
 
     highlight_neighborhood: function (args) {
       var name = (args && args.name || '').toString().trim().toLowerCase();
-      var aliases = { 'red bank':'redbank', 'red-bank':'redbank', 'long branch':'pier', 'piervillage':'pier', 'pier village':'pier', 'pier_village':'pier', 'pier-village':'pier' };
+      // Normalize aliases → canonical slug used in /neighborhoods/{slug}/ URLs
+      var aliases = {
+        'red bank':'red-bank',
+        'redbank':'red-bank',
+        'long branch':'pier-village',
+        'longbranch':'pier-village',
+        'piervillage':'pier-village',
+        'pier village':'pier-village',
+        'pier_village':'pier-village',
+        'pier':'pier-village'
+      };
       name = aliases[name] || name;
 
-      // If not on a page with neighborhood entries, navigate there
-      var hasEntries = document.querySelector('.nbh-entry') !== null;
-      if (!hasEntries) {
-        window.location.href = '/neighborhoods/#nbh-' + name;
-        return { ok: true, neighborhood: name, navigated: true };
+      var validSlugs = ['holmdel', 'red-bank', 'rumson', 'pier-village'];
+      if (validSlugs.indexOf(name) === -1) {
+        // Unknown neighborhood → default to the index page
+        window.location.href = '/neighborhoods/';
+        return { ok: false, error: 'unknown neighborhood', navigated: true };
       }
 
-      setTimeout(function () {
-        var sel = '[data-nbh="' + name + '"]';
-        var target = document.querySelector('.nbh-entry' + sel);
-        if (target) {
-          smoothScrollTo(target, 200);
-          pulse(target, 3000);
-        } else {
-          var entries = $$('.nbh-entry');
-          var order = ['holmdel','redbank','rumson','pier'];
-          var pos = order.indexOf(name);
-          if (pos >= 0 && entries[pos]) { smoothScrollTo(entries[pos], 200); pulse(entries[pos], 3000); }
-        }
-      }, 100);
-      return { ok: true, neighborhood: name };
+      var detailPath = '/neighborhoods/' + name + '/';
+      var indexPath = '/neighborhoods/';
+      var cur = currentPath();
+
+      // Case 1: already on the detail page — scroll to top of hero
+      if (cur === detailPath) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return { ok: true, neighborhood: name, action: 'already_on_detail' };
+      }
+
+      // Case 2: on the neighborhoods index — pulse the matching card in place
+      if (cur === indexPath) {
+        setTimeout(function () {
+          var card = document.querySelector('.neighborhood-card[data-nbh="' + name + '"]') ||
+                     document.getElementById('nbh-' + name) ||
+                     // legacy fallback (old pinned-scroll entries)
+                     document.querySelector('.nbh-entry[data-nbh="' + name.replace('-','') + '"]') ||
+                     document.querySelector('.nbh-entry[data-nbh="' + (name === 'pier-village' ? 'pier' : name) + '"]');
+          if (card) {
+            smoothScrollTo(card, 160);
+            pulse(card, 3000);
+          }
+        }, 100);
+        return { ok: true, neighborhood: name, action: 'pulse_on_index' };
+      }
+
+      // Case 3: elsewhere on the site — navigate to the detail page
+      window.location.href = detailPath;
+      return { ok: true, neighborhood: name, navigated: true };
     },
 
     open_inquiry_form: function () {

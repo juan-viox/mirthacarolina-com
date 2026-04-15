@@ -188,18 +188,67 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/portfolio/commercial/?lang=es"/>
   </url>
 
-  <!-- NEIGHBORHOODS -->
+  <!-- NEIGHBORHOODS INDEX -->
   <url>
     <loc>https://mirthacarolina.com/neighborhoods/</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/"/>
     <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-rumson.jpg</image:loc><image:caption>Rumson, NJ — old-money Atlantic shingled estates, median $2.7M</image:caption></image:image>
     <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-holmdel.jpg</image:loc><image:caption>Holmdel, NJ — estate living 50 min from Manhattan, median $1.4M</image:caption></image:image>
     <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-red-bank.jpg</image:loc><image:caption>Red Bank, NJ — riverfront restaurants and boutique living, median $980K</image:caption></image:image>
     <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-pier-village.jpg</image:loc><image:caption>Long Branch / Pier Village, NJ — Atlantic-front lofts, median $1.1M</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: HOLMDEL -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/holmdel/</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/holmdel/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/holmdel/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/holmdel/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-holmdel.jpg</image:loc><image:caption>Holmdel, NJ — estate living, Bell Works metroburb, top-ten schools, median $1.4M</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: RED BANK -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/red-bank/</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/red-bank/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/red-bank/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/red-bank/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-red-bank.jpg</image:loc><image:caption>Red Bank, NJ — Count Basie Theatre, riverfront dining, Navesink walkability, median $980K</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: RUMSON -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/rumson/</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/rumson/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/rumson/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/rumson/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-rumson.jpg</image:loc><image:caption>Rumson, NJ — shingled Old-Atlantic estates, prep schools, Navesink waterfront, median $2.7M</image:caption></image:image>
+  </url>
+
+  <!-- NEIGHBORHOOD DETAIL: LONG BRANCH / PIER VILLAGE -->
+  <url>
+    <loc>https://mirthacarolina.com/neighborhoods/pier-village/</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/neighborhoods/pier-village/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/neighborhoods/pier-village/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/neighborhoods/pier-village/"/>
+    <image:image><image:loc>https://mirthacarolina.com/assets/images/neighborhood-pier-village.jpg</image:loc><image:caption>Long Branch / Pier Village, NJ — Atlantic-front lofts, boardwalk, Mirtha's most active submarket, median $1.1M</image:caption></image:image>
   </url>
 
   <!-- INSIGHTS -->
