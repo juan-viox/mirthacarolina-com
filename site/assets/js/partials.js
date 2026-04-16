@@ -86,6 +86,10 @@ window.MC_FOOTER = `
           <img class="tcm-logo-img" src="/assets/images/tcm-logo-white.png" alt="Teresa Minnick Group · TCM Realty Group" width="1441" height="321" loading="lazy" decoding="async" />
           <span class="tcm-caption" data-en="A Member of the Teresa Minnick Group" data-es="Miembro del Teresa Minnick Group">A Member of the Teresa Minnick Group</span>
         </a>
+        <div class="footer-compliance" aria-label="Fair housing and REALTOR® compliance">
+          <span class="compliance-chip"><img class="compliance-badge compliance-eho" src="/assets/images/equal-housing-white.png" alt="Equal Housing Opportunity" width="585" height="600" loading="lazy" decoding="async" /></span>
+          <span class="compliance-chip"><img class="compliance-badge compliance-realtor" src="/assets/images/realtor-white.png" alt="REALTOR®" width="235" height="274" loading="lazy" decoding="async" /></span>
+        </div>
       </div>
 
       <div class="footer-col">

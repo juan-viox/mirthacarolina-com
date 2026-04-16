@@ -1758,6 +1758,42 @@ h1, h2, h3, h4, h5, .display, .numeral {
   font-weight: 400;
 }
 
+.footer-compliance {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--hairline);
+}
+.compliance-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* ivory-cream chip for high contrast against navy footer */
+  background: var(--ivory-cream, #F5F1E8);
+  padding: 12px 18px;
+  box-sizing: border-box;
+  border: 1px solid var(--champagne, #C4A962);
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+.compliance-chip:hover {
+  background: #ffffff;
+  border-color: var(--champagne-dk, #A68A3F);
+}
+.compliance-badge {
+  display: block;
+  height: 72px;            /* inner logo height; chip adds padding for total ~96px */
+  width: auto;
+  /* convert white source PNG → solid black for max contrast on ivory chip */
+  filter: brightness(0);
+  transition: filter 0.4s ease;
+}
+@media (max-width: 720px) {
+  .compliance-badge { height: 56px; }
+  .compliance-chip { padding: 10px 14px; }
+  .footer-compliance { gap: 10px; }
+}
 .footer-bottom {
   padding-top: 30px;
   border-top: 1px solid var(--hairline);
