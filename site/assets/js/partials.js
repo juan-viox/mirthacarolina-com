@@ -21,7 +21,9 @@ window.MC_NAV = `
 
 <header class="nav" id="nav" role="banner">
   <div class="nav-shell">
-    <a class="nav-mark" href="/" aria-label="Mirtha Carolina — Home">
+    <a class="nav-mark" href="/" aria-label="Mirtha Carolina — Christie's International Real Estate — Home">
+      <img class="nav-christies-mark" src="/assets/images/christies-logo.png" alt="Christie's International Real Estate Group" width="2613" height="659" decoding="async" />
+      <span class="nav-logo-divider" aria-hidden="true"></span>
       <img class="nav-mc-mark" src="/assets/images/mc-mark-light.png" alt="" width="600" height="600" decoding="async" />
       <span class="nav-mark-text">
         <span class="wm">MIRTHA CAROLINA</span>

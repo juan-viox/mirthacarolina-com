@@ -229,6 +229,25 @@ h1, h2, h3, h4, h5, .display, .numeral {
   transition: opacity 0.4s ease;
 }
 .nav-mark:hover { opacity: 0.88; }
+.nav-christies-mark {
+  display: block;
+  width: 144px;            /* ~20% larger than MC mark footprint */
+  height: auto;
+  flex-shrink: 0;
+  opacity: 0.95;
+  transition: opacity 0.4s ease;
+  /* Christie's lockup is dark by default — invert to render on navy/hero backgrounds */
+  filter: brightness(0) invert(1);
+}
+.nav-mark:hover .nav-christies-mark { opacity: 1; }
+.nav-logo-divider {
+  display: inline-block;
+  width: 1px;
+  height: 56px;
+  background: var(--champagne, #C4A962);
+  opacity: 0.55;
+  flex-shrink: 0;
+}
 .nav-mc-mark {
   display: block;
   width: 120px;
@@ -263,6 +282,8 @@ h1, h2, h3, h4, h5, .display, .numeral {
   opacity: 0.82;
 }
 @media (max-width: 720px) {
+  .nav-christies-mark { width: 106px; height: auto; }
+  .nav-logo-divider { height: 32px; }
   .nav-mc-mark { width: 88px; height: 88px; }
   .nav-mark { gap: 10px; }
   .nav-mark .wm { font-size: 14px; letter-spacing: 0.14em; }
