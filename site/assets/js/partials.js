@@ -27,7 +27,6 @@ window.MC_NAV = `
       <img class="nav-mc-mark" src="/assets/images/mc-mark-light.png" alt="" width="600" height="600" decoding="async" />
       <span class="nav-mark-text">
         <span class="wm">MIRTHA CAROLINA</span>
-        <span class="aff" data-en="CHRISTIE'S INTERNATIONAL REAL ESTATE" data-es="CHRISTIE'S INTERNATIONAL REAL ESTATE">CHRISTIE'S INTERNATIONAL REAL ESTATE</span>
       </span>
     </a>
 
