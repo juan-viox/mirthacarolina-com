@@ -409,4 +409,8 @@
   document.addEventListener('mc:partials-ready', function () {
     initNav();
   });
+
+  // Expose for SPA-lite re-init after page swaps (see spa-nav.js)
+  window.MC_boot = boot;
+  window.MC_initNav = initNav;
 })();
