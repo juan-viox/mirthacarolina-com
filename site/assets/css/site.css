@@ -369,12 +369,43 @@ h1, h2, h3, h4, h5, .display, .numeral {
   position: fixed;
   inset: 0;
   background: var(--navy-deep);
-  z-index: 90;
+  /* Above .nav (z 100) so the navy fill fully covers the visible nav bar
+     and its lang toggle while the menu is open — prevents lang pills from
+     hovering over the centered menu links on mobile. */
+  z-index: 200;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: translateY(-100%);
   transition: transform 0.65s var(--ease-in-out);
+}
+/* Lang toggle that lives INSIDE the overlay (visible only when menu open).
+   Lets users switch language while the overlay covers the nav-bar's own
+   lang toggle. */
+.nav-overlay .overlay-lang {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  display: flex;
+  gap: 12px;
+}
+.nav-overlay .overlay-lang button {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ivory-cream);
+  background: transparent;
+  border: 1px solid rgba(196, 169, 98, 0.55);
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+.nav-overlay .overlay-lang button.active {
+  background: var(--champagne);
+  color: var(--navy-deep);
+  border-color: var(--champagne);
 }
 .nav-overlay.open { transform: translateY(0); }
 .nav-overlay ul {

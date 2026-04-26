@@ -54,6 +54,10 @@ window.MC_NAV = `
 </header>
 
 <div class="nav-overlay" id="navOverlay" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="overlay-lang" role="group" aria-label="Language toggle">
+    <button class="lang-pill active" data-lang="en" aria-label="English">EN</button>
+    <button class="lang-pill"        data-lang="es" aria-label="Español">ES</button>
+  </div>
   <ul>
     <li><a href="/listings/"      data-en="Listings"      data-es="Propiedades">Listings</a></li>
     <li><a href="/portfolio/"     data-en="Portfolio"     data-es="Portafolio">Portfolio</a></li>

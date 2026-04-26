@@ -69,7 +69,12 @@
 
     var burger = document.getElementById('navBurger');
     var overlay = document.getElementById('navOverlay');
-    if (burger && overlay) {
+    // Idempotent: initNav() runs on boot, on mc:partials-ready, and on every
+    // SPA-lite page swap. Without this guard each call stacks another click
+    // handler, causing the menu to toggle open→close instantly (appears
+    // broken on mobile after the first navigation).
+    if (burger && overlay && !burger.dataset.mcBurgerBound) {
+      burger.dataset.mcBurgerBound = '1';
       burger.addEventListener('click', function () {
         var isOpen = overlay.classList.toggle('open');
         burger.classList.toggle('open', isOpen);
@@ -77,7 +82,9 @@
         document.body.style.overflow = isOpen ? 'hidden' : '';
       });
       overlay.addEventListener('click', function (e) {
-        if (e.target.tagName === 'A') {
+        // Close on link click; ignore lang-toggle button clicks
+        var t = e.target.closest('a');
+        if (t) {
           overlay.classList.remove('open');
           burger.classList.remove('open');
           burger.setAttribute('aria-expanded', 'false');
