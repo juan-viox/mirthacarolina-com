@@ -73,7 +73,7 @@ window.MC_FOOTER = `
         <a class="footer-mc-lockup" href="/" aria-label="Mirtha Carolina">
           <img src="/assets/images/mc-logo.png" alt="Mirtha Carolina · Christie's International Real Estate" width="1024" height="1024" loading="lazy" decoding="async" />
         </a>
-        <span class="aff" data-en="TERESA MINNICK GROUP · MONMOUTH COUNTY, NJ" data-es="TERESA MINNICK GROUP · CONDADO DE MONMOUTH, NJ">TERESA MINNICK GROUP · MONMOUTH COUNTY, NJ</span>
+        <span class="aff" data-en="MONMOUTH COUNTY, NJ" data-es="CONDADO DE MONMOUTH, NJ">MONMOUTH COUNTY, NJ</span>
         <p class="tag-line" data-en="Bilingual luxury concierge for the Navesink, Rumson, Holmdel, and the Atlantic shoreline." data-es="Concierge de lujo bilingüe para el Navesink, Rumson, Holmdel y el litoral Atlántico.">
           Bilingual luxury concierge for the Navesink, Rumson, Holmdel, and the Atlantic shoreline.
         </p>
