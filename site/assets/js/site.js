@@ -385,6 +385,50 @@
   // ---------------------------------------------------------------------------
   // BOOT
   // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
+  // EDITORIAL SPREAD PARALLAX · gentle vertical drift on .ed-img elements
+  // (used on /listings/30-melrose/ Lofts editorial). Idempotent — safe to
+  // re-run after SPA-lite swaps.
+  // ---------------------------------------------------------------------------
+  function initEditorialParallax() {
+    if (prefersReduce) return;
+    var spreads = document.querySelectorAll('.ed-spread');
+    if (!spreads.length) return;
+
+    function update() {
+      var vh = window.innerHeight || 800;
+      spreads.forEach(function (s) {
+        var img = s.querySelector('.ed-img');
+        if (!img) return;
+        var speed = parseFloat(s.getAttribute('data-parallax-speed') || '0.05');
+        var rect = s.getBoundingClientRect();
+        // Distance from viewport center (px). Negative = scrolled past.
+        var dist = (rect.top + rect.height / 2) - vh / 2;
+        // Translate the ed-img inversely so the image appears to drift slowly.
+        var ty = -dist * speed;
+        img.style.transform = 'translate3d(0, ' + ty.toFixed(1) + 'px, 0)';
+      });
+    }
+
+    var ticking = false;
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(function () { update(); ticking = false; });
+        ticking = true;
+      }
+    }
+
+    // Cleanup previous listener if re-running (SPA nav)
+    if (window.__mcEdScroll) {
+      window.removeEventListener('scroll', window.__mcEdScroll);
+      window.removeEventListener('resize', window.__mcEdScroll);
+    }
+    window.__mcEdScroll = onScroll;
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+  }
+
   function boot() {
     initLocale();
     initNav();
@@ -397,6 +441,7 @@
     initMarqueeVelocity();
     initHashScroll();
     initListingParam();
+    initEditorialParallax();
   }
 
   if (document.readyState === 'loading') {

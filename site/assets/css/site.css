@@ -2171,6 +2171,179 @@ h1, h2, h3, h4, h5, .display, .numeral {
   50% { opacity: 0.35; }
 }
 
+/* ==========================================================================
+   LOFTS EDITORIAL · Magazine-spread photo essay for community listing
+   Alternating left/right spreads, italic Cormorant captions, champagne
+   chapter markers, scroll-driven parallax on .ed-img.
+   ========================================================================== */
+.listing-editorial {
+  background: var(--ivory-cream);
+  padding: clamp(96px, 14vw, 160px) 0 clamp(40px, 6vw, 80px);
+  position: relative;
+  overflow: hidden;
+}
+.listing-editorial .shell { max-width: 1320px; }
+
+/* Section header */
+.listing-editorial .ed-head {
+  margin-bottom: clamp(64px, 9vw, 120px);
+  max-width: 720px;
+}
+.listing-editorial .ed-head .eyebrow {
+  display: block;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--champagne-dk, #A68A3F);
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.listing-editorial .ed-title {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-size: clamp(40px, 5.8vw, 88px);
+  letter-spacing: -0.025em;
+  color: var(--navy-deep);
+  font-variation-settings: "opsz" 144;
+  line-height: 0.98;
+  margin: 0 0 24px;
+}
+.listing-editorial .ed-title em {
+  font-family: var(--ff-accent, "Cormorant Garamond", serif);
+  font-style: italic;
+  color: var(--champagne-dk, #A68A3F);
+  font-weight: 400;
+  display: block;
+}
+.listing-editorial .ed-lede {
+  font-family: var(--ff-accent, "Cormorant Garamond", serif);
+  font-style: italic;
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.5;
+  color: var(--charcoal, #1C1C1C);
+  opacity: 0.78;
+  max-width: 56ch;
+  margin: 0;
+}
+
+/* Spread base — alternating layout grid */
+.listing-editorial .ed-spread {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: clamp(40px, 6vw, 96px);
+  align-items: center;
+  margin-bottom: clamp(80px, 12vw, 160px);
+}
+.listing-editorial .ed-spread--left {
+  grid-template-columns: 1.4fr 1fr;
+}
+.listing-editorial .ed-spread--full {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+.listing-editorial .ed-spread--right .ed-text { padding-right: 24px; }
+.listing-editorial .ed-spread--left  .ed-text { padding-left: 24px; }
+
+/* Chapter + pull-quote text block */
+.listing-editorial .ed-text { max-width: 28ch; }
+.listing-editorial .ed-chapter {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--champagne-dk, #A68A3F);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--champagne, #C4A962);
+}
+.listing-editorial .ed-chapter em {
+  font-family: var(--ff-accent, "Cormorant Garamond", serif);
+  font-style: italic;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--navy-deep);
+  font-weight: 500;
+}
+.listing-editorial .ed-chapter.on-dark { color: var(--champagne); border-bottom-color: var(--champagne); }
+.listing-editorial .ed-chapter.on-dark em { color: var(--ivory-cream); }
+.listing-editorial .ed-pull {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(26px, 2.8vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -0.018em;
+  color: var(--navy-deep);
+  margin: 0;
+  font-variation-settings: "opsz" 144;
+}
+.listing-editorial .ed-pull.on-dark { color: var(--ivory-cream); text-shadow: 0 2px 24px rgba(0,0,0,0.45); }
+
+/* Image frames — figcaption sits BELOW the masked image, not over it */
+.listing-editorial .ed-frame {
+  position: relative;
+  margin: 0;
+}
+.listing-editorial .ed-img-mask {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+.listing-editorial .ed-frame--tall .ed-img-mask { aspect-ratio: 4 / 5; }
+.listing-editorial .ed-frame--cinematic .ed-img-mask { aspect-ratio: 21 / 9; }
+.listing-editorial .ed-img {
+  position: absolute;
+  inset: -8% -2%;          /* slight negative inset gives parallax room */
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  transition: transform 0.8s var(--easing, cubic-bezier(0.16, 1, 0.3, 1));
+}
+.listing-editorial .ed-frame:hover .ed-img { transform: scale(1.04); }
+
+/* Overlay caption for full-width cinematic frame */
+.listing-editorial .ed-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: clamp(32px, 5vw, 72px);
+  background: linear-gradient(180deg, transparent 0%, rgba(11,31,58,0.0) 30%, rgba(11,31,58,0.78) 100%);
+  color: var(--ivory-cream);
+}
+.listing-editorial .ed-overlay .ed-chapter { margin-bottom: 14px; }
+.listing-editorial .ed-overlay .ed-pull { max-width: 24ch; }
+
+/* Italic figcaption beneath each frame */
+.listing-editorial .ed-cap {
+  display: block;
+  margin-top: 18px;
+  font-family: var(--ff-accent, "Cormorant Garamond", serif);
+  font-style: italic;
+  font-size: clamp(14px, 1.1vw, 18px);
+  line-height: 1.45;
+  color: var(--charcoal, #1C1C1C);
+  opacity: 0.7;
+  max-width: 48ch;
+}
+
+/* Mobile: stack everything */
+@media (max-width: 820px) {
+  .listing-editorial .ed-spread,
+  .listing-editorial .ed-spread--left,
+  .listing-editorial .ed-spread--right {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .listing-editorial .ed-spread--right .ed-text,
+  .listing-editorial .ed-spread--left  .ed-text { padding: 0; }
+  /* Image first on mobile for visual punch, regardless of desktop side */
+  .listing-editorial .ed-spread--right .ed-frame { order: -1; }
+  .listing-editorial .ed-frame--cinematic { aspect-ratio: 16 / 9; }
+}
+
 .listing-body {
   background: var(--ivory-cream);
   padding: clamp(96px, 14vw, 160px) 0;
