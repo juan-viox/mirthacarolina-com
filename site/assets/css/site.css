@@ -1675,7 +1675,7 @@ h1, h2, h3, h4, h5, .display, .numeral {
 }
 .christies-logo-img {
   display: block;
-  width: 280px;
+  width: 252px;            /* -10% from 280px */
   max-width: 100%;
   height: auto;
   /* Official PNG is black on transparent. Soften slightly so it sits inside the editorial palette. */
@@ -1718,7 +1718,7 @@ h1, h2, h3, h4, h5, .display, .numeral {
 }
 .tcm-logo-img {
   display: block;
-  width: 240px;
+  width: 168px;            /* -30% from 240px */
   max-width: 100%;
   height: auto;
   /* Official PNG is white-on-transparent. Invert to render dark on the ivory footer
@@ -1739,7 +1739,7 @@ h1, h2, h3, h4, h5, .display, .numeral {
 }
 @media (max-width: 768px) {
   .tcm-lockup { max-width: 100%; }
-  .tcm-logo-img { width: 220px; }
+  .tcm-logo-img { width: 154px; }   /* -30% from 220px */
 }
 .footer-contact .item { margin-bottom: 14px; }
 .footer-contact .item .label {
@@ -1783,15 +1783,15 @@ h1, h2, h3, h4, h5, .display, .numeral {
 }
 .compliance-badge {
   display: block;
-  height: 72px;            /* inner logo height; chip adds padding for total ~96px */
+  height: 41px;            /* -10% from 45px */
   width: auto;
   /* convert white source PNG → solid black for max contrast on ivory chip */
   filter: brightness(0);
   transition: filter 0.4s ease;
 }
 @media (max-width: 720px) {
-  .compliance-badge { height: 56px; }
-  .compliance-chip { padding: 10px 14px; }
+  .compliance-badge { height: 32px; }   /* -10% from 35px */
+  .compliance-chip { padding: 8px 12px; }
   .footer-compliance { gap: 10px; }
 }
 .footer-bottom {
