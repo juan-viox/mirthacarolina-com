@@ -126,6 +126,11 @@ window.MC_FOOTER = `
         <button class="lang-pill"        data-lang="es">ES</button>
       </div>
     </div>
+
+    <p class="footer-credit">
+      <span data-en="Powered by" data-es="Impulsado por">Powered by</span>
+      <a href="https://viox.ai" target="_blank" rel="noopener">VioX AI</a>
+    </p>
   </div>
 </footer>
 `;

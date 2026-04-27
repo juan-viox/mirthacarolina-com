@@ -1842,6 +1842,24 @@ h1, h2, h3, h4, h5, .display, .numeral {
   flex-wrap: wrap;
   gap: 20px;
 }
+.footer-credit {
+  margin: 32px 0 0;
+  text-align: center;
+  font-family: var(--ff-body);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--muted-ink);
+  opacity: 0.65;
+  font-weight: 500;
+}
+.footer-credit a {
+  color: var(--champagne-dk, #A68A3F);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.35s ease;
+}
+.footer-credit a:hover { color: var(--champagne, #C4A962); }
 .footer-bottom .copy {
   font-family: var(--ff-body);
   font-size: 11.5px;
