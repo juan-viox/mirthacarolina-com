@@ -436,6 +436,85 @@
     update();
   }
 
+  // ---------------------------------------------------------------------------
+  // CONTACT FORM → /api/lead → VioX CRM
+  // Hijacks the inquire form so submissions land in the CRM as a lead +
+  // first-stage deal. Falls back to a friendly error with Mirtha's cell
+  // if the proxy is unreachable. Idempotent for SPA-lite re-init.
+  // ---------------------------------------------------------------------------
+  function initInquireForm() {
+    var form = document.getElementById('mcInquireForm');
+    if (!form || form.dataset.mcBound) return;
+    form.dataset.mcBound = '1';
+
+    var statusEl = document.createElement('p');
+    statusEl.className = 'inquire-status';
+    statusEl.style.cssText =
+      'margin-top:18px; font-family:var(--ff-body); font-size:13px;' +
+      'letter-spacing:0.06em; min-height:1.2em; transition:opacity 0.4s ease;';
+    form.appendChild(statusEl);
+
+    function setStatus(msg, kind) {
+      statusEl.textContent = msg || '';
+      statusEl.style.color =
+        kind === 'error'   ? 'var(--christies-red, #9B2032)' :
+        kind === 'success' ? 'var(--champagne-dk, #A68A3F)'  :
+                             'var(--muted-ink, #5b5f6a)';
+      statusEl.style.opacity = msg ? '1' : '0';
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var btn = form.querySelector('button[type="submit"]');
+      var prevDisabled = btn ? btn.disabled : false;
+      if (btn) btn.disabled = true;
+
+      var fd = new FormData(form);
+      var payload = {
+        name:         (fd.get('name')         || '').toString().trim(),
+        email:        (fd.get('email')        || '').toString().trim(),
+        phone:        (fd.get('phone')        || '').toString().trim(),
+        neighborhood: (fd.get('neighborhood') || '').toString().trim(),
+        listing:      (fd.get('listing')      || '').toString().trim(),
+        message:      (fd.get('message')      || '').toString().trim(),
+        locale:       (typeof window.MC_getLocale === 'function' ? window.MC_getLocale() : 'en'),
+      };
+
+      var loc = payload.locale === 'es' ? 'es' : 'en';
+      var msgs = {
+        sending:  loc === 'es' ? 'Enviando…' : 'Sending…',
+        success:  loc === 'es'
+                  ? 'Gracias. Mirtha responderá el mismo día hábil.'
+                  : 'Thank you. Mirtha will reach out within the same business day.',
+        error:    loc === 'es'
+                  ? 'No se pudo enviar. Llama al 201-554-7166 y resolvemos al instante.'
+                  : 'Could not send. Call 201-554-7166 and we will resolve immediately.',
+      };
+
+      setStatus(msgs.sending, 'pending');
+
+      fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+        .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, body: d }; }); })
+        .then(function (res) {
+          if (res.ok) {
+            setStatus(msgs.success, 'success');
+            form.reset();
+          } else {
+            setStatus((res.body && res.body.error) || msgs.error, 'error');
+          }
+        })
+        .catch(function () { setStatus(msgs.error, 'error'); })
+        .finally(function () {
+          if (btn) btn.disabled = prevDisabled;
+        });
+    });
+  }
+
   function boot() {
     initLocale();
     initNav();
@@ -449,6 +528,7 @@
     initHashScroll();
     initListingParam();
     initEditorialParallax();
+    initInquireForm();
   }
 
   if (document.readyState === 'loading') {

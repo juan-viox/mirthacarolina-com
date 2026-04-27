@@ -104,6 +104,7 @@ window.MC_FOOTER = `
           <li><a href="/about/"         data-en="About"         data-es="Sobre Mí">About</a></li>
           <li><a href="/insights/"      data-en="Insights"      data-es="Perspectivas">Insights</a></li>
           <li><a href="/contact/"       data-en="Contact"       data-es="Contacto">Contact</a></li>
+          <li><a href="/portal/"        data-en="Client Portal" data-es="Portal de Cliente">Client Portal</a></li>
         </ul>
       </div>
 
