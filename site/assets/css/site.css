@@ -428,6 +428,14 @@ h1, h2, h3, h4, h5, .display, .numeral {
   .nav-links { display: none; }
   .nav-right { gap: 16px; }
   .nav-burger { display: flex; }
+  /* Push the overlay's EN/ES pills down on mobile so they clear the
+     iPhone notch / dynamic island and don't feel cramped against the top
+     edge. `env(safe-area-inset-top)` gives extra room on devices that
+     report a notch; non-notch devices fall back to the 56px floor. */
+  .nav-overlay .overlay-lang {
+    top: max(56px, calc(env(safe-area-inset-top, 0px) + 32px));
+    right: 24px;
+  }
 }
 
 /* ==========================================================================
