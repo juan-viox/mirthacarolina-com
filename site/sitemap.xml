@@ -487,4 +487,12 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/contact/?lang=es"/>
   </url>
 
+  <!-- CASE STUDY -->
+  <url>
+    <loc>https://mirthacarolina.com/case-study/</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>
