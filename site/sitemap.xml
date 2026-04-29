@@ -495,4 +495,15 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- CLIENT PORTAL -->
+  <url>
+    <loc>https://mirthacarolina.com/portal/</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mirthacarolina.com/portal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mirthacarolina.com/portal/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mirthacarolina.com/portal/"/>
+  </url>
+
 </urlset>
