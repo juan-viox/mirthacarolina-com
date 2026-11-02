@@ -140,7 +140,7 @@ Footer "Client Portal" → /portal/ → "Enter Portal" → https://crm.mirthacar
 - **CRM app:** a clone of https://github.com/juan-viox/viox-crm (Next.js 16 + Supabase, multi-tenant schema with `organizations` / `cinematic_sites`). The branding and real-estate pipeline stages are set in `src/crm.config.ts`. The ingest routes require `x-api-key == SITE_API_KEY`. The schema and seed were applied from `MIGRATION-RUN-THIS.sql`.
 - **The domain:** `crm.mirthacarolina.com` uses a Cloudflare CNAME to Vercel and is verified.
 - **Local fix not pushed upstream:** `src/components/shared/ThemeProvider.tsx` now always renders the Provider, which fixed a client-side crash from `useTheme` running outside the provider during SSR. The upstream `viox-crm` repo still has the bug.
-- **CRM source repo:** https://github.com/juan-viox/mirtha-crm (private). `origin` is that repo and `upstream` is `juan-viox/viox-crm`. Production is still deployed with the Vercel CLI (`vercel --prod` from the folder). The repo is not linked to Vercel for auto-deploy. `.env.local` is not committed. The committed `MIGRATION-RUN-THIS.sql` has a placeholder for the seed API key, and the real copy is `MIGRATION-RUN-THIS.local.sql`, which is gitignored and kept only locally.
+- **CRM source repo:** https://github.com/juan-viox/mirtha-crm (private). `origin` is that repo and `upstream` is `juan-viox/viox-crm`. Production deploys automatically when `main` is pushed, because the repo is connected to the `mirtha-crm` Vercel project. `.env.local` is not committed. The committed `MIGRATION-RUN-THIS.sql` has a placeholder for the seed API key, and the real copy is `MIGRATION-RUN-THIS.local.sql`, which is gitignored and kept only locally.
 - Mirtha's CRM account: she signs up at https://crm.mirthacarolina.com/signup. Whether she has done this is still unconfirmed.
 
 ---
@@ -165,7 +165,6 @@ Footer "Client Portal" → /portal/ → "Enter Portal" → https://crm.mirthacar
 
 ## 10. Open items / offered but not started
 
-1. Optional: connect `juan-viox/mirtha-crm` to the `mirtha-crm` Vercel project so it deploys on push.
 2. Push the ThemeProvider fix upstream to `juan-viox/viox-crm`.
 3. Confirm Mirtha has created her account at crm.mirthacarolina.com/signup.
 4. Optional: wire Blotato (social posting) into the CRM. The key is in env, not the repo.
