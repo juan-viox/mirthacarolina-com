@@ -141,7 +141,9 @@ Footer "Client Portal" → /portal/ → "Enter Portal" → https://crm.mirthacar
 - **The domain:** `crm.mirthacarolina.com` uses a Cloudflare CNAME to Vercel and is verified.
 - **ThemeProvider fix:** `src/components/shared/ThemeProvider.tsx` always renders the Provider. This fixed a crash from `useTheme` running outside the provider during SSR. The fix was also merged upstream in [juan-viox/viox-crm#1](https://github.com/juan-viox/viox-crm/pull/1), so it no longer causes conflicts when you pull from `upstream`.
 - **CRM source repo:** https://github.com/juan-viox/mirtha-crm (private). `origin` is that repo and `upstream` is `juan-viox/viox-crm`. Production deploys automatically when `main` is pushed, because the repo is connected to the `mirtha-crm` Vercel project. `.env.local` is not committed. The committed `MIGRATION-RUN-THIS.sql` has a placeholder for the seed API key, and the real copy is `MIGRATION-RUN-THIS.local.sql`, which is gitignored and kept only locally.
-- Mirtha's CRM account: she signs up at https://crm.mirthacarolina.com/signup. Whether she has done this is still unconfirmed.
+- Mirtha's CRM account: confirmed (mirtha.c.solorzano@gmail.com, role owner, created 2026-04-27). She is the only owner; `/signup` now refuses anyone else, so add staff from Settings → Team.
+- **API auth:** middleware lets every `/api/*` path through, so each route checks auth itself. Internal routes call `requireStaff()` from `src/lib/require-staff.ts` (team invite: owner/admin only); `ingest/*` uses `SITE_API_KEY`; `branding` is public. Any new route must do one of these. Shipped 2026-11-02 (mirtha-crm e47d4d7, upstream [juan-viox/viox-crm#2](https://github.com/juan-viox/viox-crm/pull/2)).
+- **Blotato social page:** built on branch `feat/blotato-social` (sidebar → Social; key in `BLOTATO_API_KEY` server env). Not merged: needs Mirtha's own Blotato key — the key in the API Keys note is connected to DreamersJoy's accounts.
 
 ---
 
@@ -165,10 +167,9 @@ Footer "Client Portal" → /portal/ → "Enter Portal" → https://crm.mirthacar
 
 ## 10. Open items / offered but not started
 
-1. Confirm Mirtha has created her account at crm.mirthacarolina.com/signup.
-2. Optional: wire Blotato (social posting) into the CRM. The key is in env, not the repo.
-3. Optional: the EN/ES pills feel slightly crowded on the closed mobile nav bar.
-4. Search Console sitemap submission and the Google Business Profile.
+1. Blotato: get Mirtha's own Blotato key, set `BLOTATO_API_KEY` in Vercel (Production + Preview), then merge `feat/blotato-social`.
+2. Optional: the EN/ES pills feel slightly crowded on the closed mobile nav bar.
+3. Search Console sitemap submission and the Google Business Profile.
 
 ---
 
