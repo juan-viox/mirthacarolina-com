@@ -139,7 +139,7 @@ Footer "Client Portal" → /portal/ → "Enter Portal" → https://crm.mirthacar
 - `api/voice-call.js` requires a phone number and adds the intent and summary to the transcript.
 - **CRM app:** a clone of https://github.com/juan-viox/viox-crm (Next.js 16 + Supabase, multi-tenant schema with `organizations` / `cinematic_sites`). The branding and real-estate pipeline stages are set in `src/crm.config.ts`. The ingest routes require `x-api-key == SITE_API_KEY`. The schema and seed were applied from `MIGRATION-RUN-THIS.sql`.
 - **The domain:** `crm.mirthacarolina.com` uses a Cloudflare CNAME to Vercel and is verified.
-- **Local fix not pushed upstream:** `src/components/shared/ThemeProvider.tsx` now always renders the Provider, which fixed a client-side crash from `useTheme` running outside the provider during SSR. The upstream `viox-crm` repo still has the bug.
+- **ThemeProvider fix:** `src/components/shared/ThemeProvider.tsx` always renders the Provider. This fixed a crash from `useTheme` running outside the provider during SSR. The fix was also merged upstream in [juan-viox/viox-crm#1](https://github.com/juan-viox/viox-crm/pull/1), so it no longer causes conflicts when you pull from `upstream`.
 - **CRM source repo:** https://github.com/juan-viox/mirtha-crm (private). `origin` is that repo and `upstream` is `juan-viox/viox-crm`. Production deploys automatically when `main` is pushed, because the repo is connected to the `mirtha-crm` Vercel project. `.env.local` is not committed. The committed `MIGRATION-RUN-THIS.sql` has a placeholder for the seed API key, and the real copy is `MIGRATION-RUN-THIS.local.sql`, which is gitignored and kept only locally.
 - Mirtha's CRM account: she signs up at https://crm.mirthacarolina.com/signup. Whether she has done this is still unconfirmed.
 
@@ -165,11 +165,10 @@ Footer "Client Portal" → /portal/ → "Enter Portal" → https://crm.mirthacar
 
 ## 10. Open items / offered but not started
 
-1. Push the ThemeProvider fix upstream to `juan-viox/viox-crm`.
-2. Confirm Mirtha has created her account at crm.mirthacarolina.com/signup.
-3. Optional: wire Blotato (social posting) into the CRM. The key is in env, not the repo.
-4. Optional: the EN/ES pills feel slightly crowded on the closed mobile nav bar.
-5. Search Console sitemap submission and the Google Business Profile.
+1. Confirm Mirtha has created her account at crm.mirthacarolina.com/signup.
+2. Optional: wire Blotato (social posting) into the CRM. The key is in env, not the repo.
+3. Optional: the EN/ES pills feel slightly crowded on the closed mobile nav bar.
+4. Search Console sitemap submission and the Google Business Profile.
 
 ---
 
