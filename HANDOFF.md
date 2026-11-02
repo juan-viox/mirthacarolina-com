@@ -165,11 +165,11 @@ Footer "Client Portal" → /portal/ → "Enter Portal" → https://crm.mirthacar
 
 ## 10. Open items / offered but not started
 
-2. Push the ThemeProvider fix upstream to `juan-viox/viox-crm`.
-3. Confirm Mirtha has created her account at crm.mirthacarolina.com/signup.
-4. Optional: wire Blotato (social posting) into the CRM. The key is in env, not the repo.
-5. Optional: the EN/ES pills feel slightly crowded on the closed mobile nav bar.
-6. Search Console sitemap submission and the Google Business Profile.
+1. Push the ThemeProvider fix upstream to `juan-viox/viox-crm`.
+2. Confirm Mirtha has created her account at crm.mirthacarolina.com/signup.
+3. Optional: wire Blotato (social posting) into the CRM. The key is in env, not the repo.
+4. Optional: the EN/ES pills feel slightly crowded on the closed mobile nav bar.
+5. Search Console sitemap submission and the Google Business Profile.
 
 ---
 
